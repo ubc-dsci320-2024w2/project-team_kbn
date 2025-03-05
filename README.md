@@ -1,4 +1,4 @@
-# Group {Name} - {Short Title of your project}
+# Group { Name} - {Short Title of your project}
 
 - Your title can change over time.
 
