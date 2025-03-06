@@ -1,10 +1,8 @@
-# Group { Name} - {Short Title of your project}
-
-- Your title can change over time.
+# Group KBN - Vancouver Trees
 
 ## Describe your dataset in about 150-200 words
 
-{Add a description of your dataset here, including the source}
+The [public tree dataset](https://opendata.vancouver.ca/explore/dataset/public-trees/information/?disjunctive.neighbourhood_name&disjunctive.on_street&disjunctive.species_name&disjunctive.common_name) provides information on public trees in Vancouver, including their location, species, size, and planting date, published by the City of Vancouver and maintained by the Vancouver Board of Parks and Recreation.
 
 ## Describe your topic/interest in about 150-200 words
 
@@ -31,6 +29,3 @@
 ## References
 
 {Add your stuff here}
-
-
-
