@@ -23,8 +23,8 @@ print("HEIGHT_RANGE_ID set")
 
 # Earlier EDA provided 'CULTIVAR_NAME', 'NEIGHBOURHOOD_NAME', 'DATE_PLANTED' as having NA values; 'CULTIVAR_NAME' is filled with the corresponding 'SPECIES_NAME', while 'NEIGHBOURHOOD_NAME', 'DATE_PLANTED' have 'NA' strings applied instead
 public_trees_cleaned['CULTIVAR_NAME'] = public_trees_cleaned['CULTIVAR_NAME'].fillna(public_trees_cleaned['SPECIES_NAME'])
-public_trees_cleaned['NEIGHBOURHOOD_NAME'] = public_trees_cleaned['NEIGHBOURHOOD_NAME'].fillna(value=None)
-public_trees_cleaned['DATE_PLANTED'] = public_trees_cleaned['DATE_PLANTED'].fillna(value=None)
+public_trees_cleaned['NEIGHBOURHOOD_NAME'] = public_trees_cleaned['NEIGHBOURHOOD_NAME'].fillna('')
+public_trees_cleaned['DATE_PLANTED'] = public_trees_cleaned['DATE_PLANTED'].fillna('')
 print("NAs filled")
 
 # Due to being redundant and difficult to use, 'Geom' and 'geo_point_2d' are dropped
