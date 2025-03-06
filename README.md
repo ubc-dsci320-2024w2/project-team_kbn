@@ -2,7 +2,7 @@
 
 ## Describe your dataset in about 150-200 words
 
-The [public tree dataset](https://opendata.vancouver.ca/explore/dataset/public-trees/information/?disjunctive.neighbourhood_name&disjunctive.on_street&disjunctive.species_name&disjunctive.common_name) provides information on public trees in Vancouver, including their location, species, size, and planting date, published by the City of Vancouver and maintained by the Vancouver Board of Parks and Recreation.
+The [Public Tree Dataset](https://opendata.vancouver.ca/explore/dataset/public-trees/information/?disjunctive.neighbourhood_name&disjunctive.on_street&disjunctive.species_name&disjunctive.common_name) provides information on public trees in Vancouver, including their location, species, size, planting date, and coordinates. It is published by the City of Vancouver and maintained by the Vancouver Board of Parks and Recreation. Private trees are not included in the inventory. The dataset refreshes daily on weekdays, with tree attributes updated on a regular basis, though it may be several years between updates for some attributes. Priorities and resources determine how fast a change in reality is reflected in the data. For the purposes of our analysis, we will use data last modified on March 4th, 2025 (City of Vancouver, 2025). 
 
 ## Describe your topic/interest in about 150-200 words
 
@@ -12,7 +12,7 @@ The [public tree dataset](https://opendata.vancouver.ca/explore/dataset/public-t
 
 - Person 1: one sentence about you!
 - Person 2: one sentence about you!
-- Person 3: one sentence about you!
+- Person 3: Nicholas Tam, planning to target the distribution of trees by various factors.
 - Person 4: one sentence about you!
 
 ## Images
@@ -25,7 +25,8 @@ The [public tree dataset](https://opendata.vancouver.ca/explore/dataset/public-t
 
 - `altair`
 - `pre-commit`
+- `pandas`
 
 ## References
 
-{Add your stuff here}
+- City of Vancouver. (2025, March 4). Public trees. City of Vancouver Open Data Portal. [https://opendata.vancouver.ca/explore/dataset/public-trees/information/?disjunctive.neighbourhood_name&disjunctive.on_street&disjunctive.species_name&disjunctive.common_name](https://opendata.vancouver.ca/explore/dataset/public-trees/information/?disjunctive.neighbourhood_name&disjunctive.on_street&disjunctive.species_name&disjunctive.common_name)
