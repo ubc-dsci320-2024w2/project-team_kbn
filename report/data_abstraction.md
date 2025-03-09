@@ -2,7 +2,7 @@
 
 | Attribute Name | Attribute Type | Data Semantics | Cardinality |
 | -------- | ------- | ------- | ------- |
-| TREE_ID | Quantitative | Tree identification number; primary key | 181476 |
+| TREE_ID | Categorical | Tree identification number; primary key | 181476 |
 | CIVIC_NUMBER | Categorical | Street address of the site at which the tree is associated with  | 8338 |
 | STD_STREET | Categorical | Street name of the site at which the tree is associated with  | 814 |
 | GENUS_NAME | Categorical | Genus name of the tree | 169 |
