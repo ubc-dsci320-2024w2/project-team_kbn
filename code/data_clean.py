@@ -1,7 +1,18 @@
 import pandas as pd
+# importlib.reload(kli_query_family)
+import kli_query_family
 
 # Clean the public_trees.csv dataset
 def clean_public_trees(df): 
+    """
+    Cleans the DataFrame by .
+    
+    Parameters:
+        df (pd.DataFrame): Original DataFrame containing genus names.
+    
+    Returns:
+        pd.DataFrame: DataFrame with additional columns for latitude, longitude, nomenclature, full address and family names.
+    """
     
     # `HEIGHT_RANGE` is set to be an ordinal attribute, with the order provided in `priority_order`
     priority_order = ['10-20', '20-30', '30-40', '40-50', '50-60', '60-70', '70-80', '80-90', '>90']
@@ -29,4 +40,9 @@ def clean_public_trees(df):
     # `ON_ADDRESS` is a column derived from combining `ON_STREET` and `ON_STREET_BLOCK` into 1 string
     df['ON_ADDRESS'] = df['ON_STREET_BLOCK'] + " " + df['ON_STREET'] + " " + df['NEIGHBOURHOOD_NAME'] + " (" + df['STREET_SIDE_NAME'] + ")"
 
-    return df
+    # Following code is in code/kli_query_family.py
+    genus_to_family_dict = kli_query_family.get_genus_to_family_mapping(df)
+    df_with_family = kli_query_family.map_family_to_dataframe(df, genus_to_family_dict)
+    kli_query_family.add_family_name_to_cleaned("../../data/processed/public_trees_cleaned.csv", df_with_family)
+    
+    return df_with_family
