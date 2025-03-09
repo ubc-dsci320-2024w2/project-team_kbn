@@ -23,3 +23,4 @@
 | LONGITUDE | Quantitative | Longitude of a tree’s location | 181343 |
 | NOMENCLATURE | Categorical | Combination of GENUS_NAME and SPECIES_NAME | 701 |
 | ON_ADDRESS | Categorical | Combination of ON_STREET_BLOCK, ON_STREET, NEIGHBOURHOOD_NAME, STREET_SIDE_NAME | 19267 |
+| FAMILY_NAME | Categorical | Family name of the tree | 57 |
