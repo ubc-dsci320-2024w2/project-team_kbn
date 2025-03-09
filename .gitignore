@@ -8,6 +8,7 @@
 
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
+*.json
 
 # IPython
 profile_default/
