@@ -24,3 +24,4 @@
 | NOMENCLATURE | Categorical | Combination of GENUS_NAME and SPECIES_NAME | 701 |
 | ON_ADDRESS | Categorical | Combination of ON_STREET_BLOCK, ON_STREET, NEIGHBOURHOOD_NAME, STREET_SIDE_NAME | 19267 |
 | FAMILY_NAME | Categorical | Family name of the tree | 57 |
+| HAS_POLLEN | Boolean | Whether tree is known to produce pollen | 2 |
