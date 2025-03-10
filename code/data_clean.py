@@ -1,11 +1,12 @@
 import pandas as pd
 import preprocess_query_family
 import preprocess_query_pollen
+import json
 
 # Clean the public_trees.csv dataset
 def clean_public_trees(df): 
     """
-    Cleans the DataFrame by .
+    Cleans the DataFrame.
     
     Parameters:
         df (pd.DataFrame): Original DataFrame containing genus names.
