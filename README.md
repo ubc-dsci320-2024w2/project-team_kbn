@@ -11,9 +11,8 @@ The [Public Tree Dataset](https://opendata.vancouver.ca/explore/dataset/public-t
 ## Team Members
 
 - Person 1: one sentence about you!
-- Person 2: one sentence about you!
+- Person 2: Kaylee Li, on a mission to find the perfect picnic spot for the upcoming spring using this dataset.
 - Person 3: Nicholas Tam, planning to target the distribution of trees by various factors.
-- Person 4: one sentence about you!
 
 ## Images
 
