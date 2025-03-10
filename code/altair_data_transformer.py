@@ -18,6 +18,7 @@ def create_json_dir_transformer(data_dir):
     def json_dir(data):
         os.makedirs(data_dir, exist_ok=True)
         return pipe(data, alt.to_json(filename=data_dir + '/{prefix}-{hash}.{extension}'))
+        
     return json_dir
 
 
@@ -30,8 +31,12 @@ def setup_altair_for_large_data(data_dir, renderer='jupyterlab'):
 
     Args:
         data_dir (str): Directory to store JSON files. Default is 'altairdata'.
+        image_dir (str): Directory to store rendered chart images.
         renderer (str): Renderer to enable. Default is 'jupyterlab'.
     """
+    
+    os.makedirs(data_dir, exist_ok=True)
+    
     json_dir_transformer = create_json_dir_transformer(data_dir)
     alt.data_transformers.register('json_dir', json_dir_transformer)
     alt.data_transformers.enable('json_dir')
