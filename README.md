@@ -10,7 +10,7 @@ The [Public Tree Dataset](https://opendata.vancouver.ca/explore/dataset/public-t
 
 ## Team Members
 
-- Person 1: one sentence about you!
+- Person 1: Brianna Zhou, exploring how different tree species and their physical traits influence their substanability
 - Person 2: Kaylee Li, on a mission to find the perfect picnic spot for the upcoming spring using this dataset.
 - Person 3: Nicholas Tam, planning to target the distribution of trees by various factors.
 
