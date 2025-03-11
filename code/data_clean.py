@@ -14,21 +14,6 @@ def clean_public_trees(df):
     Returns:
         pd.DataFrame: DataFrame with additional columns for latitude, longitude, nomenclature, full address and family names.
     """
-
-    with open("../../data/processed/genus_to_family_dict.json", "r") as file:
-        genus_to_family_dict = json.load(file)
-
-
-    with open("../../data/processed/tree_that_has_pollen_list.txt", "r") as file:
-        tree_that_has_pollen_list = [line.strip() for line in file]
-
-    # Map Tree's family based on genus (`FAMILY_NAME`)
-    df = preprocess_query_family.map_family_to_dataframe(df, genus_to_family_dict)
-    preprocess_query_family.add_family_name_to_cleaned("../../data/processed/public_trees_cleaned.csv", df)
-
-    # Map whether tree has pollen or not (`HAS_POLLEN` column)
-    df = preprocess_query_pollen.map_has_pollen_to_dataframe(df, tree_that_has_pollen_list)
-    preprocess_query_pollen.add_has_pollen_to_cleaned("../../data/processed/public_trees_cleaned.csv", df)
     
     # `HEIGHT_RANGE` is set to be an ordinal attribute, with the order provided in `priority_order`
     priority_order = ['10-20', '20-30', '30-40', '40-50', '50-60', '60-70', '70-80', '80-90', '>90']
@@ -56,5 +41,22 @@ def clean_public_trees(df):
     # `ON_ADDRESS` is a column derived from combining `ON_STREET` and `ON_STREET_BLOCK` into 1 string
     df['ON_ADDRESS'] = df['ON_STREET_BLOCK'].astype(str) + " " + df['ON_STREET'].astype(str) + " " + df['NEIGHBOURHOOD_NAME'].astype(str) + " (" + df['STREET_SIDE_NAME'].astype(str) + ")"
 
+    with open("../../data/processed/genus_to_family_dict.json", "r") as file:
+        genus_to_family_dict = json.load(file)
+
+
+    with open("../../data/processed/tree_that_has_pollen_list.txt", "r") as file:
+        tree_that_has_pollen_list = [line.strip() for line in file]
+
+    # Map Tree's family based on genus (`FAMILY_NAME`)
+    df = preprocess_query_family.map_family_to_dataframe(df, genus_to_family_dict)
+    preprocess_query_family.add_family_name_to_cleaned("../../data/processed/public_trees_cleaned.csv", df)
+
+    # Map whether tree has pollen or not (`HAS_POLLEN` column)
+    df = preprocess_query_pollen.map_has_pollen_to_dataframe(df, tree_that_has_pollen_list)
+
+    preprocess_query_pollen.add_has_pollen_to_cleaned("../../data/processed/public_trees_cleaned.csv", df)
+
+    df.to_csv("../../data/processed/public_trees_cleaned.csv", index=False)
     
     return df
