@@ -1,4 +1,4 @@
-## Data Abstraction 
+# Data Abstraction
 
 | Attribute Name | Attribute Type | Data Semantics | Cardinality |
 | -------- | ------- | ------- | ------- |
