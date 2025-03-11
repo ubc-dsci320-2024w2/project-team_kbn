@@ -220,6 +220,26 @@ The high-fidelity sketch selected was a dot plot version of the sketch for the q
 
 ## Next Steps
 
+### Person 1
+
+- Compare height and diameter distribution between North and South Vancouver to identity regional to see how environment and urbanization impact growth
+- Compare how trees grow in parks vs. along streets
+- Look at species known to withstand drought, heavy rain, or storms and analyze their distribution across Vancouver
+- Highlight trees best suited for Vancouver’s long-term urban sustainability.
+
+### Person 2
+
+- Impute Missing Neighbourhoods: Fill in missing values in the 'neighbourhood' column using KNN to predict locations like Stanley Park, UBC, or a specific Vancouver neighbourhood.
+Layer Features for Optimal Picnic Spots: Combine 'Has Pollen,' 'Tree Diversity,' and 'Tree Density (Large Trees)' to identify the best picnic locations based on pollen, tree variety, and shade.
+- Interactive Filtering for Picnic Spot Recommendations: Build an interactive tool (e.g., dashboard) that lets users filter picnic spots based on their preferences for tree density, diversity, or pollen levels, allowing them to find the best spots for their needs.
+
+### Person 3
+
+- Diameter may not be an effective metric of plant health, as planted trees need to be lighter for easier transplanting and maintenance (Camu, 2022); the ratio of plant height to diameter may be a more effective metric.
+- Determine which planted species exist in many different locations within each neighbourhood.
+- Filter out which trees have planted equivalents and reasonably large values for the total number of trees and proportion of trees that have been planted.
+- Determine the distribution of ages from the filtered tree species from the step above.
+
 ## Resources
 
 - City of Vancouver. (2025, March 4). Public trees. City of Vancouver Open Data Portal. [https://opendata.vancouver.ca/explore/dataset/public-trees/information/?disjunctive.neighbourhood_name&disjunctive.on_street&disjunctive.species_name&disjunctive.common_name](https://opendata.vancouver.ca/explore/dataset/public-trees/information/?disjunctive.neighbourhood_name&disjunctive.on_street&disjunctive.species_name&disjunctive.common_name)
