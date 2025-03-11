@@ -6,6 +6,9 @@
 # gitignore template for Jupyter Notebooks
 # website: http://jupyter.org/
 
+# Images
+*/images/analysis3_eda/*
+
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
 *.json
