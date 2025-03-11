@@ -1,11 +1,12 @@
 import pandas as pd
-# importlib.reload(kli_query_family)
-import kli_query_family
+import preprocess_query_family
+import preprocess_query_pollen
+import json
 
 # Clean the public_trees.csv dataset
 def clean_public_trees(df): 
     """
-    Cleans the DataFrame by .
+    Cleans the DataFrame.
     
     Parameters:
         df (pd.DataFrame): Original DataFrame containing genus names.
@@ -19,7 +20,7 @@ def clean_public_trees(df):
     df['HEIGHT_RANGE'] = pd.Categorical(df['HEIGHT_RANGE'], categories=priority_order, ordered=True)
     
     # `TREE_ID`, `CIVIC_NUMBER`, `ON_STREET_BLOCK` are set to be categorical attributes
-    df[['TREE_ID', 'CIVIC_NUMBER', 'ON_STREET_BLOCK']] = df[['TREE_ID', 'CIVIC_NUMBER', 'ON_STREET_BLOCK']].astype(str)
+    df[['TREE_ID', 'CIVIC_NUMBER', 'ON_STREET_BLOCK']] = df[['TREE_ID', 'CIVIC_NUMBER', 'ON_STREET_BLOCK']].astype("category")
     
     # Earlier EDA provided `CULTIVAR_NAME`, `NEIGHBOURHOOD_NAME`, `DATE_PLANTED` as having NA values; `CULTIVAR_NAME` is filled with the corresponding `SPECIES_NAME`, `NEIGHBOURHOOD_NAME` has `NA` strings applied instead, and `DATE_PLANTED` is left with `None`
     df['CULTIVAR_NAME'] = df['CULTIVAR_NAME'].fillna(df['SPECIES_NAME'])
@@ -38,11 +39,24 @@ def clean_public_trees(df):
     df['NOMENCLATURE'] = df['GENUS_NAME'] + " " + df['SPECIES_NAME']
     
     # `ON_ADDRESS` is a column derived from combining `ON_STREET` and `ON_STREET_BLOCK` into 1 string
-    df['ON_ADDRESS'] = df['ON_STREET_BLOCK'] + " " + df['ON_STREET'] + " " + df['NEIGHBOURHOOD_NAME'] + " (" + df['STREET_SIDE_NAME'] + ")"
+    df['ON_ADDRESS'] = df['ON_STREET_BLOCK'].astype(str) + " " + df['ON_STREET'].astype(str) + " " + df['NEIGHBOURHOOD_NAME'].astype(str) + " (" + df['STREET_SIDE_NAME'].astype(str) + ")"
 
-    # Following code is in code/kli_query_family.py
-    genus_to_family_dict = kli_query_family.get_genus_to_family_mapping(df)
-    df_with_family = kli_query_family.map_family_to_dataframe(df, genus_to_family_dict)
-    kli_query_family.add_family_name_to_cleaned("../../data/processed/public_trees_cleaned.csv", df_with_family)
+    with open("../../data/processed/genus_to_family_dict.json", "r") as file:
+        genus_to_family_dict = json.load(file)
+
+
+    with open("../../data/processed/tree_that_has_pollen_list.txt", "r") as file:
+        tree_that_has_pollen_list = [line.strip() for line in file]
+
+    # Map Tree's family based on genus (`FAMILY_NAME`)
+    df = preprocess_query_family.map_family_to_dataframe(df, genus_to_family_dict)
+    preprocess_query_family.add_family_name_to_cleaned("../../data/processed/public_trees_cleaned.csv", df)
+
+    # Map whether tree has pollen or not (`HAS_POLLEN` column)
+    df = preprocess_query_pollen.map_has_pollen_to_dataframe(df, tree_that_has_pollen_list)
+
+    preprocess_query_pollen.add_has_pollen_to_cleaned("../../data/processed/public_trees_cleaned.csv", df)
+
+    df.to_csv("../../data/processed/public_trees_cleaned.csv", index=False)
     
-    return df_with_family
+    return df
