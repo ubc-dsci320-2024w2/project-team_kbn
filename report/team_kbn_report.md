@@ -2,6 +2,15 @@
 
 ## Introduction
 
+The Public Tree Dataset provides information on public trees in Vancouver, including their location, species, size, planting date, and coordinates. It is published by the City of Vancouver and maintained by the Vancouver Board of Parks and Recreation. Private trees are not included in the inventory. The dataset refreshes daily on weekdays, with tree attributes updated regularly, though it may be several years between updates for some attributes. Priorities and resources determine how fast a change in reality is reflected in the data (City of Vancouver, 2025). For our analysis, we will use data last modified on March 4th, 2025.
+
+The City of Vancouver primarily uses the dataset for maintaining the city’s urban forest, which contributes to Vancouver’s Healthy City Strategy goal of continually improving the conditions that allow everyone to enjoy the highest level of health and well-being possible, by creating environments that benefit physical and mental health (City of Vancouver, 2018, n.d.-a). Other benefits of maintaining the urban forest include cleaner air, capturing carbon, providing habitats for wildlife, and protecting the city from storms, extreme heat, and the impacts of climate change (City of Vancouver, n.d.).
+
+Our team consists of Kaylee Li, Brianna Zhou, and Nicholas Tam. Based on the dataset’s original purpose, our primary goal is to utilise the dataset to optimise tree placement and management for more effective sustainability and recreational benefits for Vancouver’s urban environment.
+
+The intended audiences for this dataset are urban foresters, city planners, local communities, and ecologists. The data provided for the variety of tree species could serve as an additional sample for ecologists. Local communities and city planners could use the data to map out and set up ideal recreation locations. Urban foresters could use the data to plan the types and quantities of trees to plant to improve the environment further.
+
+
 ## About the Data
 
 ### Data Abstraction
@@ -77,3 +86,10 @@
 ## Preliminary Sketches
 
 ## Next Steps
+
+## Resources
+
+- City of Vancouver. (2025, March 4). Public trees. City of Vancouver Open Data Portal. [https://opendata.vancouver.ca/explore/dataset/public-trees/information/?disjunctive.neighbourhood_name&disjunctive.on_street&disjunctive.species_name&disjunctive.common_name](https://opendata.vancouver.ca/explore/dataset/public-trees/information/?disjunctive.neighbourhood_name&disjunctive.on_street&disjunctive.species_name&disjunctive.common_name)
+City of Vancouver. (2018). Urban Forest Strategy, 2018 update. [https://vancouver.ca/files/cov/urban-forest-strategy.pdf](https://vancouver.ca/files/cov/urban-forest-strategy.pdf)
+City of Vancouver. (n.d.). Vancouver’s Urban Forest. [https://vancouver.ca/parks-recreation-culture/urban-forest-strategy.aspx#:~:text=Vancouver’s%20urban%20forest%20includes%20every,the%20impacts%20of%20climate%20change](https://vancouver.ca/parks-recreation-culture/urban-forest-strategy.aspx#:~:text=Vancouver’s%20urban%20forest%20includes%20every,the%20impacts%20of%20climate%20change)
+City of Vancouver. (n.d.-a). Healthy City Strategy. [https://vancouver.ca/people-programs/healthy-city-strategy.aspx](https://vancouver.ca/people-programs/healthy-city-strategy.aspx)
