@@ -221,7 +221,7 @@ Boxplot divide data into five columns and create 15 small plots, which can overw
 **Which neighbourhoods have the highest density of large trees (e.g., height over 40 feet) that provide ample shade for comfortable picnic spots?**
 
 A choropleth map visualizes tree density across neighborhoods. While the low-fidelity sketches, like the bar chart and heatmap, provide clear summaries, they lack interactivity and can become cluttered due to many categories. The high-fidelity design enhances the choropleth map with tooltips and filtering, making it easier to explore picnic spots. This approach improves usability by grouping colors effectively, reducing cognitive load, and enabling seamless interaction for better decision-making.
-![k_sketch_1](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/d0484cd12fb51c9bd60a68d0d8200253155cd063/images/kli_sketches/sketch_1.png){:height="200px" width="auto"}
+<img src="https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/d0484cd12fb51c9bd60a68d0d8200253155cd063/images/kli_sketches/sketch_1.png" height="200px" width="auto" />
 
 
 **Which neighbourhoods have the highest diversity of tree families, offering visually varied and unique picnic environments?** 
