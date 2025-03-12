@@ -276,9 +276,10 @@ The high-fidelity sketch selected was a dot plot version of the sketch for the q
 
 ### Person 2 - Picnic Focus
 
-- Fill in missing values in the 'neighbourhood' column using KNN to predict locations like Stanley Park, UBC, or a specific Vancouver neighbourhood.
-- Combine 'Has Pollen,' 'Tree Diversity,' and 'Tree Density (Large Trees)' to identify the best picnic locations based on pollen, tree variety, and shade as a whole
-- Build an interactive view that lets users filter picnic spots based on their preferences for tree density, diversity, or pollen levels, allowing them to find the best spots for their own needs.
+- Address the "Null" values for trees not assigned to neighborhoods by cross-referencing with geographic data.
+- Identify neighborhoods with the highest density of large trees and pinpoint parks or streets ideal for shaded picnics.
+- Filter species that bloom in spring in Vancouver for targeted spring picnic recommendations.
+- Develop an interactive map to explore tree species diversity and shading across neighborhoods, with a filter to show trees that produce pollen.
 
 ### Person 3 - Planting Focus
 
