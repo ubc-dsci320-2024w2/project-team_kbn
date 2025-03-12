@@ -42,33 +42,52 @@ The intended audiences for this dataset are urban foresters, city planners, loca
 
 ### EDA: Sustainability
 
-How do different tree species in Vancouver’s public spaces vary in terms of growth patterns and physical traits, and what does this suggest about their sustainability for Vancouver’s urban environment?
+**How do different tree species in Vancouver’s public spaces vary in terms of growth patterns and physical traits, and what does this suggest about their sustainability for Vancouver’s urban environment?**
 
 Sub Questions:
 
-- How do height and diameter vary across different tree species in Vancouver’s public spaces?* Examines the fundamental growth of characteristics of trees, which are essential for understanding their long-term sustainability in urban areas
-- How does the spatial distribution of the physical traits of species differ across Vancouver?* Determines whether certain species are concentrated in specific areas due to environmental factors, urban planning decisions, or ecological suitability.
-- How do height and diameter of trees influence their placement in different urban settings (e.g., streets, parks, medians, and greenways)?* Trees of different sizes and growth patterns may be more appropriate for certain settings. Understanding these relationships supports better planning for sustainability.
+- *How do height and diameter vary across different tree species in Vancouver’s public spaces?* Examines the fundamental growth of characteristics of trees, which are essential for understanding their long-term sustainability in urban areas
+- *How does the spatial distribution of the physical traits of species differ across Vancouver?* Determines whether certain species are concentrated in specific areas due to environmental factors, urban planning decisions, or ecological suitability.
+- *How do height and diameter of trees influence their placement in different urban settings (e.g., streets, parks, medians, and greenways)?* Trees of different sizes and growth patterns may be more appropriate for certain settings. Understanding these relationships supports better planning for sustainability.
+
+#### Distribution of Diameter and Height Range and Tree Species
+
+Vancouver's public tree inventory primarily consists of small to medium-sized trees. Most of these trees have diameters below 40 inches and heights under 30 feet. Larger specimens, with diameters greater than 100 inches and heights exceeding 50 feet, are quite rare. This scarcity may due to urban constraints, such as limited space and maintenance challenges. The inventory is dominated by tree families such as Rosaceae (rose), Aceraceae (maple), and Fagaceae (oak), indicating a deliberate selection for traits. Moreover, there is a positive correlation between tree height and diameter, which aligns with natural growth patterns.
+![species_diameter_height_distribution](images/Bri_eda1/combined_distribution_figure.png)
+![diameter_height_relation](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/da727681923e3e667ae2d341332d89a752fad87c/images/Bri_eda1/avg_dia_height.png)
+
+#### Distribution of Average Diameter and Count of Height Range in the Top 20 Common Family Species
+
+Vancouver's top 20 tree families display distinct growth patterns. Larger species, such as Cupressaceae (cypress) and Salicaceae (willow), tend to have greater average diameters and heights, often exceeding 50 meters. This may be due to their slow growth rates or genetic traits. In contrast, smaller families like Cornaceae (dogwood) and Styracaceae (storax) typically reach shorter heights, ranging from 10 to 30 meters, and have narrower trunks, reflecting their faster growth rates and ornamental roles.
+
+
+#### Distribution of Species, Diameter and Height across Vancouver
+
+Vancouver’s three most common tree families—Aceraceae (maple), Fagaceae (oak/beech), and Rosaceae (rose)—exhibit distinct spatial and physical patterns. The Aceraceae and Rosaceae families generally have larger diameters and are evenly distributed throughout the city. In contrast, the Fagaceae family, consisting of smaller-diameter trees, tends to cluster in specific areas. Most tree heights range between 10 to 30 meters, with very few exceeding this height, indicating similar growth limitations across the urban landscape. 
+
+#### Distribution of Diameter and Height in Different Street Side
+
+Vancouver’s street-side tree growth varies significantly by location: parks host the largest trees in both diameter and height, likely due to lower disturbance and ample space. Even and odd street sides show nearly identical diameter ranges and shorter heights (mostly under 30m), reflecting uniform urban conditions and management. In contrast, bike medians and greenways feature smaller trees, suggesting recent plantings or intentional size control for safety, visibility, or space efficiency.
 
 ### EDA: Picnic
 
-How can the Vancouver tree dataset help identify the best locations for spring picnics in Vancouver, tailored to different preferences?
+**How can the Vancouver tree dataset help identify the best locations for spring picnics in Vancouver, tailored to different preferences?**
 
 Sub Questions:
 
-- Which neighbourhoods have the highest density of large trees (e.g., height over 40 feet) that provide ample shade for comfortable picnic spots? Large trees are essential for creating shaded areas, which can significantly enhance the picnic experience on sunny days.
-- Which neighbourhoods have the highest diversity of tree families, offering visually varied and unique picnic environments? A mix of tree species can create a more aesthetically pleasing and engaging atmosphere for picnickers.
-- Which neighbourhoods have trees that produce high amounts of pollen, potentially affecting picnic experiences for people with allergies? Identifying high-pollen areas can help allergy sufferers avoid discomfort or plan allergy-friendly events.
+- *Which neighbourhoods have the highest density of large trees (e.g., height over 40 feet) that provide ample shade for comfortable picnic spots?* Large trees are essential for creating shaded areas, which can significantly enhance the picnic experience on sunny days.
+- *Which neighbourhoods have the highest diversity of tree families, offering visually varied and unique picnic environments?* A mix of tree species can create a more aesthetically pleasing and engaging atmosphere for picnickers.
+- *Which neighbourhoods have trees that produce high amounts of pollen, potentially affecting picnic experiences for people with allergies?* Identifying high-pollen areas can help allergy sufferers avoid discomfort or plan allergy-friendly events.
 
 ### EDA: Planting
 
-Given the tree dataset, how would we want to arrange the types of trees to be planted in certain locations, such that they could survive and significantly improve the ecosystem?
+**Given the tree dataset, how would we want to arrange the types of trees to be planted in certain locations, such that they could survive and significantly improve the ecosystem?**
 
 Sub Questions:
 
-- Which planted species exist in many different locations within each neighbourhood?
-- How do trees that have been planted directly compare in terms of diameter to those that have grown naturally?
-- What is the distribution of ages for specific tree species?
+- *Which planted species exist in many different locations within each neighbourhood?*
+- *How do trees that have been planted directly compare in terms of diameter to those that have grown naturally?*
+- *What is the distribution of ages for specific tree species?*
 
 #### Count of each `SPECIES_NAME` that have been planted
 
