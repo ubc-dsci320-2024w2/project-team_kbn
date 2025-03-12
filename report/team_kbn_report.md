@@ -53,21 +53,23 @@ Sub Questions:
 #### Distribution of Diameter and Height Range and Tree Species
 
 Vancouver's public tree inventory primarily consists of small to medium-sized trees. Most of these trees have diameters below 40 inches and heights under 30 feet. Larger specimens, with diameters greater than 100 inches and heights exceeding 50 feet, are quite rare. This scarcity may due to urban constraints, such as limited space and maintenance challenges. The inventory is dominated by tree families such as Rosaceae (rose), Aceraceae (maple), and Fagaceae (oak), indicating a deliberate selection for traits. Moreover, there is a positive correlation between tree height and diameter, which aligns with natural growth patterns.
-![species_diameter_height_distribution](images/Bri_eda1/combined_distribution_figure.png)
+![species_diameter_height_distribution](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/e0f0de4a9c083a83478cae6041df0418a47dd82c/images/Bri_eda1/combined_distribution_figure.png)
 ![diameter_height_relation](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/da727681923e3e667ae2d341332d89a752fad87c/images/Bri_eda1/avg_dia_height.png)
 
 #### Distribution of Average Diameter and Count of Height Range in the Top 20 Common Family Species
 
 Vancouver's top 20 tree families display distinct growth patterns. Larger species, such as Cupressaceae (cypress) and Salicaceae (willow), tend to have greater average diameters and heights, often exceeding 50 meters. This may be due to their slow growth rates or genetic traits. In contrast, smaller families like Cornaceae (dogwood) and Styracaceae (storax) typically reach shorter heights, ranging from 10 to 30 meters, and have narrower trunks, reflecting their faster growth rates and ornamental roles.
-
+![top_20_species_avg_dia_and_height_distri](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/e0f0de4a9c083a83478cae6041df0418a47dd82c/images/Bri_eda1/tree_distri.png)
 
 #### Distribution of Species, Diameter and Height across Vancouver
 
 Vancouver’s three most common tree families—Aceraceae (maple), Fagaceae (oak/beech), and Rosaceae (rose)—exhibit distinct spatial and physical patterns. The Aceraceae and Rosaceae families generally have larger diameters and are evenly distributed throughout the city. In contrast, the Fagaceae family, consisting of smaller-diameter trees, tends to cluster in specific areas. Most tree heights range between 10 to 30 meters, with very few exceeding this height, indicating similar growth limitations across the urban landscape. 
+![top_3_species_distri](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/e0f0de4a9c083a83478cae6041df0418a47dd82c/images/Bri_eda1/top_3_species.png)
 
 #### Distribution of Diameter and Height in Different Street Side
 
 Vancouver’s street-side tree growth varies significantly by location: parks host the largest trees in both diameter and height, likely due to lower disturbance and ample space. Even and odd street sides show nearly identical diameter ranges and shorter heights (mostly under 30m), reflecting uniform urban conditions and management. In contrast, bike medians and greenways feature smaller trees, suggesting recent plantings or intentional size control for safety, visibility, or space efficiency.
+![street_side_diameter_height_distribution](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/e0f0de4a9c083a83478cae6041df0418a47dd82c/images/Bri_eda1/street_side_fig.png)
 
 ### EDA: Picnic
 
@@ -197,17 +199,20 @@ Sub Questions:
 
 ### Person 1
 
-How do height and diameter vary across different tree species in Vancouver’s public spaces?
+**How do height and diameter vary across different tree species in Vancouver’s public spaces?**
 
 Stacked bars illustrate the distribution of height, while the line overlay depicts trends in diameter. This method effectively combines two important aspects: the range of heights and the trends in diameter. It utilizes both the position (with bar height representing count) and line encoding (to show diameter trends) effectively. This combination allows for easy comparison of height categories and average diameters within a single plot.
+![skecth_1](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/e0f0de4a9c083a83478cae6041df0418a47dd82c/images/Bri_sketches/sketch_1.jpg)
 
-How does the spatial distribution of the physical traits of species differ across Vancouver?
+**How does the spatial distribution of the physical traits of species differ across Vancouver?**
 
 A scatterplot displays individual trees at their exact geographic coordinates, preserving spatial accuracy. This method avoids the distortions associated with choropleth maps, which aggregate data into arbitrary regions. In the scatterplot, ordinal height categories (small, medium, and large) are represented using distinct shapes, which helps to eliminate biases related to color hierarchy.
+![sketch_2](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/e0f0de4a9c083a83478cae6041df0418a47dd82c/images/Bri_sketches/sketch_2.jpg)
 
-How do height and diameter of tree influence their placement in different urban settings (e.g., streets, parks, medians, and greenways)?
+**How do height and diameter of tree influence their placement in different urban settings (e.g., streets, parks, medians, and greenways)?**
 
 Boxplot divide data into five columns and create 15 small plots, which can overwhelm viewers and make comparisons between settings and heights challenging. Grouped bar charts with line overlays may lead to misleading conclusions due to the apparent trends shown by the lines. In contrast, a heatmap is more effective because it directly connects height, diameter, and placement in a single, intuitive view. This makes it particularly useful for high-level comparisons.
+![sketch_3](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/e0f0de4a9c083a83478cae6041df0418a47dd82c/images/Bri_sketches/sketch_%233.jpg)
 
 ### Person 2
 
