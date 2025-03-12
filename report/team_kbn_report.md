@@ -249,43 +249,45 @@ The following sketches assume that `SPECIES_NAME` is filtered such that they fol
 
 Sketch 1: Which planted species exist in many different locations within each neighbourhood?
 
-The sketchs are a heatmap, a choropleth, and a set of pie charts, each displaying the proportion of streets within each `NEIGHBOURHOOD_NAME` that have least one instance of `SPECIES_NAME`. These sketches provides an understanding of which species are more common in larger varieties of environments and which species are rarer in comparison. The high-fidelity version expands on the choropleth by allowing zooming into each `NEIGHBOURHOOD_NAME` to display the exact number of planted trees within each street for the given locations.
+The sketchs are a heatmap, a choropleth, and a set of pie charts, each displaying the proportion of streets within each `NEIGHBOURHOOD_NAME` that have least one instance of `SPECIES_NAME`. These sketches provides an understanding of which species are more common in larger varieties of environments and which species are rarer in comparison.
 
-![sketch_3_1_1](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/b3a976eb493d9becd902cfef8d01cdeb5efc1ad5/images/ntam_sketches/sketch_3_1_1.jpg)
+The high-fidelity sketch expands on the choropleth by allowing zooming into each `NEIGHBOURHOOD_NAME` to display the exact number of planted trees within each street for the given locations. The sketch adheres to the principles of effectiveness, as the channels used are spatial region, color luminance and saturation for the choropleth, and position on an aligned scale and length for the bar plots, allowing for greater accuracy, popout, grouping and discriminability between regions. It also adheres to the Gestalt principle of containment by allowing for zooming to bar plots specific to each `NEIGHBOURHOOD_NAME`.
 
-![sketch_3_1_2](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/b3a976eb493d9becd902cfef8d01cdeb5efc1ad5/images/ntam_sketches/sketch_3_1_2.jpg)
+![sketch_3_1_1](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8325dc3f1027d22f2c41ba572f18fe7956556e24/images/ntam_sketches/sketch_3_1_1.jpg)
 
-![sketch_3_1_3](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/b3a976eb493d9becd902cfef8d01cdeb5efc1ad5/images/ntam_sketches/sketch_3_1_3.jpg)
+![sketch_3_1_2](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8325dc3f1027d22f2c41ba572f18fe7956556e24/images/ntam_sketches/sketch_3_1_2.jpg)
 
-![hi_sketch_1](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/b3a976eb493d9becd902cfef8d01cdeb5efc1ad5/images/ntam_sketches/hi_sketch_1.jpg)
+![sketch_3_1_3](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8325dc3f1027d22f2c41ba572f18fe7956556e24/images/ntam_sketches/sketch_3_1_3.jpg)
+
+![hi_sketch_1](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8325dc3f1027d22f2c41ba572f18fe7956556e24/images/ntam_sketches/hi_sketch_1.jpg)
 
 Sketch 2: How do trees that have been planted directly compare in terms of diameter to those that have grown naturally?
 
-The sketches are a bar plot, a dot plot, and a line plot. The first two sketches have `SPECIES_NAME` on the x-axis, and the percentage difference in `DIAMETER` between planted and non-planted `SPECIES_NAME` trees on the y-axis, with non-planted trees as the baseline. The last sketch has the average `DIAMETER` of planted and non-planted trees on the x-axis and y-axis respectively, compared against the `y=x` line. This sketch provides information on how well planted trees fare in terms of growth  compared to non-planted trees, and how effective they are in their current environments. The high-fidelity sketch expands on the bar plot, by including a tooltip for the average diameters of planted and non-planted trees, as well as a filter for plants by `GENUS_NAME`.
+The sketches are a bar plot, a dot plot, and a line plot. The first two sketches have `SPECIES_NAME` on the x-axis, and the percentage difference in `DIAMETER` between planted and non-planted `SPECIES_NAME` trees on the y-axis, with non-planted trees as the baseline. The last sketch has the average `DIAMETER` of planted and non-planted trees on the x-axis and y-axis respectively, compared against the `y=x` line. These sketches provides information on how well planted trees fare in terms of growth  compared to non-planted trees, and how effective they are in their current environments. 
 
-![sketch_3_2_1](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/b3a976eb493d9becd902cfef8d01cdeb5efc1ad5/images/ntam_sketches/sketch_3_2_1.jpg)
+The high-fidelity sketch expands on the bar plot, by including a tooltip for the average diameters of planted and non-planted trees, as well as a filter for plants by `GENUS_NAME`. The sketch adheres to the principles of effectiveness, as the magnitude channels used are position on an aligned scale and length, allowing for greater accuracy and discriminability. It also adheres to the Gestalt principle of continuity by being arranged in descending order of `DIAM_DIFF_PERCENT`, the percentage difference in diameter between the planted trees and the non-planted trees.
 
-![sketch_3_2_2](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/b3a976eb493d9becd902cfef8d01cdeb5efc1ad5/images/ntam_sketches/sketch_3_2_2.jpg)
+![sketch_3_2_1](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8325dc3f1027d22f2c41ba572f18fe7956556e24/images/ntam_sketches/sketch_3_2_1.jpg)
 
-![sketch_3_2_3](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/b3a976eb493d9becd902cfef8d01cdeb5efc1ad5/images/ntam_sketches/sketch_3_2_3.jpg)
+![sketch_3_2_2](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8325dc3f1027d22f2c41ba572f18fe7956556e24/images/ntam_sketches/sketch_3_2_2.jpg)
 
-![hi_sketch_2](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/b3a976eb493d9becd902cfef8d01cdeb5efc1ad5/images/ntam_sketches/hi_sketch_2.jpg)
+![sketch_3_2_3](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8325dc3f1027d22f2c41ba572f18fe7956556e24/images/ntam_sketches/sketch_3_2_3.jpg)
+
+![hi_sketch_2](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8325dc3f1027d22f2c41ba572f18fe7956556e24/images/ntam_sketches/hi_sketch_2.jpg)
 
 Sketch 3: What is the distribution of ages for specific tree species?
 
-The sketches are a density plot, a box plot, and a histogram, all displaying the distribution of age (calculated by the number of days between the planting date and March 5 2025), faceted by `SPECIES_NAME`. These sketches helps with identifying which tree species have longer-standing populations and which ones are relatively newer. The high-fidelity sketch expands on the density, by including a tooltip for the average age and standard deviation for the existing tree ages, as well as a filter for plants by `GENUS_NAME`.
+The sketches are a density plot, a box plot, and a histogram, all displaying the distribution of age (calculated by the number of days between the planting date and March 5 2025), faceted by `SPECIES_NAME`. These sketches helps with identifying which tree species have longer-standing populations and which ones are relatively newer.
 
-![sketch_3_3_1](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/b3a976eb493d9becd902cfef8d01cdeb5efc1ad5/images/ntam_sketches/sketch_3_2_1.jpg)
+The high-fidelity sketch expands on the density plot, by including a tooltip for the average age and standard deviation for the existing tree ages, as well as a filter for plants by `GENUS_NAME`. The sketch adheres to the principles of effectiveness, as the channels used are area and spatial region, allowing for greater accuracy and grouping between regions. It also adheres to the Gestalt principle of connection, by allowing filtering of density plots by `GENUS_NAME`.
 
-![sketch_3_3_2](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/b3a976eb493d9becd902cfef8d01cdeb5efc1ad5/images/ntam_sketches/sketch_3_2_2.jpg)
+![sketch_3_3_1](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8325dc3f1027d22f2c41ba572f18fe7956556e24/images/ntam_sketches/sketch_3_3_1.jpg)
 
-![sketch_3_3_3](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/b3a976eb493d9becd902cfef8d01cdeb5efc1ad5/images/ntam_sketches/sketch_3_2_3.jpg)
+![sketch_3_3_2](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8325dc3f1027d22f2c41ba572f18fe7956556e24/images/ntam_sketches/sketch_3_3_2.jpg)
 
-![hi_sketch_3](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/b3a976eb493d9becd902cfef8d01cdeb5efc1ad5/images/ntam_sketches/hi_sketch_2.jpg)
+![sketch_3_3_3](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8325dc3f1027d22f2c41ba572f18fe7956556e24/images/ntam_sketches/sketch_3_3_3.jpg)
 
-The high-fidelity sketch selected was a dot plot version of the sketch for the question "How do `SPECIES_NAME` trees that have been planted directly compare in terms of `DIAMETER` to those that have grown naturally?". The sketch adheres to the principles of effectiveness, as the magnitude channel used is position on an aligned scale, allowing for greater accuracy and discriminability. It also adheres to the Gestalt principle of continuity by being arranged in descending order of `DIAM_DIFF_PERCENT`, the percentage difference in diameter between the planted trees and the non-planted trees.
-
-![n_hi_fidelity_sketch](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/ntam_eda1/hi_fidelity_sketch.png)
+![hi_sketch_3](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8325dc3f1027d22f2c41ba572f18fe7956556e24/images/ntam_sketches/hi_sketch_3.jpg)
 
 ## Next Steps
 
