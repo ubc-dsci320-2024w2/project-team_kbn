@@ -101,7 +101,7 @@ Null values (wine-red squares) tend to cluster in specific areas, such as near D
 - Applied log-transform to `Total_Count` to make colored value range easier to interpret.
 - Greater values of `Total_Count` generally provide less extreme values of `Proportion_Planted`.
 
-![species_count_chart](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/analysis3_eda/species_count_chart.png)
+![species_count_chart](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/ntam_eda1/species_count_chart.png)
 
 #### Scatterplot of `LATITUDE` against `LONGITUDE`
 
@@ -110,7 +110,7 @@ Null values (wine-red squares) tend to cluster in specific areas, such as near D
 - Limited by the number of `NEIGHBOURHOOD_NAME` exceeding the number of colors
 - Could be improved upon with `mark_geoshape()`, may require getting coordinate values that were removed in cleaning.
 
-![latvlong](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/analysis3_eda/latvlong.png)
+![latvlong](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/ntam_eda1/latvlong.png)
 
 #### Boxplots of `DIAMETER` grouped by `HEIGHT_RANGE`
 
@@ -118,21 +118,21 @@ Null values (wine-red squares) tend to cluster in specific areas, such as near D
 - For the most part, mean `DIAMETER` increases with `HEIGHT_RANGE`.
 - Outliers for `DIAMETER` appear to be more frequent for lower `HEIGHT_RANGE` values, and less frequent for higher `HEIGHT_RANGE` values.
 
-![public_trees_box](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/analysis3_eda/public_trees_box.png)
+![public_trees_box](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/ntam_eda1/public_trees_box.png)
 
 #### Number of `ON_STREET` grouped by `NEIGHBOURHOOD_NAME`
 
 - Number of streets for each neighbourhood.
 - Provides idea of potential variety in tree numbers for each location.
 
-![species_per_genus_chart](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/analysis3_eda/species_per_genus_chart.png)
+![species_per_genus_chart](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/ntam_eda1/species_per_genus_chart.png)
 
 #### Proportions of `HEIGHT_RANGE` for each `NEIGHBOURHOOD_NAME`
 
 - Normalized stacked bar plot for `HEIGHT_RANGE` proportions against `NEIGHBOURHOOD_NAME`.
 - For the most part, the majority of `HEIGHT_RANGE` values are between `HEIGHT_RANGE == "10-20"` and `HEIGHT_RANGE == "30-40"`.
 
-![neighbour_height_stack](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/analysis3_eda/neighbour_height_stack.png)
+![neighbour_height_stack](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/ntam_eda1/neighbour_height_stack.png)
 
 ## Research Questions
 
@@ -251,19 +251,23 @@ Sketch 1: Which planted species exist in many different locations within each ne
 
 The sketch is a heatmap, with `NEIGHBOURHOOD_NAME` on the x-axis, `SPECIES_NAME` on the y-axis, and colour indicating the proportion of streets within each `NEIGHBOURHOOD_NAME` with at least one instance of `SPECIES_NAME`. This sketch provides an understanding of which species are more common in larger varieties of environments and which species are rarer in comparison.
 
+![n_sketch_3](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/ntam_sketches/sketch_3.jpg)
+
 Sketch 2: How do trees that have been planted directly compare in terms of diameter to those that have grown naturally?
 
 The sketch is a bar plot, with `SPECIES_NAME` on the x-axis, and the percentage difference in `DIAMETER` between planted and non-planted `SPECIES_NAME` trees on the y-axis, with non-planted trees as the baseline. This sketch provides information on how well planted trees fare in terms of growth  compared to non-planted trees, and how effective they are in their current environments.
+
+![n_sketch_3](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/ntam_eda1/sketch_3.jpg)
 
 Sketch 3: What is the distribution of ages for specific tree species?
 
 The sketch is a density plot, with age (calculated by the number of days between the planting date and March 5 2025) on the x-axis, and the density on the y-axis, faceted by `SPECIES_NAME`. This sketch helps with identifying which tree species have longer-standing populations and which ones are relatively newer.
 
-![n_sketch_3](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/analysis3_eda/sketch_3.jpg)
+![n_sketch_3](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/ntam_eda1/sketch_3.jpg)
 
 The high-fidelity sketch selected was a dot plot version of the sketch for the question "How do `SPECIES_NAME` trees that have been planted directly compare in terms of `DIAMETER` to those that have grown naturally?". The sketch adheres to the principles of effectiveness, as the magnitude channel used is position on an aligned scale, allowing for greater accuracy and discriminability. It also adheres to the Gestalt principle of continuity by being arranged in descending order of `DIAM_DIFF_PERCENT`, the percentage difference in diameter between the planted trees and the non-planted trees.
 
-![n_hi_fidelity_sketch](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/analysis3_eda/hi_fidelity_sketch.png)
+![n_hi_fidelity_sketch](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/ntam_eda1/hi_fidelity_sketch.png)
 
 ## Next Steps
 
