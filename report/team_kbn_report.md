@@ -100,7 +100,7 @@ Sub Questions:
 - Applied log-transform to `Total_Count` to make colored value range easier to interpret.
 - Greater values of `Total_Count` generally provide less extreme values of `Proportion_Planted`.
 
-![species_count_chart](../images/analysis3_eda/species_count_chart.jpg)
+![species_count_chart](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/analysis3_eda/species_count_chart.png)
 
 #### Scatterplot of `LATITUDE` against `LONGITUDE`
 
@@ -109,7 +109,7 @@ Sub Questions:
 - Limited by the number of `NEIGHBOURHOOD_NAME` exceeding the number of colors
 - Could be improved upon with `mark_geoshape()`, may require getting coordinate values that were removed in cleaning.
 
-![latvlong](../images/analysis3_eda/latvlong.jpg)
+![latvlong](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/analysis3_eda/latvlong.png)
 
 #### Boxplots of `DIAMETER` grouped by `HEIGHT_RANGE`
 
@@ -117,21 +117,21 @@ Sub Questions:
 - For the most part, mean `DIAMETER` increases with `HEIGHT_RANGE`.
 - Outliers for `DIAMETER` appear to be more frequent for lower `HEIGHT_RANGE` values, and less frequent for higher `HEIGHT_RANGE` values.
 
-![public_trees_box](../images/analysis3_eda/public_trees_box.jpg)
+![public_trees_box](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/analysis3_eda/public_trees_box.png)
 
 #### Number of `ON_STREET` grouped by `NEIGHBOURHOOD_NAME`
 
 - Number of streets for each neighbourhood.
 - Provides idea of potential variety in tree numbers for each location.
 
-![species_per_genus_chart](../images/analysis3_eda/species_per_genus_chart.jpg)
+![species_per_genus_chart](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/analysis3_eda/species_per_genus_chart.png)
 
 #### Proportions of `HEIGHT_RANGE` for each `NEIGHBOURHOOD_NAME`
 
 - Normalized stacked bar plot for `HEIGHT_RANGE` proportions against `NEIGHBOURHOOD_NAME`.
 - For the most part, the majority of `HEIGHT_RANGE` values are between `HEIGHT_RANGE == "10-20"` and `HEIGHT_RANGE == "30-40"`.
 
-![neighbour_height_stack](../images/analysis3_eda/neighbour_height_stack.jpg)
+![neighbour_height_stack](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/analysis3_eda/neighbour_height_stack.png)
 
 ## Research Questions
 
@@ -235,11 +235,11 @@ Sketch 3: What is the distribution of ages for specific tree species?
 
 The sketch is a density plot, with age (calculated by the number of days between the planting date and March 5 2025) on the x-axis, and the density on the y-axis, faceted by `SPECIES_NAME`. This sketch helps with identifying which tree species have longer-standing populations and which ones are relatively newer.
 
-![sketch_3](../images/analysis3_eda/sketch_3.jpg)
+![sketch_3](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/analysis3_eda/sketch_3.jpg)
 
 The high-fidelity sketch selected was a dot plot version of the sketch for the question "How do `SPECIES_NAME` trees that have been planted directly compare in terms of `DIAMETER` to those that have grown naturally?". The sketch adheres to the principles of effectiveness, as the magnitude channel used is position on an aligned scale, allowing for greater accuracy and discriminability. It also adheres to the Gestalt principle of continuity by being arranged in descending order of `DIAM_DIFF_PERCENT`, the percentage difference in diameter between the planted trees and the non-planted trees.
 
-![hi_fidelity_sketch](../images/analysis3_eda/hi_fidelity_sketch.jpg)
+![hi_fidelity_sketch](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/8c1a742714bd91f33b64e198fca46adb72061f20/images/analysis3_eda/hi_fidelity_sketch.png)
 
 ## Next Steps
 
@@ -266,6 +266,7 @@ Layer Features for Optimal Picnic Spots: Combine 'Has Pollen,' 'Tree Diversity,'
 ## Resources
 
 - City of Vancouver. (2025, March 4). Public trees. City of Vancouver Open Data Portal. [https://opendata.vancouver.ca/explore/dataset/public-trees/information/?disjunctive.neighbourhood_name&disjunctive.on_street&disjunctive.species_name&disjunctive.common_name](https://opendata.vancouver.ca/explore/dataset/public-trees/information/?disjunctive.neighbourhood_name&disjunctive.on_street&disjunctive.species_name&disjunctive.common_name)
-City of Vancouver. (2018). Urban Forest Strategy, 2018 update. [https://vancouver.ca/files/cov/urban-forest-strategy.pdf](https://vancouver.ca/files/cov/urban-forest-strategy.pdf)
-City of Vancouver. (n.d.). Vancouver’s Urban Forest. [https://vancouver.ca/parks-recreation-culture/urban-forest-strategy.aspx#:~:text=Vancouver’s%20urban%20forest%20includes%20every,the%20impacts%20of%20climate%20change](https://vancouver.ca/parks-recreation-culture/urban-forest-strategy.aspx#:~:text=Vancouver’s%20urban%20forest%20includes%20every,the%20impacts%20of%20climate%20change)
-City of Vancouver. (n.d.-a). Healthy City Strategy. [https://vancouver.ca/people-programs/healthy-city-strategy.aspx](https://vancouver.ca/people-programs/healthy-city-strategy.aspx)
+- City of Vancouver. (2018). Urban Forest Strategy, 2018 update. [https://vancouver.ca/files/cov/urban-forest-strategy.pdf](https://vancouver.ca/files/cov/urban-forest-strategy.pdf)
+- City of Vancouver. (n.d.). Vancouver’s Urban Forest. [https://vancouver.ca/parks-recreation-culture/urban-forest-strategy.aspx#:~:text=Vancouver’s%20urban%20forest%20includes%20every,the%20impacts%20of%20climate%20change](https://vancouver.ca/parks-recreation-culture/urban-forest-strategy.aspx#:~:text=Vancouver’s%20urban%20forest%20includes%20every,the%20impacts%20of%20climate%20change)
+- City of Vancouver. (n.d.-a). Healthy City Strategy. [https://vancouver.ca/people-programs/healthy-city-strategy.aspx](https://vancouver.ca/people-programs/healthy-city-strategy.aspx)
+- Camu, B. (2022, April 3). Bigger is not better! 3 reasons why you should plant trees when they are smaller. Leaf & Limb. [https://www.leaflimb.com/bigger-is-not-better-3-reasons-why-you-should-plant-trees-when-they-are-smaller/#:~:text=Saplings%20are%20easier%20to%20maintain,best%20hope%20for%20future%20success](https://www.leaflimb.com/bigger-is-not-better-3-reasons-why-you-should-plant-trees-when-they-are-smaller/#:~:text=Saplings%20are%20easier%20to%20maintain,best%20hope%20for%20future%20success)
