@@ -223,28 +223,21 @@ Boxplot divide data into five columns and create 15 small plots, which can overw
 
 A choropleth map visualizes tree density across neighborhoods. While the low-fidelity sketches, like the bar chart and heatmap, provide clear summaries, they lack interactivity and can become cluttered due to many categories. The high-fidelity design enhances the choropleth map with tooltips and filtering, making it easier to explore picnic spots. This approach improves usability by grouping colors effectively, reducing cognitive load, and enabling seamless interaction for better decision-making.
 
-<div style="text-align: center;">
-  <img src="https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/d0484cd12fb51c9bd60a68d0d8200253155cd063/images/kli_sketches/sketch_1.png" style="width: 50%; height: auto;" />
-</div>
-
-
+<img src="https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/d0484cd12fb51c9bd60a68d0d8200253155cd063/images/kli_sketches/sketch_1.png" style="width: 80%; height: auto;" />
 
 **Which neighbourhoods have the highest diversity of tree families, offering visually varied and unique picnic environments?** 
 
 The low-fidelity sketches, including a bar graph, pie charts, and a choropleth map to compare the number of unique trees in each neighborhood, provide useful insights but lack interactivity and may feel overwhelming. The high-fidelity design improves the bar graph by making comparisons clearer and adding filtering and sorting based on selected map areas for better exploration. This approach enhances clarity and usability by visually grouping related data.
 
-<div style="text-align: center;">
-  <img src="https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/d0484cd12fb51c9bd60a68d0d8200253155cd063/images/kli_sketches/sketch_2.png" style="width: 50%; height: auto;" />
-</div>
+  <img src="https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/d0484cd12fb51c9bd60a68d0d8200253155cd063/images/kli_sketches/sketch_2.png" style="width: 80%; height: auto;" />
 
 
 **Which neighbourhoods have trees that produce high amounts of pollen, potentially affecting picnic experiences for people with allergies?**
 
 The low-fidelity sketches, including a bubble plot, bar graph, and choropleth map, show pollen levels across neighborhoods but lack data integration. The high-fidelity design improves this by zooming in on a specific neighborhood with a city map and using a scatterplot to display pollenated trees, combining multiple views for a clearer understanding. It also includes tooltips for easier exploration.
 
-<div style="text-align: center;">
-  <img src="https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/d0484cd12fb51c9bd60a68d0d8200253155cd063/images/kli_sketches/sketch_3.png" style="width: 50%; height: auto;" />
-</div>
+  <img src="https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/d0484cd12fb51c9bd60a68d0d8200253155cd063/images/kli_sketches/sketch_3.png" style="width: 80%; height: auto;" />
+
 
 
 ### Person 3 - Planting Focus
