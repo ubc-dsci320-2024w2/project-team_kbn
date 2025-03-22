@@ -41,6 +41,11 @@ def clean_public_trees(df):
     # `ON_ADDRESS` is a column derived from combining `ON_STREET` and `ON_STREET_BLOCK` into 1 string
     df['ON_ADDRESS'] = df['ON_STREET_BLOCK'].astype(str) + " " + df['ON_STREET'].astype(str) + " " + df['NEIGHBOURHOOD_NAME'].astype(str) + " (" + df['STREET_SIDE_NAME'].astype(str) + ")"
 
+    # `BEEN_PLANTED` is a column to determine if the tree has been planted by people or not
+    df['PLANTED_STATUS'] = df['DATE_PLANTED'].apply(
+        lambda x: 'Planted' if (pd.notna(x) and x != '' and pd.notnull(x)) else 'Non-planted'
+    )
+
     with open("../../data/processed/genus_to_family_dict.json", "r") as file:
         genus_to_family_dict = json.load(file)
 
