@@ -6,9 +6,18 @@ title: "M3: Picnic Viz"
 <article>
     <h1>This is the parent HTML file</h1>
 
-    <!-- Embedding another HTML file inside an object -->
-    <object data="https://www.dropbox.com/scl/fi/wzp6rep0msz2h1msveqpr/picnic_viz1.html?raw=1" type="text/html" width="800" height="600">
+    <!-- Placeholder for embedding another HTML file -->
+    <div id="includedContent" style="width: 800px; height: 600px;">
         Warning: picnic_viz1.html could not be included.
-    </object>
+    </div>
 
+    <!-- Include jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Load the external HTML file into the placeholder -->
+    <script>
+        $(function() {
+            $("#includedContent").load("https://www.dropbox.com/scl/fi/wzp6rep0msz2h1msveqpr/picnic_viz1.html?raw=1");
+        });
+    </script>
 </article>
