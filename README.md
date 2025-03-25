@@ -1,39 +1,99 @@
-# Group KBN - Vancouver Trees
+---
+title: "About"
+permalink: "/about/"
+layout: page
+---
 
-## Describe your dataset in about 150-200 words
+## Installation
 
-The [Public Tree Dataset](https://opendata.vancouver.ca/explore/dataset/public-trees/information/?disjunctive.neighbourhood_name&disjunctive.on_street&disjunctive.species_name&disjunctive.common_name), maintained by the Vancouver Board of Parks and Recreation, provides comprehensive information on public trees across Vancouver, including their location, species, size, planting date, and coordinates. Updated daily on weekdays, the dataset supports the city’s Healthy City Strategy by managing the urban forest to enhance physical and mental well-being, while also offering environmental benefits such as air purification, carbon capture, and climate resilience. For this analysis, we used data last modified on March 4th, 2025 and enriched it by integrating external databases. We added the FAMILY_NAME column, mapping tree genera to their families using the [Global Biodiversity Information Facility (GBIF)](https://www.gbif.org/), and the HAS_POLLEN column, indicating pollen production based on the [Palynological Database (PalDat)](https://www.paldat.org/). All external data usage complies with licensing terms (CC BY for GBIF and non-commerical use for PalDat), ensuring proper attribution and non-commercial use.
+Just fork this [repository](https://github.com/niklasbuschmann/contrast) and adjust the `_config.yml` to use with [Github Pages](https://pages.github.com/) and your page is done.
 
+## Features
 
-## Describe your topic/interest in about 150-200 words
+ - supports dark mode on macOS Mojave
+ - optional sidebar
+ - MathJax support
+ - no external ressources
+ - included archive page
+ - supports pagination
+ - feed generation
+ - responsive
+ - syntax highlighting
+ - supports comments via [disqus](https://disqus.com/) or [isso](http://posativ.org/isso/)
 
-Our goal is to optimize tree placement and management in Vancouver to enhance sustainability and recreational benefits. The primary focus is on understanding how tree species' growth patterns, physical traits, and spatial distribution affect their sustainability in urban environments. 
+## Based on
 
-For sustainability, we examine the relationship between tree height, diameter, and their suitability for urban spaces, as well as how these traits vary across different neighborhoods and urban settings. From a recreational perspective, the Vancouver tree dataset helps identify ideal locations for spring picnics. We look at tree density for shaded picnic spots, the diversity of tree species for visually engaging environments, and the pollen levels to accommodate those with allergies. These factors are crucial for planning picnic-friendly areas that maximize comfort and enjoyment. Lastly, in terms of planting, we focus on tree species' distribution across neighborhoods, comparing planted trees to naturally grown ones to assess urban planting practices. We also investigate the age distribution of trees to ensure future tree coverage and healthy ecosystem regeneration, aiding better long-term environmental planning.
+- [Hyde](https://github.com/poole/hyde)
+- [Minima](https://github.com/jekyll/minima)
+- [Lagrange](https://github.com/LeNPaul/Lagrange)
+- [Font Awesome](http://fontawesome.io/)
+- [KaTeX](https://katex.org/)
+- [Pygments](https://github.com/richleland/pygments-css)
 
-## Team Members
+## Installation (jekyll-remote-theme method)
 
-- Person 1: Brianna Zhou, exploring how different tree species and their physical traits influence their substanability.
-- Person 2: Kaylee Li, on a mission to find the perfect picnic spot for the upcoming spring using this dataset.
-- Person 3: Nicholas Tam, planning to target the distribution of trees by various factors.
+You can use this theme with the `jekyll-remote-theme` plugin. Just create an empty repo, copy over the `index.html` file and add this to your `_config.yml`:
 
-## Images
+```yaml
+remote_theme: niklasbuschmann/contrast@v2.11
 
-{You should use this area to add a screenshot of an interesting view, and eventually, of your dashboard}
+plugins:
+  - jekyll-remote-theme
+```
 
-<img src ="images/test.jpg" width="300px">
+Note: to enable icons you also need to copy over the `_data` folder.
 
-## Package requirements
+## Config
 
-- `altair`
-- `pre-commit`
-- `pandas`
-- `pygbif`
-- `requests`
-- `beautifulsoup4`
+Your `_config.yml` could for example look like this:
 
-## References
+```yaml
+title: "Blog Title"
+author: "Blog Author"
+description: "My personal blog about ... something"
+permalink: /:title/
+lang: "en"
+excerpt_separator: "\n\n\n"
+date_format: "%B %d, %Y"
 
-- City of Vancouver. (2025, March 4). Public trees. City of Vancouver Open Data Portal. [https://opendata.vancouver.ca/explore/dataset/public-trees/information/?disjunctive.neighbourhood_name&disjunctive.on_street&disjunctive.species_name&disjunctive.common_name](https://opendata.vancouver.ca/explore/dataset/public-trees/information/?disjunctive.neighbourhood_name&disjunctive.on_street&disjunctive.species_name&disjunctive.common_name)
-- GBIF.org (2025), Global Biodiversity Information Facility, https://www.gbif.org.
-- PalDat – a palynological database (2000 onwards, www.paldat.org)
+# Layout
+
+show_excerpts: true        # show article excerpts on the home page
+show_frame: true           # adds a gray frame to the site
+show_sidebar: false        # show a sidebar instead of the usual header
+
+# Menu
+
+navigation:                # accepts {file, title, url, icon, sidebaricon}
+  - {file: "index.html"}
+  - {file: "README.md"}
+
+external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
+  - {title: Mail, icon: envelope, url: "mailto:niklasbuschmann@users.noreply.github.com"}
+  - {title: Github, icon: github, url: "https://github.com/niklasbuschmann/contrast"}
+  - {title: Subscribe, icon: rss, url: "/feed.xml"}
+
+comments:
+#  disqus_shortname: ""    # see https://disqus.com/
+#  isso_domain: ""         # see https://posativ.org/isso/
+
+plugins:
+ - jekyll-feed
+
+```
+
+## MathJax
+
+Contrast comes preinstalled with a leightweight alternative to MathJax called [KaTeX](https://katex.org/). To display equations in a post simply set `mathjax: true` in the article's front matter.
+
+## License
+
+[public domain](http://unlicense.org/)
+
+## Screenshots
+
+![screenshot](https://user-images.githubusercontent.com/4943215/109431850-cd711780-7a08-11eb-8601-2763f2ee6bb4.png)
+
+![screenshot](https://user-images.githubusercontent.com/4943215/109431832-b6cac080-7a08-11eb-9c5e-a058680c23a1.png)
+
+![screenshot](https://user-images.githubusercontent.com/4943215/73125194-5f0b8b80-3fa4-11ea-805c-8387187503ad.png)
