@@ -112,5 +112,4 @@ Sub Questions:
 - Enhanced Interpretability:  
    - Tooltips and conditional highlighting make the visualization accessible to a wide audience, supporting informed decision-making about species with greater flexibility in terms of what species could be focused on.
 
-![viz1](../images/ntam_viz/plant_viz1.html)
-<iframe src="../images/ntam_viz/plant_viz1.html" width="800" height="600"></iframe>
+[viz1](../images/ntam_viz/plant_viz1.html)
