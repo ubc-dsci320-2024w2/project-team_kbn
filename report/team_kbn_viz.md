@@ -32,9 +32,6 @@ Sub Questions:
 - *What are the numbers and proportions of planted trees, by species and genus?* Identifying which species have sufficiently large amounts of samples for both planted and non-planted specimens to conduct analyses with can assist in identifying physical differences between planted and non-planted specimens.
 - *Which locations within each neighbourhood can host wide varieties of species?* Understanding this could help identify locations that are well-suited to hosting wider varieties of species, ensuring biodiversity and better ecosystem health across different areas of the city.
 - *How do trees that have been planted directly compare in terms of diameter to those that have grown naturally?* Knowing this could highlight how urban planting practices affect tree growth. Planted trees may face more limitations, such as space or soil conditions, which could influence their growth compared to naturally occurring trees.
-<<<<<<< Updated upstream
-- *What is the distribution of ages for specific tree species?* This could reveal whether the neighbourhoods are planting enough young trees to sustain long-term tree coverage and whether certain species need more attention for regeneration or maintenance.
-=======
 
 ### Visualisations -- Person 1
 
@@ -270,4 +267,3 @@ Sub Questions:
 - Similarly, any species that does not have sufficient data needs to be shown as well in some form.
 
 ![plant_viz3](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/f0234f356bd51f871e926d49095ba7b17b5e9a24/images/ntam_viz/plant_viz3.png)
->>>>>>> Stashed changes
