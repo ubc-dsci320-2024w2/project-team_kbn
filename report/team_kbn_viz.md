@@ -116,7 +116,7 @@ Sub Questions:
 - Enhanced Interpretability:  
    - Tooltips and conditional highlighting make the visualization accessible to a wide audience, supporting informed decision-making about species with greater flexibility in terms of what species could be focused on.
 
-![diameter_height_relation](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/da727681923e3e667ae2d341332d89a752fad87c/images/Bri_eda1/avg_dia_height.png)
+![plant_viz1](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/f0234f356bd51f871e926d49095ba7b17b5e9a24/images/ntam_viz/plant_viz1.png)
 
 #### Visualization 2: Which planted species exist in many different locations within each neighbourhood?
 
@@ -192,7 +192,7 @@ Sub Questions:
 - The selected baseline of species variation may not be sufficient, and thus further UI widgets to provide options for such may be considered.
 - The sheer quantity of neighbourhoods means that the neighbourhood locations in the bar plot run the risk of being indiscriminable.
 
-![diameter_height_relation](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/da727681923e3e667ae2d341332d89a752fad87c/images/Bri_eda1/avg_dia_height.png)
+![plant_viz2](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/f0234f356bd51f871e926d49095ba7b17b5e9a24/images/ntam_viz/plant_viz2.png)
 
 #### Visualization 3: How do trees that have been planted directly compare in terms of diameter to those that have grown naturally?
 
@@ -266,4 +266,4 @@ Sub Questions:
 - The displayed data is limited by the inability to ensure that there are sufficient planted and non-planted samples for each given species. Thus the calculated differences in diameter and height may be highly skewed and otherwise inaccurate, and will need to be accounted for in the future.
 - Similarly, any species that does not have sufficient data needs to be shown as well in some form.
 
-![diameter_height_relation](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/da727681923e3e667ae2d341332d89a752fad87c/images/Bri_eda1/avg_dia_height.png)
+![plant_viz3](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/f0234f356bd51f871e926d49095ba7b17b5e9a24/images/ntam_viz/plant_viz3.png)
