@@ -41,98 +41,215 @@ Sub Questions:
 
 ##### Mark
 
-1. Heatmap: Used to compare tree diameters across different height ranges and species. The color intensity effectively illustrates variations in diameter at various heights, making patterns and outliers easily identifiable.
-2. Bar Chart: Used to show the average tree diameter for the top 20 species.The height of each bar allows for straightforward comparisons of tree species regarding diameter, making it easy to rank them.
+- **Heatmap**: Used to compare tree diameters across different height ranges and species. The color intensity effectively illustrates variations in diameter at various heights, making patterns and outliers easily identifiable.
+
+- **Bar Chart**: Used to show the average tree diameter for the top 20 species. The height of each bar allows for straightforward comparisons of tree species regarding diameter, making it easy to rank them.
 
 ##### Channels
+**Heatmap**: 
 
-1. Heatmap
-- Position: The X-axis represents different tree species, while the Y-axis denotes height ranges. This layout facilitates easy comparisons across species at various heights.
-- Color: The colors represent diameter size using a clear gradient for visualizing variations.
+- **Position**:
+    - X-axis represents different tree species
+    - Y-axis denotes height ranges.
 
-2. Bar Chart
-- Position: The X-axis shows various tree species, while the Y-axis indicates their average diameter, promoting an intuitive understanding of size differences.
-- Length: The height of the bars represents the average diameter for each species. The bars are sorted in ascending order, simplifying the identification of species with the largest or smallest diameters.
+- **Color:**  
+  A sequential color scale using the scheme red, yellow, and blue is employed. Colors represent varying values of average diameter: red indicates smaller diameters, yellow signifies intermediate sizes, and blue represents larger diameters.
+
+- **Opacity:**  
+  Based on the selections made (species that are selected or hovered over), if the average diameter exceeds the threshold set via the slider, the opacity of the corresponding rectangles is set to 1 (highlighted). Non-selected boxes are dimmed to an opacity of 0.3.
+
+- **Tooltip:**  
+  Each tooltip provides additional information, including the total tree count, species, height range, and average diameter, enhancing the interpretability of the heatmap.
+
+**Bar Chart**: 
+- **Position**:
+    - X-axis represents tree species
+    - Y-axis indicates their average diameter, promoting an intuitive understanding of size differences.
+  
+- **Length:** The height of the bars represents the average diameter for each tree species, arranged in ascending order. This sorting simplifies the identification of species with the largest and smallest diameters.
+
+- **Opacity:** When a species is selected, its bar is fully visible (opacity set to 1). For all other species, the bar's opacity is dimmed to 0.3.
+
+- **Tooltip:** The tooltip provides details such as tree species and average diameter, enhancing the interpretability of the data.
 
 ##### Interaction and UI Widges
 
-- Filtering: Allows users to select specific tree species for focused analysis
-- Brushing & Linking:  Clicking on a species in the bar chart highlights the corresponding cells in the heatmap, allowing users to track diameter variations across height ranges.
-- Hovering: Tooltips display exact numerical values for tree diameters, the species name, and the height category, enhancing interpretability.
+- **Diameter Slider:** This slider allows users to filter heatmap cells by setting a minimum average diameter (avg_diameter) for the tree species they wish to explore.
+- **Reset Button:** This button resets the diameter filter to its default state (minimum diameter set to 0). When activated, it restores visibility for all species in the visualizations.
+- **Bidirectional Linking:** Users can click on a specific species in either the heatmap or bar chart to select it. Once selected, the species is highlighted in both plots, allowing users to focus on a specific tree species and observe its distribution across both visualizations simultaneously.
+- **Conditional Highlighting:** The selected tree species is highlighted in full opacity, while other species are dimmed. This feature enhances focus and reduces visual clutter.
+- **Tooltip Enhancements:** Tooltips provide precise numerical values for tree counts, height ranges, and average diameter, improving interpretability while maintaining a clean visualization.
 
-##### Task Analysis
 
-1. Characterize Distribution: Analyze the distribution of diameters and heights among different tree species.
-2. Filter: Filter data to only include trees from the top 20 families 
-3. Compute Derived Value:  Compute the average diameter and tree count for each species-height combination.
-4. Find Extremum: Identify which tree species has the largest or smallest average diameter
-5. Determine Range: Identity the range of tree diameters within each tree species and height category
-6. Find Anomalies: Identify if any species has unexpectedly high or low diameters at specific heights
-7. Sort: Rank tree species by average diameter in ascending order
+##### Tasks Supported by the Visualization
+
+1. **Retrieve Value:** Tooltips allow users to extract specific details about the tree species, including their average diameter, tree count, height range, and species name.
+2. **Characterize Distribution:** Analyze the distribution of tree diameters across different species and height ranges to understand how these factors compare among the various species
+3. **Filter:** Users can filter the data based on criteria such as minimum average diameter (using a slider) and specific species selections (via click).
+4. **Compute Derived Value:** Aggregated metrics, such as average diameter and tree count per species and height range, are computed and displayed, providing insights into the characteristics of tree populations.
+5. **Find Extremum:** Identify species with the largest and smallest average diameters, and examine which height ranges correspond to these extreme values.
+6. **Determine Range:** Identify the range of tree diameters within each species and height category.
+7. **Find Anomalies:** Detect any species that exhibit unexpectedly high or low diameters at specific heights.
+8. **Sort:** Rank tree species by average diameter in ascending order.
+
+##### Why These Choices Were Effective
+
+1. **Data Processing:**  
+- Aggregating the data by species and height combination helps summarize the relationship between species, their height ranges, and average diameters. This method allows for easy comparison across different species, helping users understand how height and diameter vary for each type.
+- The filter that shows only the top 20 families ensures that the visualization emphasizes the most significant species in terms of their presence in Vancouver’s public spaces. This approach prevents users from being overwhelmed by less-representative species and instead highlights those that the public interacts with most frequently.
+
+2. **Comprehensive Analysis:**  
+- The heatmap provides a spatial overview of how height ranges and average diameters are distributed across tree species. This enables users to visually identify trends, such as which species tend to be taller or have larger diameters.
+- The bar chart complements the heatmap by offering a detailed view of the average diameter per species, sorted by species name. This visualization clarifies how diameters differ among species, offering insight into which species are larger or smaller and allowing users to dive deeper into individual species for more details.
+
+3. **Dynamic Exploration:**  
+- **Species Selection:** Users can explore specific species in more detail through click interactions. This feature allows them to see how the diameter and height of a selected species compare to others. 
+- **Average Diameter Slider:** The slider enhances users' ability to focus on specific subsets of the data, particularly regarding tree diameters.
+- **Conditional Highlighting:** This feature improves focus on selected species or height ranges, reducing cognitive load and making it easier to visually assess how specific trees or species compare in terms of size characteristics.
+
+4. **Enhanced Interpretability:**  
+- Tooltips provide users with direct access to key information such as species name, height range, average diameter, and tree count. This clarity ensures that users understand the data points they are interacting with.
+- The opacity changes on hover or selection help guide the user’s attention to the most relevant data, improving the clarity of comparisons between species.
 
 #### Visualisation 2: How does the spatial distribution of the physical traits of species differ across Vancouver?
 
 ##### Mark
 
-1. Scatter Plots: Used to represent tree diameters at different latitudes for various height categories. Each point represents an aggregated average, making spatial trends clear.
-2. Bar Charts: Used to display the dominant species within each height category. This allows for easy comparison of species distribution across different tree sizes.
+- **Scatter Plots:** Used to represent tree diameters at different latitudes for various height categories. Each point represents an aggregated average, making spatial trends clear.
+- **Bar Charts:** Used to display the dominant species within each height category. This allows for easy comparison of species distribution across different tree sizes.
 
 ##### Channels
 
-- Position (Latitude vs. Height Category in Scatter Plots): Latitude is mapped to the x-axis, and Height Category is mapped to the y-axis, enabling a clear spatial pattern analysis.
-- Length (Bar Charts for Species Distribution): The height of each bar represents the relative abundance of tree species, making dominant species visually prominent.
-- Size (Latitude vs. Height Category in Scatter Plots): The size of each point indicates the average tree diameter at various latitudes and height categories, making comparisons straightforward.
+#### Channels:
+**Scatter Plot**
+- **Position**:
+    - X-axis represents different height categories (small, medium, large)
+    - Y-axis encodes the binned latitude as a quantitative value along the y-axis. Latitude is binned into small intervals (step = 0.01) to smooth the distribution.
+
+- **Size**: The size of the circles represents the number of trees in a given height and latitude bin, with a specific scale for tree count.
+
+- **Color:** The color of the circles is determined by whether the point is selected (via dot selection). Selected dots are colored red, while unselected dots are green, highlighting the interactive selection.
+
+- **Tooltip:** Provides additional information on hover, including latitude, height category, average diameter, and tree count.
+
+**Bar Chart**
+- **Position:**
+    - X-axis represents the binned tree diameter values (maximum of 50 bins)
+    - Y-axis represents the tree count in each diameter bin.
+
+- **Tooltip:** Provides additional information on hover, including the height category, tree count, and binned latitude.
 
 ##### Interaction and UI Widges
 
-- Filtering by Height Category: The figures separate data by height (small, medium, large) using a drop-down menu, making it easier to interpret trends without information overload.
-- Linked Views: The scatter plots and bar charts complement each other by showing both tree size variations and species composition, facilitating multi-faceted analysis.
-- Highlighting Trends: The scatter plots reveal consistent spatial patterns, such as larger tree diameters in northern latitudes, while bar charts highlight species dominance.
+- **Threshold Slider:** The threshold_slider dynamically filters the scatter plot, showing only trees with a count greater than or equal to the selected threshold value.
+- **Diameter Slider:** The diameter_selection slider filters the species chart to display only those trees with a diameter greater than or equal to the selected value.
+- **Dot Selection:** The dot_selection enables the user to select a specific group of trees by clicking on a scatter plot point. The selected trees' height and latitude values are then used to filter the species chart.
+- **Linked Filtering:**
+1. As the threshold slider value changes, the scatter plot updates in real-time to reflect the data points that meet the tree count criteria. This allows users to focus on areas with higher tree counts.
+2. As the diameter slider value changes, the bar chart updates in real-time to reflect the data points that meet the minimum diameter criteria.
+3. Once a point is selected in the scatter plot, the species chart (bar chart) updates to display only data that corresponds to the selected height category and latitude bin.   
+- **Conditional Highlighting:** When a point is selected, its color changes from green (default) to red, visually indicating the selection. The species chart then updates to display the diameters of trees corresponding to the selected height and latitude bins.
+- **Tooltip Enhancements:** Tooltips provide precise numerical values for tree counts, average diameter, and latitude bin improving interpretability while maintaining a clean visualization.
 
-##### Task Analysis
 
-1. Characterize Distribution: Analyze the distribution of diameters and heights in latitudes
-2. Filter: 
-- Filter data to only include trees from the top 20 families 
-- Filter trees based on the selected height category in the bar chart
-3. Compute Derived Value:  Compute the average diameter and tree count for a given latitude and height category.
-4. Find Extremum: Identify the latitude where the trees have the largest or smallest average diameter
-5. Determine Range: Identity the range of tree diameters within each tree species and height category
-6. Correlate: Analyze the relationship between latitude and tree size distribution.
-7. Sort: Rank tree species by tree count for the selected height
+##### Tasks Supported by the Visualization
+
+1. **Characterize Distribution:**
+   - Users can explore how tree diameter distribution varies across different height and latitude categories using the bar chart (species chart).
+   - The scatter plot illustrates the distribution of tree counts for each height and latitude bin.
+2. **Retrieve Value:** Tooltips enable users to extract specific details about tree species, including average diameter, tree count, and height range across different latitudes.
+3. **Filter:**
+   - Adjusting the diameter slider filters the bar chart to display only trees with diameters greater than or equal to the selected value, allowing users to focus on specific tree sizes.
+   - By selecting a specific point on the scatter plot, users can filter the bar chart to show only the tree diameter distribution for the chosen height and latitude group.
+4. **Find Extremum:** Users can interact with the scatter plot to visually identify the latitude bins and heights that correspond to the largest and smallest tree counts.
+5. **Determine Range:** Identify the range of tree diameters within each tree species and height category. The species chart displays the range of diameters using bars for the diameter bins. The diameter slider allows users to further filter this range, showing only the trees that fall within the selected diameter thresholds.
+6. **Correlate:** Users can identify patterns or trends in tree data distribution, such as whether trees in certain height categories are concentrated in specific latitudes or whether diameter distributions differ significantly across groups.
+
+##### Why These Choices Were Effective
+
+1. **Comprehensive Analysis:**  
+- The scatter plot, when used in combination with the latitude binning, directly answers the question of how the spatial distribution (latitude) influences the physical traits (height and diameter) of tree species. Users can quickly observe trends such as which species tend to be taller or have larger diameters at specific latitudes.
+- The bar chart complements this analysis by providing a more focused view of the diameter distribution for specific height categories and species. Users can compare the average diameters and see how species vary in size across different latitudes.
+2. **Dynamic Exploration:**  
+- **Threshold Slider:** The slider allows users to set a threshold for the minimum tree count. As users adjust the slider, the chart updates in real-time to show only the points where the tree count meets or exceeds the specified threshold.
+- **Diameter Slider:** The Diameter Slider provides a way to filter data based on the diameter of the trees. It lets users focus on a specific range of tree sizes.
+- **Dot Selection:** Dot Selection allows users to click on specific dots in the scatter plot, which represent trees in a particular height and latitude range. It provides a mechanism for selecting and filtering data interactively.
+- **Conditional Highlighting:** Conditional Highlighting helps users visually distinguish between selected and unselected data points based on their interactions. This increases the visibility of the elements the user is focusing on and improves the overall clarity of the visualization.
+3. **Enhanced Interpretability:**  
+- Tooltips provide users with direct access to key information such as tree count, height range and average diameter. This clarity ensures that users understand the data points they are interacting with.
 
 #### Visualisation 3: How do height and diameter of tree influence their placement in different urban settings (e.g., streets, parks, medians, and greenways)?
 
 ##### Mark
 
-1. Stacked Bar Chat: Used to compare tree height categories (small, medium, large) across different street sides. The stacked format allows for a direct proportional comparison across categories.
-2. Histogram: Used to represent the frequency distribution of tree diameters for the selected street side and height category. The binning approach in the histogram effectively shows the distribution of tree sizes.
+- **Stacked Bar Chart:** Used to compare tree height categories (small, medium, large) across different street sides. The stacked format allows for a direct proportional comparison across categories.
+- **Histogram:** Used to represent the frequency distribution of tree diameters for the selected street side and height category. The binning approach in the histogram effectively shows the distribution of tree sizes.
 
 ##### Channels
 
-1. Stacked Bar Chart
+**Stacked Bar Chart**
+- **Position**:
+    - X-axis represents different street side
+    - Y-axis represents relative proportions of different height ranges (small, medium, large)
 
-- Position: X-axis represents different street sides, allowing for direct comparisons of tree distribution across urban settings. Y-axis represents the proportion of trees in each height category, making it easy to compare different tree sizes.
-- Color: Different tree height categories (small, medium, large) are represented by distinct colors, helping to distinguish between the height distributions.
+- **Color:** The color of the bar is represented by different height ranges
 
-2. Histogram
+- **Opacity:** Encodes the opacity of each bar, which changes based on the selection of height size (height_selection) and street side (street_selection). Selected values are fully visible (opacity = 1), and others are dimmed (opacity = 0.3).
 
-- Position (Histogram): X-axis represents tree diameter values, enabling users to see the distribution of tree trunk sizes. Y-axis represents tree counts, showing the frequency of different diameter ranges.
+- **Tooltip:** Provides additional information on hover, including height category, diameter, steer side and tree count.
+
+**Bar Chart**
+- **Position:**
+    - X-axis represents the diameter of trees). This axis is divided into bins with a maximum of 30 bins.
+    - Y-axis represents the tree count in each diameter bin.
+
+- **Tooltip:** Provides additional information on hover, including height category, diameter, steer side and tree count.
 
 ##### Interaction and UI Widges
 
-- Street Selection: Users can choose between even, odd, median, park, bike medians, and greenways.
-- Height Selection: Users can filter tree heights to focus on small, medium, or large trees.
-- Selecting a street type and height category updates the histogram and highlights the corresponding proportion in the stacked bar chart, allowing users to explore specific subsets of data and analyze relationships between height and diameter.
+- **Height Selection Radio Button:** This widget allows the user to select a height range for the trees. The options "Small," "Medium," and "Large" correspond to the HEIGHT_SIZE variable, while the "Show All" option displays all tree heights, regardless of the size.
 
-##### Task Analysis
+- **Street Selection Radio Button:** This widget allows the user to select a street side (or choose "Show All" to include all streets). The street sides are dynamically populated based on the dataset, and users can pick a specific street side for analysis.
 
-1. Characterize Distribution: Analyze the distribution of diameters and heights among different street sides.
-2. Filter: Filter data to only include trees from the top 20 families and limit tree diameter to below 60 cm
-3. Compute Derived Value: Compute the total count of trees per street side and height category.
-4. Find Extremum: Identify which street side has the largest or smallest proportion of each height category
-5. Determine Range: Identity the range of tree diameters within each street side and height category
-6. Find Anomalies: Identify if any street sides have an unusual height distribution.
+- **Linked Filtering:**
+1. The height selection filters both visualizations to display only data corresponding to the selected street side (or all street sides if "Show All" is selected).
+2. The street selection filters both visualizations to display only data corresponding to the selected street side (or all street sides if "Show All" is selected).
+
+- **Conditional Highlighting:**
+1. The height selection controls the opacity of the bars in the height_bar chart. Trees of the selected height range are fully visible, while trees outside the selection are dimmed.
+2. The street selection filters both visualizations to display only data corresponding to the selected street side (or all street sides if "Show All" is selected).
+
+- **Tooltip Enhancements:** Tooltips provide precise numerical values for tree counts, average diameter, and improving interpretability while maintaining a clean visualization.
+
+##### Tasks Supported by the Visualization
+
+1. **Characterize Distribution:**  The height distribution allows users to see which sides of the street have a greater number of trees within specific height ranges.
+
+2. **Filter:** Filtering by tree diameter ensures that the visualization only displays relevant data, specifically trees with diameters under 60 cm. Users can also filter by street side for more precise information.
+
+3. **Retrieve Value:**  Tooltips enable users to extract detailed information about the average diameter, tree count, and height range for different sides of the street.
+
+4. **Compute Derived Value:**  Calculate the total number of trees for each street side and height category.
+
+5. **Find Extremum:**  The stacked bars allow users to easily compare the relative proportions of different height categories on each side of the street.
+
+6. **Determine Range:**  The histogram bins for each street side display the range of tree diameters within each selected height category. Users can visually assess the distribution of tree diameters for each side of the street by selecting different height categories using radio buttons.
+
+7. **Find Anomalies:** Identify any unusual diameter distribution patterns that may exist for specific combinations of street sides and height ranges.
+
+#### Why These Choices Were Effective
+
+1. **Comprehensive Analysis:**  
+- The stacked bar chart represents the count of trees in each height category (Small, Medium, Large) across various street sides (urban settings). This allows users to compare how different height categories are distributed across the urban settings.
+- The bar chart (histogram) visually shows the distribution of tree diameters across different settings. By binning the diameter data, users can observe the prevalence of certain tree sizes across urban locations.
+
+2. **Dynamic Exploration:**
+- **Height Selection Radio Button**: Users can filter by height categories (Small, Medium, Large) or choose "Show All" to view all trees regardless of height. This enables focused exploration of how different height ranges are distributed across various street sides.
+- **Street Side Selection:** Users can filter by specific urban settings (e.g., streets, parks, greenways), which allows them to explore how trees of different heights and diameters are placed in these settings.
+- **Conditional Highlighting:** Conditional Highlighting helps users visually distinguish between selected and unselected combinations based on their interactions. This increases the visibility of the elements the user is focusing on and improves the overall clarity of the visualization.
+
+3. **Enhanced Interpretability:**  
+- Tooltips provide users with direct access to key information such as tree count, height range, street side and average diameter. This clarity ensures that users understand the data points they are interacting with.
 
 ### Visualisations -- Person 2
 
