@@ -6,18 +6,18 @@ title:  "Optimizing Urban Forests: Leveraging the Vancouver Public Tree Dataset 
 
 ## Introduction
 
-The City of Vancouver's Public Tree Dataset, maintained by the Vancouver Board of Parks and Recreation, offers comprehensive records of public trees throughout the city. This valuable resource documents tree locations, species, dimensions, planting dates, and geographic coordinates (excluding private trees). Updated weekdays, the dataset's attributes refresh regularly though some may take years to update due to resource constraints (City of Vancouver, 2025). Our analysis uses the March 4, 2025 version.
+The City of Vancouver's [Public Tree Dataset](https://opendata.vancouver.ca/explore/dataset/public-trees/information/?disjunctive.neighbourhood_name&disjunctive.on_street&disjunctive.species_name&disjunctive.common_name), maintained by the Vancouver Board of Parks and Recreation, offers comprehensive records of public trees throughout the city. This valuable resource documents tree locations, species, dimensions, planting dates, and geographic coordinates (excluding private trees). Updated weekdays, the dataset's attributes refresh regularly, though some may take years to update due to resource constraints (City of Vancouver, 2025). Our analysis uses the March 4, 2025 version.
 
-This dataset supports Vancouver's Healthy City Strategy by helping create environments that promote resident well-being (City of Vancouver, 2018). Urban forests provide critical benefits including air purification, carbon sequestration, wildlife habitats, and climate resilience (City of Vancouver, n.d.). To enhance the dataset's utility, we integrated two key additions:
+This dataset supports Vancouver's Healthy City Strategy by helping create environments that promote resident well-being (City of Vancouver, 2018). Urban forests provide critical benefits, including air purification, carbon sequestration, wildlife habitats, and climate resilience (City of Vancouver, n.d.). To enhance the dataset's utility, we integrated two key additions:
 
-1. FAMILY_NAME: Mapped tree genera to families using GBIF data (CC BY license), revealing broader taxonomic relationships
-2. HAS_POLLEN: Identified pollen-producing species via PalDat's palynological database (non-commercial use) to assess allergy impacts
+1. FAMILY_NAME: Mapped tree genera to families using data from [GBIF](https://www.gbif.org) (CC BY license), revealing broader taxonomic relationships.
+2. HAS_POLLEN: Identified pollen-producing species via the [Palynological Database (PalDat)](https://www.paldat.org) (non-commercial use) to assess allergy impacts.
 
 During initial analysis, we identified 3,928 records missing neighborhood data. Mapping these revealed concentrations in Stanley Park and UBC/West Point Grey areas (particularly Spanish Bank), plus scattered points in existing neighborhoods. To resolve this, we:
 
-1. Used Geofabrik's Overpass API to obtain boundaries for Stanley Park and West Point Grey
-2. Utilized Vancouver's Local Area Boundary dataset, maintained by the City of Vancouver, for precise neighborhood mapping
-3. Assigned accurate neighborhood names to previously unclassified points
+1. Used Geofabrik's [Overpass API](https://www.openstreetmap.org) to obtain boundaries for Stanley Park and West Point Grey.
+2. Utilized Vancouver's [Local Area Boundary dataset](https://opendata.vancouver.ca/explore/dataset/local-area-boundary/information/?disjunctive.name), maintained by the City of Vancouver, for precise neighborhood mapping.
+3. Assigned accurate neighborhood names to previously unclassified points.
 
 Our team consists of Kaylee Li, Brianna Zhou, and Nicholas Tam. In alignment with the dataset’s original purpose, our primary goal is to optimize tree placement and management to maximize sustainability and recreational benefits for Vancouver’s urban environment. By improving the accuracy and utility of the dataset, we aim to support evidence-based decision-making that enhances the quality of life for Vancouver residents.
 
