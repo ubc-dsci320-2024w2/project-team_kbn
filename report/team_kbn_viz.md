@@ -643,7 +643,6 @@ Sub Questions:
 
 ##### Further Developments
 
-- The intended functionality for this visualisation was that the user could select a specific neighbourhood in the choropleth to filter the display of species counts. However, as of this writing, the function has not been implemented, and external assistance is required to resolve it.
 - The selected baseline of species variation may not be sufficient, and thus further UI widgets to provide options for such may be considered.
 - The sheer quantity of neighbourhoods means that the neighbourhood locations in the bar plot run the risk of being indiscriminable.
 
