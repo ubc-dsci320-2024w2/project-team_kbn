@@ -46,11 +46,12 @@ Sub Questions:
 - **Bar Chart**: Used to show the average tree diameter for the top 20 species. The height of each bar allows for straightforward comparisons of tree species regarding diameter, making it easy to rank them.
 
 ##### Channels
-**Heatmap**: 
+
+**Heatmap**:
 
 - **Position**:
-    - X-axis represents different tree species
-    - Y-axis denotes height ranges.
+  - X-axis represents different tree species
+  - Y-axis denotes height ranges.
 
 - **Color:**  
   A sequential color scale using the scheme red, yellow, and blue is employed. Colors represent varying values of average diameter: red indicates smaller diameters, yellow signifies intermediate sizes, and blue represents larger diameters.
@@ -61,10 +62,11 @@ Sub Questions:
 - **Tooltip:**  
   Each tooltip provides additional information, including the total tree count, species, height range, and average diameter, enhancing the interpretability of the heatmap.
 
-**Bar Chart**: 
-- **Position**:
-    - X-axis represents tree species
-    - Y-axis indicates their average diameter, promoting an intuitive understanding of size differences.
+**Bar Chart:**
+
+- **Position:**
+  - X-axis represents tree species
+  - Y-axis indicates their average diameter, promoting an intuitive understanding of size differences.
   
 - **Length:** The height of the bars represents the average diameter for each tree species, arranged in ascending order. This sorting simplifies the identification of species with the largest and smallest diameters.
 
@@ -80,7 +82,6 @@ Sub Questions:
 - **Conditional Highlighting:** The selected tree species is highlighted in full opacity, while other species are dimmed. This feature enhances focus and reduces visual clutter.
 - **Tooltip Enhancements:** Tooltips provide precise numerical values for tree counts, height ranges, and average diameter, improving interpretability while maintaining a clean visualization.
 
-
 ##### Tasks Supported by the Visualization
 
 1. **Retrieve Value:** Tooltips allow users to extract specific details about the tree species, including their average diameter, tree count, height range, and species name.
@@ -94,22 +95,28 @@ Sub Questions:
 
 ##### Why These Choices Were Effective
 
-1. **Data Processing:**  
+1. **Data Processing:**
+
 - Aggregating the data by species and height combination helps summarize the relationship between species, their height ranges, and average diameters. This method allows for easy comparison across different species, helping users understand how height and diameter vary for each type.
 - The filter that shows only the top 20 families ensures that the visualization emphasizes the most significant species in terms of their presence in Vancouver’s public spaces. This approach prevents users from being overwhelmed by less-representative species and instead highlights those that the public interacts with most frequently.
 
-2. **Comprehensive Analysis:**  
+2. **Comprehensive Analysis:**
+
 - The heatmap provides a spatial overview of how height ranges and average diameters are distributed across tree species. This enables users to visually identify trends, such as which species tend to be taller or have larger diameters.
 - The bar chart complements the heatmap by offering a detailed view of the average diameter per species, sorted by species name. This visualization clarifies how diameters differ among species, offering insight into which species are larger or smaller and allowing users to dive deeper into individual species for more details.
 
-3. **Dynamic Exploration:**  
-- **Species Selection:** Users can explore specific species in more detail through click interactions. This feature allows them to see how the diameter and height of a selected species compare to others. 
+3. **Dynamic Exploration:**
+
+- **Species Selection:** Users can explore specific species in more detail through click interactions. This feature allows them to see how the diameter and height of a selected species compare to others.
 - **Average Diameter Slider:** The slider enhances users' ability to focus on specific subsets of the data, particularly regarding tree diameters.
 - **Conditional Highlighting:** This feature improves focus on selected species or height ranges, reducing cognitive load and making it easier to visually assess how specific trees or species compare in terms of size characteristics.
 
-4. **Enhanced Interpretability:**  
+4. **Enhanced Interpretability:**
+
 - Tooltips provide users with direct access to key information such as species name, height range, average diameter, and tree count. This clarity ensures that users understand the data points they are interacting with.
 - The opacity changes on hover or selection help guide the user’s attention to the most relevant data, improving the clarity of comparisons between species.
+
+![sustainability_viz1](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/ab65d0b1ec8791cf2c729e48894329b3b91edeaf/images/bri_viz/sustainability_viz1.html)
 
 #### Visualisation 2: How does the spatial distribution of the physical traits of species differ across Vancouver?
 
@@ -120,11 +127,11 @@ Sub Questions:
 
 ##### Channels
 
-#### Channels:
 **Scatter Plot**
+
 - **Position**:
-    - X-axis represents different height categories (small, medium, large)
-    - Y-axis encodes the binned latitude as a quantitative value along the y-axis. Latitude is binned into small intervals (step = 0.01) to smooth the distribution.
+  - X-axis represents different height categories (small, medium, large)
+  - Y-axis encodes the binned latitude as a quantitative value along the y-axis. Latitude is binned into small intervals (step = 0.01) to smooth the distribution.
 
 - **Size**: The size of the circles represents the number of trees in a given height and latitude bin, with a specific scale for tree count.
 
@@ -133,9 +140,10 @@ Sub Questions:
 - **Tooltip:** Provides additional information on hover, including latitude, height category, average diameter, and tree count.
 
 **Bar Chart**
+
 - **Position:**
-    - X-axis represents the binned tree diameter values (maximum of 50 bins)
-    - Y-axis represents the tree count in each diameter bin.
+  - X-axis represents the binned tree diameter values (maximum of 50 bins)
+  - Y-axis represents the tree count in each diameter bin.
 
 - **Tooltip:** Provides additional information on hover, including the height category, tree count, and binned latitude.
 
@@ -145,12 +153,13 @@ Sub Questions:
 - **Diameter Slider:** The diameter_selection slider filters the species chart to display only those trees with a diameter greater than or equal to the selected value.
 - **Dot Selection:** The dot_selection enables the user to select a specific group of trees by clicking on a scatter plot point. The selected trees' height and latitude values are then used to filter the species chart.
 - **Linked Filtering:**
+
 1. As the threshold slider value changes, the scatter plot updates in real-time to reflect the data points that meet the tree count criteria. This allows users to focus on areas with higher tree counts.
 2. As the diameter slider value changes, the bar chart updates in real-time to reflect the data points that meet the minimum diameter criteria.
-3. Once a point is selected in the scatter plot, the species chart (bar chart) updates to display only data that corresponds to the selected height category and latitude bin.   
+3. Once a point is selected in the scatter plot, the species chart (bar chart) updates to display only data that corresponds to the selected height category and latitude bin.
+
 - **Conditional Highlighting:** When a point is selected, its color changes from green (default) to red, visually indicating the selection. The species chart then updates to display the diameters of trees corresponding to the selected height and latitude bins.
 - **Tooltip Enhancements:** Tooltips provide precise numerical values for tree counts, average diameter, and latitude bin improving interpretability while maintaining a clean visualization.
-
 
 ##### Tasks Supported by the Visualization
 
@@ -167,16 +176,23 @@ Sub Questions:
 
 ##### Why These Choices Were Effective
 
-1. **Comprehensive Analysis:**  
+1. **Comprehensive Analysis:**
+
 - The scatter plot, when used in combination with the latitude binning, directly answers the question of how the spatial distribution (latitude) influences the physical traits (height and diameter) of tree species. Users can quickly observe trends such as which species tend to be taller or have larger diameters at specific latitudes.
 - The bar chart complements this analysis by providing a more focused view of the diameter distribution for specific height categories and species. Users can compare the average diameters and see how species vary in size across different latitudes.
-2. **Dynamic Exploration:**  
+
+2. **Dynamic Exploration:**
+
 - **Threshold Slider:** The slider allows users to set a threshold for the minimum tree count. As users adjust the slider, the chart updates in real-time to show only the points where the tree count meets or exceeds the specified threshold.
 - **Diameter Slider:** The Diameter Slider provides a way to filter data based on the diameter of the trees. It lets users focus on a specific range of tree sizes.
 - **Dot Selection:** Dot Selection allows users to click on specific dots in the scatter plot, which represent trees in a particular height and latitude range. It provides a mechanism for selecting and filtering data interactively.
 - **Conditional Highlighting:** Conditional Highlighting helps users visually distinguish between selected and unselected data points based on their interactions. This increases the visibility of the elements the user is focusing on and improves the overall clarity of the visualization.
-3. **Enhanced Interpretability:**  
+
+3. **Enhanced Interpretability:**
+
 - Tooltips provide users with direct access to key information such as tree count, height range and average diameter. This clarity ensures that users understand the data points they are interacting with.
+
+![sustainability_viz2](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/ab65d0b1ec8791cf2c729e48894329b3b91edeaf/images/bri_viz/sustainability_viz2.html)
 
 #### Visualisation 3: How do height and diameter of tree influence their placement in different urban settings (e.g., streets, parks, medians, and greenways)?
 
@@ -189,8 +205,8 @@ Sub Questions:
 
 **Stacked Bar Chart**
 - **Position**:
-    - X-axis represents different street side
-    - Y-axis represents relative proportions of different height ranges (small, medium, large)
+  - X-axis represents different street side
+  - Y-axis represents relative proportions of different height ranges (small, medium, large)
 
 - **Color:** The color of the bar is represented by different height ranges
 
@@ -199,9 +215,10 @@ Sub Questions:
 - **Tooltip:** Provides additional information on hover, including height category, diameter, steer side and tree count.
 
 **Bar Chart**
+
 - **Position:**
-    - X-axis represents the diameter of trees). This axis is divided into bins with a maximum of 30 bins.
-    - Y-axis represents the tree count in each diameter bin.
+  - X-axis represents the diameter of trees). This axis is divided into bins with a maximum of 30 bins.
+  - Y-axis represents the tree count in each diameter bin.
 
 - **Tooltip:** Provides additional information on hover, including height category, diameter, steer side and tree count.
 
@@ -212,10 +229,12 @@ Sub Questions:
 - **Street Selection Radio Button:** This widget allows the user to select a street side (or choose "Show All" to include all streets). The street sides are dynamically populated based on the dataset, and users can pick a specific street side for analysis.
 
 - **Linked Filtering:**
+
 1. The height selection filters both visualizations to display only data corresponding to the selected street side (or all street sides if "Show All" is selected).
 2. The street selection filters both visualizations to display only data corresponding to the selected street side (or all street sides if "Show All" is selected).
 
 - **Conditional Highlighting:**
+
 1. The height selection controls the opacity of the bars in the height_bar chart. Trees of the selected height range are fully visible, while trees outside the selection are dimmed.
 2. The street selection filters both visualizations to display only data corresponding to the selected street side (or all street sides if "Show All" is selected).
 
@@ -239,17 +258,22 @@ Sub Questions:
 
 #### Why These Choices Were Effective
 
-1. **Comprehensive Analysis:**  
+1. **Comprehensive Analysis:**
+
 - The stacked bar chart represents the count of trees in each height category (Small, Medium, Large) across various street sides (urban settings). This allows users to compare how different height categories are distributed across the urban settings.
 - The bar chart (histogram) visually shows the distribution of tree diameters across different settings. By binning the diameter data, users can observe the prevalence of certain tree sizes across urban locations.
 
 2. **Dynamic Exploration:**
+
 - **Height Selection Radio Button**: Users can filter by height categories (Small, Medium, Large) or choose "Show All" to view all trees regardless of height. This enables focused exploration of how different height ranges are distributed across various street sides.
 - **Street Side Selection:** Users can filter by specific urban settings (e.g., streets, parks, greenways), which allows them to explore how trees of different heights and diameters are placed in these settings.
 - **Conditional Highlighting:** Conditional Highlighting helps users visually distinguish between selected and unselected combinations based on their interactions. This increases the visibility of the elements the user is focusing on and improves the overall clarity of the visualization.
 
-3. **Enhanced Interpretability:**  
+3. **Enhanced Interpretability:**
+
 - Tooltips provide users with direct access to key information such as tree count, height range, street side and average diameter. This clarity ensures that users understand the data points they are interacting with.
+
+![sustainability_viz3](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/ab65d0b1ec8791cf2c729e48894329b3b91edeaf/images/bri_viz/sustainability_viz3.html)
 
 ### Visualisations -- Person 2
 
@@ -325,6 +349,8 @@ Sub Questions:
 3. Enhanced Interpretability:  
    - Conditional highlighting and tooltips improve clarity, making it easier for users to interpret the data and make informed decisions about identifying neighborhoods with the highest density of large trees for comfortable picnic spots.  
 
+![picnic_viz1](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/ab65d0b1ec8791cf2c729e48894329b3b91edeaf/images/kli_viz/picnic_viz1.html)
+
 #### Visualisation 2: Which neighbourhoods have the highest diversity of tree families, offering visually varied and unique picnic environments? A mix of tree species can create a more aesthetically pleasing and engaging atmosphere for picnickers.
 
 ##### Marks
@@ -394,6 +420,8 @@ Sub Questions:
 4. Enhanced Interpretability:  
    - Tooltips and conditional highlighting make the visualization accessible to a wide audience, supporting informed decision-making about neighborhoods with diverse picnic environments.  
 
+![picnic_viz2](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/ab65d0b1ec8791cf2c729e48894329b3b91edeaf/images/kli_viz/picnic_viz2.html)
+
 #### Visualisation 3: Which neighbourhoods have trees that produce high amounts of pollen, potentially affecting picnic experiences for people with allergies? Identifying high-pollen areas can help allergy sufferers avoid discomfort or plan allergy-friendly events.
 
 ##### Marks
@@ -461,6 +489,8 @@ Sub Questions:
    - Tooltips and clear color encoding improve clarity, making the visualization accessible to a wide audience.  
    - These features support informed decision-making about identifying high-pollen areas to avoid discomfort for allergy sufferers or plan allergy-friendly events.  
 
+![picnic_viz3](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/ab65d0b1ec8791cf2c729e48894329b3b91edeaf/images/kli_viz/picnic_viz3.html)
+
 ### Visualisations -- Person 3
 
 #### Visualization 1: What are the counts and proportions of planted trees?
@@ -518,6 +548,7 @@ Sub Questions:
   - Tooltips provide precise numerical values for proportions of planted specimens and total population size corresponding to each species, enhancing interpretability without cluttering the visualization.
 
 ##### Tasks Supported by the Visualization
+
 - Retrieve Value: Tooltips allow users to extract specific details, such as proportions of planted specimens and total population size corresponding to each species. 
 - Filter: Users can filter data by genus selection (via dropdown), selection of boundaries for population size (via textbox) and proportions of planted specimens (via sliders), and brushing within either plot, enabling focused exploration.
 - Compute Derived Value: To obtain the proportion of planted specimens over the total populations for each species, two aggregations were required. The first aggregation involved counting the number of trees with explicit `DATE_PLANTED` values grouped by species, under the assumption that all trees without the `DATE_PLANTED` were not planted trees, while the second involved counting the total number trees for the species that had `DATE_PLANTED` specimens. The proportion was obtained by dividing the number of planted specimens over the total number of specimens for each species.
@@ -526,19 +557,19 @@ Sub Questions:
 ##### Why These Choices Were Effective
 
 - Data Processing:
-   - Aggregating proportion of planted specimens over the total populations for each species ensures the visualization is concise and focused on species with sufficiently large amounts of samples to conduct analyses with.  
-   - Filtering the dataset avoids overwhelming users with less relevant data while still providing meaningful insights into planted proportions.  
+ - Aggregating proportion of planted specimens over the total populations for each species ensures the visualization is concise and focused on species with sufficiently large amounts of samples to conduct analyses with.  
+ - Filtering the dataset avoids overwhelming users with less relevant data while still providing meaningful insights into planted proportions.  
 
 - Comprehensive Analysis:  
-   - The bar plot and dot plot visualise variations of proportions of planted specimens across species and population sizes.
-   - Together, they allow users to discover which species has sufficient data for both planted and non-planted specimens through the combinations of the total number of trees and the proportion of planted samples.
+ - The bar plot and dot plot visualise variations of proportions of planted specimens across species and population sizes.
+ - Together, they allow users to discover which species has sufficient data for both planted and non-planted specimens through the combinations of the total number of trees and the proportion of planted samples.
 
 - Dynamic Exploration:  
-   - The dropdown menu, input box, sliders and bidirectional interactions allow users to explore the data dynamically, refining their analysis based on genus, population size, proportions and species.  
-   - Linked filtering ensures consistency between the bar plot and dot plot, maintaining a seamless exploration experience.
+  - The dropdown menu, input box, sliders and bidirectional interactions allow users to explore the data dynamically, refining their analysis based on genus, population size, proportions and species.  
+  - Linked filtering ensures consistency between the bar plot and dot plot, maintaining a seamless exploration experience.
 
 - Enhanced Interpretability:  
-   - Tooltips and conditional highlighting make the visualization accessible to a wide audience, supporting informed decision-making about species with greater flexibility in terms of what species could be focused on.
+  - Tooltips and conditional highlighting make the visualization accessible to a wide audience, supporting informed decision-making about species with greater flexibility in terms of what species could be focused on.
 
 ![plant_viz1](https://github.com/ubc-dsci320-2024w2/project-team_kbn/blob/f0234f356bd51f871e926d49095ba7b17b5e9a24/images/ntam_viz/plant_viz1.png)
 
@@ -584,7 +615,7 @@ Sub Questions:
 
 ##### Tasks Supported by the Visualization
 
-- Retrieve Value: Tooltips allow users to extract specific details, such as counts of streets with sufficient species variation and specific number of distinct species corresponding to each location. 
+- Retrieve Value: Tooltips allow users to extract specific details, such as counts of streets with sufficient species variation and specific number of distinct species corresponding to each location.
 - Filter: Users can filter data by selection in the choropleth, enabling focused exploration.  
 - Compute Derived Value: To obtain the proportion of streets with sufficient species variation, two aggregations were required. The first aggregation involved counting the number of unique species within each street, while the second involved counting the number of streets within each neighbourhood. The proportion was obtained by dividing the number of streets that had sufficient numbers of distinct species over the total number of streets within each neighbourhood.
 - Sort: Neighborhoods are implicitly ranked by proportion of streets with sufficient species variation (via color intensity on the map), and species variations are sorted by neighbourhood in the bar chart.
@@ -592,23 +623,23 @@ Sub Questions:
 ##### Why These Choices Were Effective
 
 - Data Processing:
-   - Aggregating unique species counts per street and extent of species variation within each neighbourhood ensures the visualization is concise and focused on significant contributors to biodiversity.  
-   - Filtering the dataset avoids overwhelming users with less relevant data while still providing meaningful insights into biodiversity patterns.  
+  - Aggregating unique species counts per street and extent of species variation within each neighbourhood ensures the visualization is concise and focused on significant contributors to biodiversity.  
+  - Filtering the dataset avoids overwhelming users with less relevant data while still providing meaningful insights into biodiversity patterns.  
 
 - Comprehensive Analysis:
 
-   - The map provides an overview of spatial patterns, highlighting areas with high or low biodiversity.
-   - The bar chart complements the map by offering detailed insights into the composition of biodiversity, breaking down data by locations.  
-   - Together, they provide a holistic view of Vancouver’s urban tree ecosystem, balancing broad overviews with granular analyses.
+  - The map provides an overview of spatial patterns, highlighting areas with high or low biodiversity.
+  - The bar chart complements the map by offering detailed insights into the composition of biodiversity, breaking down data by locations.  
+  - Together, they provide a holistic view of Vancouver’s urban tree ecosystem, balancing broad overviews with granular analyses.
 
 - Dynamic Exploration:
 
-   - Mouse-based neighborhood selection and linked filtering enable seamless exploration, allowing users to transition from spatial patterns to location-level breakdowns.  
-   - Conditional highlighting improves focus, reducing cognitive load and enhancing interpretability.
+  - Mouse-based neighborhood selection and linked filtering enable seamless exploration, allowing users to transition from spatial patterns to location-level breakdowns.  
+  - Conditional highlighting improves focus, reducing cognitive load and enhancing interpretability.
 
 - Enhanced Interpretability:
 
-   - Tooltips and conditional highlighting make the visualization accessible to a wide audience, supporting informed decision-making about neighborhoods with greater flexibility in terms of species sustainability.  
+  - Tooltips and conditional highlighting make the visualization accessible to a wide audience, supporting informed decision-making about neighborhoods with greater flexibility in terms of species sustainability.  
 
 ##### Further Developments
 
