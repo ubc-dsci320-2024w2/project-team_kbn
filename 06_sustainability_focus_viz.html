@@ -8,20 +8,24 @@ title: "M3: Picnic Viz"
     body {
       font-family: 'PT Sans', Arial, sans-serif;
     }
+
     .container {
       max-width: 900px;
       margin: 10px;
       padding: 10px;
     }
+
     .section {
       margin: 10px;
       padding: 20px;
       border: 1px solid #ddd;
       border-radius: 5px;
     }
+
     iframe {
       width: 100%;
       border: none;
+      margin: 10px;
     }
   </style>
 </head>
@@ -29,10 +33,12 @@ title: "M3: Picnic Viz"
 <body>
 
   <h2>Visualisation 1: How do height and diameter vary across different tree species in Vancouver’s public spaces?</h2>
-  <iframe src="../images/bri_viz/sustainability_viz1.html" height="400"></iframe>
+  <iframe src="../images/bri_viz/sustainability_viz1.html" height="600"></iframe>
 
 
   <div class="container">
+
+
     <div class="section">
       <h4>Mark</h4>
       <p><strong>Heatmap:</strong> Used to compare tree diameters across different height ranges and species.</p>
@@ -41,6 +47,7 @@ title: "M3: Picnic Viz"
 
     <div class="section">
       <h4>Channels</h4>
+
       <p><strong>Heatmap</strong></p>
       <ul>
         <li><strong>Position:</strong> X-axis represents different tree species and Y-axis denotes height ranges.</li>
@@ -66,19 +73,71 @@ title: "M3: Picnic Viz"
         <li><strong>Tooltip:</strong> The tooltip provides details such as tree species and average diameter, enhancing
           the interpretability of the data.</li>
       </ul>
+
     </div>
 
     <div class="section">
       <h4>Interaction and UI Widgets</h4>
       <ul>
-        <li><strong>Diameter Slider:</strong> Filters heatmap by minimum average diameter.</li>
-        <li><strong>Reset Button:</strong> Resets diameter filter.</li>
-        <li><strong>Bidirectional Linking:</strong> Clickable species highlight in both charts.</li>
-        <li><strong>Conditional Highlighting:</strong> Selected species stand out.</li>
-        <li><strong>Tooltip Enhancements:</strong> Displays detailed information.</li>
+        <li><strong>Diameter Slider:</strong> This slider allows users to filter heatmap cells by setting a minimum
+          average diameter (avg_diameter) for the tree species they wish to explore.</li>
+        <li><strong>Reset Button:</strong> This button resets the diameter filter to its default state (minimum diameter
+          set to 0). When activated, it restores visibility for all species in the visualizations.</li>
+        <li><strong>Bidirectional Linking:</strong> Users can click on a specific species in either the heatmap or bar
+          chart to select it. Once selected, the species is highlighted in both plots, allowing users to focus on a
+          specific tree species and observe its distribution across both visualizations simultaneously.</li>
+        <li><strong>Conditional Highlighting:</strong> The selected tree species is highlighted in full opacity, while
+          other species are dimmed. This feature enhances focus and reduces visual clutter.</li>
+        <li><strong>Tooltip Enhancements:</strong> Tooltips provide precise numerical values for tree counts, height
+          ranges, and average diameter, improving interpretability while maintaining a clean visualization.</li>
       </ul>
     </div>
+
+    <div class="section">
+    <h4>Tasks Supported by the Visualization</h4>
+    <ul>
+      <li><strong>Retrieve Value:</strong> Tooltips allow users to extract specific details about the tree species, including their average diameter, tree count, height range, and species name.</li>
+      <li><strong>Characterize Distribution:</strong> Analyze the distribution of tree diameters across different species and height ranges to understand how these factors compare among the various species.</li>
+      <li><strong>Filter:</strong> Users can filter the data based on criteria such as minimum average diameter (using a slider) and specific species selections (via click).</li>
+      <li><strong>Compute Derived Value:</strong> Aggregated metrics, such as average diameter and tree count per species and height range, are computed and displayed, providing insights into the characteristics of tree populations.</li>
+      <li><strong>Find Extremum:</strong> Identify species with the largest and smallest average diameters, and examine which height ranges correspond to these extreme values.</li>
+      <li><strong>Determine Range:</strong> Identify the range of tree diameters within each species and height category.</li>
+      <li><strong>Find Anomalies:</strong> Detect any species that exhibit unexpectedly high or low diameters at specific heights.</li>
+      <li><strong>Sort:</strong> Rank tree species by average diameter in ascending order.</li>
+    </ul>
+    </div>
+
+    <div class="section">
+    <h4>Why These Choices Were Effective</h4>
+    <ul>
+      <li><strong>Data Processing:</strong>
+        <ul>
+          <li>Aggregating the data by species and height combination helps summarize the relationship between species, their height ranges, and average diameters. This method allows for easy comparison across different species, helping users understand how height and diameter vary for each type.</li>
+          <li>The filter that shows only the top 20 families ensures that the visualization emphasizes the most significant species in terms of their presence in Vancouver’s public spaces. This approach prevents users from being overwhelmed by less-representative species and instead highlights those that the public interacts with most frequently.</li>
+        </ul>
+      </li>
+      <li><strong>Comprehensive Analysis:</strong>
+        <ul>
+          <li>The heatmap provides a spatial overview of how height ranges and average diameters are distributed across tree species. This enables users to visually identify trends, such as which species tend to be taller or have larger diameters.</li>
+          <li>The bar chart complements the heatmap by offering a detailed view of the average diameter per species, sorted by species name. This visualization clarifies how diameters differ among species, offering insight into which species are larger or smaller and allowing users to dive deeper into individual species for more details.</li>
+        </ul>
+      </li>
+      <li><strong>Dynamic Exploration:</strong>
+        <ul>
+          <li>Species Selection: Users can explore specific species in more detail through click interactions. This feature allows them to see how the diameter and height of a selected species compare to others.</li>
+          <li>The Average Diameter Slider enhances users' ability to focus on specific subsets of the data, particularly regarding tree diameters.</li>
+          <li>Conditional Highlighting: This feature improves focus on selected species or height ranges, reducing cognitive load and making it easier to visually assess how specific trees or species compare in terms of size characteristics.</li>
+        </ul>
+      </li>
+      <li><strong>Enhanced Interpretability:</strong>
+        <ul>
+          <li>Tooltips provide users with direct access to key information such as species name, height range, average diameter, and tree count. This clarity ensures that users understand the data points they are interacting with.</li>
+          <li>The opacity changes on hover or selection help guide the user’s attention to the most relevant data, improving the clarity of comparisons between species.</li>
+        </ul>
+      </li>
+    </ul>    
+    </div>
+    
+    
   </div>
 </body>
-
-</html>
