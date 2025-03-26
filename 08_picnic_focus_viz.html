@@ -54,7 +54,7 @@ title: "M3: Picnic Focus Viz"
     provide ample shade for comfortable picnic spots?</h2>
 
   <div class="iframe-container">
-    <iframe src="../images/kli_viz/picnic_viz1.html" height="600"></iframe>
+    <iframe src="../images/kli_viz/picnic_viz1.html" height="900"></iframe>
   </div>
 
   <div class="container">
@@ -220,7 +220,7 @@ title: "M3: Picnic Focus Viz"
   <h2>Visualization 2: Which neighbourhoods have the highest diversity of tree families, offering visually varied and
     unique picnic environments?</h2>
   <div class="iframe-container">
-    <iframe src="../images/kli_viz/picnic_viz2.html" height="630"></iframe>
+    <iframe src="../images/kli_viz/picnic_viz2.html" height="900"></iframe>
   </div>
 
   <div class="container">
@@ -229,17 +229,22 @@ title: "M3: Picnic Focus Viz"
       <h4>Marks</h4>
 
       <p><strong>Chlorophyll Map</strong></p>
-      <p>Displays the diversity of tree genera across Vancouver neighborhoods.</p>
-      <p>The geospatial layout provides geographic context, enabling users to quickly identify areas with high
-        biodiversity.</p>
-      <p>Color intensity (blues scheme) encodes unique tree genera counts, making it easy to spot neighborhoods with the
-        highest ecological richness.</p>
+      <ul>
+        <li>Displays the diversity of tree genera across Vancouver neighborhoods.</li>
+        <li>The geospatial layout provides geographic context, enabling users to quickly identify areas with high
+          biodiversity.</li>
+        <li>Color intensity (blues scheme) encodes unique tree genera counts, making it easy to spot neighborhoods with
+          the highest ecological richness.</li>
+      </ul>
 
       <p><strong>Bar Chart</strong></p>
-      <p>Shows the top 10 tree families by distinct genera count for the selected neighborhood.</p>
-      <p>Bar lengths represent the number of distinct genera per family, enabling comparisons and highlighting the most
-        biodiverse families.</p>
+      <ul>
+        <li>Shows the top 10 tree families by distinct genera count for the selected neighborhood.</li>
+        <li>Bar lengths represent the number of distinct genera per family, enabling comparisons and highlighting the
+          most biodiverse families.</li>
+      </ul>
     </div>
+
 
     <div class="section">
       <h4>Channels</h4>
@@ -275,22 +280,32 @@ title: "M3: Picnic Focus Viz"
       <h4>Interaction and UI Widgets</h4>
 
       <p><strong>Mouse-Based Neighborhood Selection - Bi-directional:</strong></p>
-      <p>Users can click on a specific neighborhood in the map to filter the bar chart. This interaction is
-        bi-directional: selecting a neighborhood updates both the map and bar chart, ensuring synchronization. This
-        supports linked highlighting and retrieve value tasks.</p>
+      <ul>
+        <li>Users can click on a specific neighborhood in the map to filter the bar chart.</li>
+        <li>This interaction is bi-directional: selecting a neighborhood updates both the map and bar chart, ensuring
+          synchronization.</li>
+        <li>Supports linked highlighting and retrieve value tasks.</li>
+      </ul>
 
       <p><strong>Conditional Highlighting</strong></p>
-      <p>Highlights the selected neighborhood in yellow while dimming others. Improves focus and reduces cognitive load,
-        adhering to the Gestalt principle of figure-ground differentiation.</p>
+      <ul>
+        <li>Highlights the selected neighborhood in yellow while dimming others.</li>
+        <li>Improves focus and reduces cognitive load, adhering to the Gestalt principle of figure-ground
+          differentiation.</li>
+      </ul>
 
       <p><strong>Linked Filtering</strong></p>
-      <p>Ensures the map and bar chart remain synchronized. Clicking on a neighborhood updates both visualizations,
-        creating a cohesive exploration experience.</p>
+      <ul>
+        <li>Ensures the map and bar chart remain synchronized.</li>
+        <li>Clicking on a neighborhood updates both visualizations, creating a cohesive exploration experience.</li>
+      </ul>
 
       <p><strong>Tooltip Enhancements</strong></p>
-      <p>Tooltips provide precise numerical values for unique genera counts, ranks, and family-specific details.
-        Enhances interpretability without cluttering the visualization, supporting retrieve value and compute derived
-        value tasks.</p>
+      <ul>
+        <li>Tooltips provide precise numerical values for unique genera counts, ranks, and family-specific details.</li>
+        <li>Enhances interpretability without cluttering the visualization, supporting retrieve value and compute
+          derived value tasks.</li>
+      </ul>
     </div>
 
     <div class="section">
@@ -343,5 +358,199 @@ title: "M3: Picnic Focus Viz"
     </div>
   </div>
   <!-- VIZ 2 END -->
+
+  <!-- VIZ 3 START-->
+  <h2>Visualization 3: Which neighbourhoods have trees that produce high amounts of pollen, potentially affecting picnic experiences for people with allergies? </h2>
+  <div class="iframe-container">
+    <iframe src="../images/kli_viz/picnic_viz3.html" height="630"></iframe>
+  </div>
+
+  <!-- VIZ START -->
+  <div class="container">
+
+    <div class="section">
+      <h4>Marks</h4>
+
+      <p><strong>Scatterplot</strong></p>
+      <ul>
+        <li>Displays the spatial distribution of trees in the selected neighborhood, color-coded by pollen presence
+          (Yes/No).</li>
+        <li>Provides a geographic overview, enabling users to identify areas with high concentrations of
+          pollen-producing or non-pollen-producing trees.</li>
+        <li>Aligns with the Gestalt principle of proximity, grouping nearby trees visually based on their location.</li>
+      </ul>
+
+      <p><strong>Bar Chart</strong></p>
+      <ul>
+        <li>Shows the top 10 streets by tree count in the selected neighborhood, broken down by pollen presence.</li>
+        <li>Bar lengths encode tree counts, simplifying comparisons between streets.</li>
+        <li>Color differentiation highlights the proportion of pollen-producing vs. non-pollen-producing trees on each
+          street, supporting tasks like characterizing distribution.</li>
+      </ul>
+    </div>
+
+
+    <div class="section">
+      <h4>Channels</h4>
+
+      <p><strong>Scatterplot</strong></p>
+      <ul>
+        <li><strong>Position :</strong>
+          <ul>
+            <li>X and Y coordinates represent the geographic locations of trees, offering spatial context.</li>
+            <li>This choice leverages the geospatial layout to help users understand where trees are located relative to
+              one another.</li>
+          </ul>
+        </li>
+        <li><strong>Color :</strong>
+          <ul>
+            <li>Encodes pollen presence using distinct colors (e.g., red for "Yes" and blue for "No"), making it easy to
+              distinguish between pollen-producing and non-pollen-producing trees.</li>
+            <li>The use of contrasting colors ensures clarity and adheres to accessibility principles.</li>
+          </ul>
+        </li>
+        <li><strong>Tooltip :</strong>
+          <ul>
+            <li>Provides additional details like tree location and pollen status, enhancing interpretability without
+              cluttering the visualization.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <p><strong>Bar Chart</strong></p>
+      <ul>
+        <li><strong>Position :</strong>
+          <ul>
+            <li>Y-axis : Lists streets, sorted by tree count in descending order, emphasizing streets with the highest
+              tree densities.</li>
+            <li>X-axis : Represents tree count, showing magnitude.</li>
+          </ul>
+        </li>
+        <li><strong>Length :</strong>
+          <ul>
+            <li>Bar lengths encode the number of trees, simplifying comparisons between streets.</li>
+          </ul>
+        </li>
+        <li><strong>Color :</strong>
+          <ul>
+            <li>Differentiates between pollen-producing and non-pollen-producing trees within each street, highlighting
+              compositional patterns.</li>
+            <li>This supports tasks like find extremum and sort.</li>
+          </ul>
+        </li>
+        <li><strong>Tooltip :</strong>
+          <ul>
+            <li>Displays exact values for tree counts and pollen breakdowns, improving clarity.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Interaction and UI Widgets</h4>
+
+      <p><strong>Dropdown Menu (Neighborhood Selection)</strong></p>
+      <ul>
+        <li>Allows users to select a specific neighborhood from a list, dynamically updating both the scatterplot and
+          bar chart.</li>
+        <li>Enables focused exploration by adapting the visualization to the user's chosen area.</li>
+        <li>Supports filter tasks and enhances usability by allowing users to narrow their focus.</li>
+      </ul>
+
+      <p><strong>Pollen Radio Button (Has Pollen Selection)</strong></p>
+      <ul>
+        <li>Lets users filter trees based on whether they produce pollen ("Yes" or "No").</li>
+        <li>Allows users to focus on specific subsets of data, such as identifying high-pollen areas or planning
+          allergy-friendly events.</li>
+        <li>Aligns with the interaction idiom of filtering, enabling dynamic exploration.</li>
+      </ul>
+
+      <p><strong>Search Box (Street Name Selection)</strong></p>
+      <ul>
+        <li>Enables users to search for trees located on a specific street.</li>
+        <li>Helps users find tree distributions along particular roads, allowing for detailed location-based
+          exploration.</li>
+        <li>Supports retrieve value tasks by enabling users to extract specific details.</li>
+      </ul>
+
+      <p><strong>Linked Filtering</strong></p>
+      <ul>
+        <li>Ensures both the scatterplot and bar chart update dynamically based on selections.</li>
+        <li>Maintains consistency across visualizations, reducing confusion and maintaining focus.</li>
+        <li>Aligns with best practices for interaction idioms, such as linked highlighting.</li>
+      </ul>
+
+      <p><strong>Tooltip Enhancements</strong></p>
+      <ul>
+        <li>Tooltips provide precise numerical values and additional context, such as tree location and pollen status.
+        </li>
+        <li>Enhances interpretability without cluttering the visualization, supporting retrieve value and compute
+          derived value tasks.</li>
+      </ul>
+    </div>
+
+
+    <div class="section">
+      <h4>Tasks Supported</h4>
+      <ul>
+        <li><strong>Retrieve Value :</strong> Tooltips allow users to extract specific details, such as tree locations
+          and pollen statuses.</li>
+        <li><strong>Filter :</strong> Users can filter data by neighborhood (via dropdown) and pollen presence (via
+          radio buttons), enabling focused exploration.</li>
+        <li><strong>Find Extremum :</strong> The scatterplot highlights areas with high concentrations of
+          pollen-producing trees, while the bar chart identifies streets with the most trees.</li>
+        <li><strong>Sort :</strong> Streets are explicitly sorted by tree count in the bar chart, emphasizing areas with
+          the highest tree densities.</li>
+        <li><strong>Characterize Distribution :</strong> The combination of the scatterplot and bar chart allows users
+          to analyze the spread of pollen-producing trees spatially and compositionally.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Why These Choices Were Effective</h4>
+
+      <p><strong>Comprehensive Analysis :</strong></p>
+      <ul>
+        <li>The scatterplot provides a spatial overview of tree distribution, helping users identify areas with high
+          pollen-producing tree concentrations.</li>
+        <li>The bar chart complements the scatterplot by offering detailed insights into specific streets, breaking down
+          data by pollen presence.</li>
+        <li>Together, these visualizations provide a holistic view of Vancouver's urban tree ecosystem, balancing broad
+          overviews with granular analyses.</li>
+      </ul>
+
+      <p><strong>Dynamic Exploration :</strong></p>
+      <ul>
+        <li>Dropdown and radio button selections give users control over filtering data, enabling them to explore
+          patterns of pollen presence in specific neighborhoods.</li>
+        <li>Linked filtering ensures consistency across visualizations, reducing confusion and maintaining focus.</li>
+      </ul>
+
+      <p><strong>Enhanced Interpretability :</strong></p>
+      <ul>
+        <li>Tooltips and clear color encoding improve clarity, making the visualization accessible to a wide audience.
+        </li>
+        <li>These features support informed decision-making about identifying high-pollen areas to avoid discomfort for
+          allergy sufferers or plan allergy-friendly events.</li>
+      </ul>
+
+      <p><strong>Accessibility and Aesthetics :</strong></p>
+      <ul>
+        <li>The use of distinct colors for pollen presence ensures accessibility for users with varying levels of color
+          vision deficiency.</li>
+        <li>The clean design minimizes cognitive overload, adhering to the principle of data-ink ratio.</li>
+      </ul>
+
+      <p><strong>Task Alignment :</strong></p>
+      <ul>
+        <li>The visualization design directly supports user tasks such as retrieving specific values, filtering data,
+          finding extrema, sorting, and characterizing distributions.</li>
+        <li>Each interaction idiom (e.g., tooltips, dropdowns, radio buttons) is purposefully designed to address
+          specific user goals.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- VIZ 3 END-->
 
 </body>
