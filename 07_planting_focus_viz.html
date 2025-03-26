@@ -5,7 +5,6 @@ title: "M3: Planting Focus Viz"
 
 <head>
   <style>
-
     body {
       font-family: 'PT Sans', Arial, sans-serif;
     }
@@ -29,7 +28,7 @@ title: "M3: Planting Focus Viz"
     }
 
     .iframe-container {
-    margin-left: 30px;
+      margin-left: 30px;
     }
 
     h1 {
@@ -40,9 +39,8 @@ title: "M3: Planting Focus Viz"
       margin: 30px;
       max-width: 1000px
     }
-
   </style>
-  
+
 </head>
 
 <body>
@@ -51,26 +49,29 @@ title: "M3: Planting Focus Viz"
 
   <h2>Visualization 1: What are the counts and proportions of planted trees?</h2>
   <div class="iframe-container">
-    <iframe src="../images/ntam_viz/plant_viz1.html" height="630"></iframe>
+    <iframe src="../images/ntam_viz/plant_viz1.html" height="700"></iframe>
   </div>
-  
+
   <!-- VIZ 1 START -->
   <div class="container">
-  
+
     <div class="section">
       <h4>Marks</h4>
       <p><strong>Bar plot:</strong></p>
-      <p>Used to accurately display the proportions of planted specimens between species, ordered by total number of specimens.</p>
-      <p>Bar lengths represent proportions of planted specimens for given species, and color differentiation displays the species' total population size.</p>
-      
+      <p>Used to accurately display the proportions of planted specimens between species, ordered by total number of
+        specimens.</p>
+      <p>Bar lengths represent proportions of planted specimens for given species, and color differentiation displays
+        the species' total population size.</p>
+
       <p><strong>Dot plot:</strong></p>
       <p>Used to provide an interpretable display of the variation in proportions and total populations.</p>
-      <p>Population size is log-transformed to allow for easier interpretation of values given drastic variations in such.</p>
+      <p>Population size is log-transformed to allow for easier interpretation of values given drastic variations in
+        such.</p>
     </div>
-  
+
     <div class="section">
       <h4>Channels</h4>
-      
+
       <p><strong>Bar plot:</strong></p>
       <ul>
         <li><strong>Position:</strong>
@@ -79,42 +80,52 @@ title: "M3: Planting Focus Viz"
             <li>X-axis represents the proportions of planted specimens for given species.</li>
           </ul>
         </li>
-        <li><strong>Color:</strong> Represents the species' total population size, log-transformed, and uses a sequential continuous color palette to display the change in log-transformed total populations, and to display the differences in population sizes should the data be filtered by the widgets.</li>
-        <li><strong>Opacity:</strong> Upon brushing on a given range of species, the opacity of all other areas are set to be low, drawing attention to the species under analysis.</li>
-        <li><strong>Tooltip:</strong> Displays the corresponding species, genus, proportions of planted specimens and total population size, improving clarity.</li>
+        <li><strong>Color:</strong> Represents the species' total population size, log-transformed, and uses a
+          sequential continuous color palette to display the change in log-transformed total populations, and to display
+          the differences in population sizes should the data be filtered by the widgets.</li>
+        <li><strong>Opacity:</strong> Upon brushing on a given range of species, the opacity of all other areas are set
+          to be low, drawing attention to the species under analysis.</li>
+        <li><strong>Tooltip:</strong> Displays the corresponding species, genus, proportions of planted specimens and
+          total population size, improving clarity.</li>
       </ul>
-      
+
       <p><strong>Dot plot:</strong></p>
       <ul>
         <li><strong>Position:</strong>
           <ul>
-            <li>X-axis represents log-transformed population size, to allow for easier interpretation of values given drastic variations in such.</li>
+            <li>X-axis represents log-transformed population size, to allow for easier interpretation of values given
+              drastic variations in such.</li>
             <li>Y-axis represents the proportions of planted specimens for given species.</li>
           </ul>
         </li>
-        <li><strong>Opacity:</strong> Upon brushing on a given range of points, the opacity of all other points are set to be low, drawing attention to the points under analysis.</li>
-        <li><strong>Tooltip:</strong> Displays the corresponding species, genus, proportions of planted specimens and total population size, improving clarity.</li>
+        <li><strong>Opacity:</strong> Upon brushing on a given range of points, the opacity of all other points are set
+          to be low, drawing attention to the points under analysis.</li>
+        <li><strong>Tooltip:</strong> Displays the corresponding species, genus, proportions of planted specimens and
+          total population size, improving clarity.</li>
       </ul>
     </div>
-  
+
     <div class="section">
       <h4>Interaction and UI Widgets</h4>
       <ul>
         <li><strong>Genus Dropdown:</strong>
           <ul>
             <li>Filters trees based on genus, dynamically updating both the histogram and dot plot.</li>
-            <li>This ensures the user can apply focused comparisons of counts and proportions between similar species.</li>
+            <li>This ensures the user can apply focused comparisons of counts and proportions between similar species.
+            </li>
           </ul>
         </li>
         <li><strong>Min Total Count Input Box:</strong>
           <ul>
-            <li>Allows users to select a minimum total population size, to ensure that the values displayed have sufficient samples to conduct analyses with.</li>
+            <li>Allows users to select a minimum total population size, to ensure that the values displayed have
+              sufficient samples to conduct analyses with.</li>
             <li>Set to 300 by default.</li>
           </ul>
         </li>
         <li><strong>Min Proportion and Max Proportion Sliders:</strong>
           <ul>
-            <li>Allows users to select minimum and maximum proportions of planted species, to find species that can be used for practical analysis of characteristics between planted and non-planted samples.</li>
+            <li>Allows users to select minimum and maximum proportions of planted species, to find species that can be
+              used for practical analysis of characteristics between planted and non-planted samples.</li>
             <li>Set to 0.3 and 0.7 respectively by default.</li>
           </ul>
         </li>
@@ -126,60 +137,406 @@ title: "M3: Planting Focus Viz"
         </li>
         <li><strong>Linked Filtering:</strong>
           <ul>
-            <li>Ensures the bar plot and dot plot remain synchronized. Brushing on either view updates both visualizations, creating a cohesive exploration experience.</li>
+            <li>Ensures the bar plot and dot plot remain synchronized. Brushing on either view updates both
+              visualizations, creating a cohesive exploration experience.</li>
           </ul>
         </li>
         <li><strong>Conditional Highlighting:</strong>
           <ul>
-            <li>Upon brushing into specific marks, the opacity of all other related marks are set to be low, drawing attention to the area under analysis, improving focus and reducing cognitive load.</li>
+            <li>Upon brushing into specific marks, the opacity of all other related marks are set to be low, drawing
+              attention to the area under analysis, improving focus and reducing cognitive load.</li>
           </ul>
         </li>
         <li><strong>Tooltip Enhancements:</strong>
           <ul>
-            <li>Tooltips provide precise numerical values for proportions of planted specimens and total population size corresponding to each species, enhancing interpretability without cluttering the visualization.</li>
+            <li>Tooltips provide precise numerical values for proportions of planted specimens and total population size
+              corresponding to each species, enhancing interpretability without cluttering the visualization.</li>
           </ul>
         </li>
       </ul>
     </div>
-  
+
     <div class="section">
       <h4>Tasks Supported by the Visualization</h4>
       <ul>
-        <li><strong>Retrieve Value:</strong> Tooltips allow users to extract specific details, such as proportions of planted specimens and total population size corresponding to each species.</li>
-        <li><strong>Filter:</strong> Users can filter data by genus selection (via dropdown), selection of boundaries for population size (via textbox) and proportions of planted specimens (via sliders), and brushing within either plot, enabling focused exploration.</li>
-        <li><strong>Compute Derived Value:</strong> To obtain the proportion of planted specimens over the total populations for each species, two aggregations were required. The first aggregation involved counting the number of trees with explicit DATE_PLANTED values grouped by species, under the assumption that all trees without the DATE_PLANTED were not planted trees, while the second involved counting the total number trees for the species that had DATE_PLANTED specimens. The proportion was obtained by dividing the number of planted specimens over the total number of specimens for each species.</li>
+        <li><strong>Retrieve Value:</strong> Tooltips allow users to extract specific details, such as proportions of
+          planted specimens and total population size corresponding to each species.</li>
+        <li><strong>Filter:</strong> Users can filter data by genus selection (via dropdown), selection of boundaries
+          for population size (via textbox) and proportions of planted specimens (via sliders), and brushing within
+          either plot, enabling focused exploration.</li>
+        <li><strong>Compute Derived Value:</strong> To obtain the proportion of planted specimens over the total
+          populations for each species, two aggregations were required. The first aggregation involved counting the
+          number of trees with explicit DATE_PLANTED values grouped by species, under the assumption that all trees
+          without the DATE_PLANTED were not planted trees, while the second involved counting the total number trees for
+          the species that had DATE_PLANTED specimens. The proportion was obtained by dividing the number of planted
+          specimens over the total number of specimens for each species.</li>
         <li><strong>Sort:</strong> Species in the bar plot are are sorted by population size.</li>
       </ul>
     </div>
-  
+
     <div class="section">
       <h4>Why These Choices Were Effective</h4>
       <ul>
         <li><strong>Data Processing:</strong>
           <ul>
-            <li>Aggregating proportion of planted specimens over the total populations for each species ensures the visualization is concise and focused on species with sufficiently large amounts of samples to conduct analyses with.</li>
-            <li>Filtering the dataset avoids overwhelming users with less relevant data while still providing meaningful insights into planted proportions.</li>
+            <li>Aggregating proportion of planted specimens over the total populations for each species ensures the
+              visualization is concise and focused on species with sufficiently large amounts of samples to conduct
+              analyses with.</li>
+            <li>Filtering the dataset avoids overwhelming users with less relevant data while still providing meaningful
+              insights into planted proportions.</li>
           </ul>
         </li>
         <li><strong>Comprehensive Analysis:</strong>
           <ul>
-            <li>The bar plot and dot plot visualise variations of proportions of planted specimens across species and population sizes.</li>
-            <li>Together, they allow users to discover which species has sufficient data for both planted and non-planted specimens through the combinations of the total number of trees and the proportion of planted samples.</li>
+            <li>The bar plot and dot plot visualise variations of proportions of planted specimens across species and
+              population sizes.</li>
+            <li>Together, they allow users to discover which species has sufficient data for both planted and
+              non-planted specimens through the combinations of the total number of trees and the proportion of planted
+              samples.</li>
           </ul>
         </li>
         <li><strong>Dynamic Exploration:</strong>
           <ul>
-            <li>The dropdown menu, input box, sliders and bidirectional interactions allow users to explore the data dynamically, refining their analysis based on genus, population size, proportions and species.</li>
-            <li>Linked filtering ensures consistency between the bar plot and dot plot, maintaining a seamless exploration experience.</li>
+            <li>The dropdown menu, input box, sliders and bidirectional interactions allow users to explore the data
+              dynamically, refining their analysis based on genus, population size, proportions and species.</li>
+            <li>Linked filtering ensures consistency between the bar plot and dot plot, maintaining a seamless
+              exploration experience.</li>
           </ul>
         </li>
         <li><strong>Enhanced Interpretability:</strong>
           <ul>
-            <li>Tooltips and conditional highlighting make the visualization accessible to a wide audience, supporting informed decision-making about species with greater flexibility in terms of what species could be focused on.</li>
+            <li>Tooltips and conditional highlighting make the visualization accessible to a wide audience, supporting
+              informed decision-making about species with greater flexibility in terms of what species could be focused
+              on.</li>
           </ul>
         </li>
       </ul>
     </div>
   </div>
+
+  <!-- VIZ 1 ENDS -->
+
+  <!-- VIZ 2 START -->
+  <h2>Visualization 2: Which planted species exist in many different locations within each neighbourhood?</h2>
+  <div class="iframe-container">
+    <iframe src="../images/ntam_viz/plant_viz2.html" height="700"></iframe>
+  </div>
+
+  <div class="container">
+
+    <div class="section">
+      <h4>Marks</h4>
+
+      <p><strong>Choropleth:</strong></p>
+      <ul>
+        <li>Used to display proportions of streets within Vancouver neighborhoods with sufficient species variation, 15
+          in this case.</li>
+        <li>The geospatial layout provides geographic context, helping users quickly identify areas with higher or lower
+          homogeneity.</li>
+        <li>Color intensity (viridis scheme) encodes proportions of streets within the neighbourhood with over 15
+          different species, emphasizing areas with the most extreme variations of species diversity.</li>
+      </ul>
+
+      <p><strong>Bar plot:</strong></p>
+      <ul>
+        <li>Used to provide more detailed information within each neighbourhood on the counts of species for each
+          street.</li>
+        <li>Bar lengths represent number of species within specific streets, enabling users more detailed information on
+          species variation that would be difficult to display on the choropleth.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Channels</h4>
+
+      <p><strong>Choropleth:</strong></p>
+      <ul>
+        <li><strong>Position:</strong> Geographic boundaries represent neighborhoods, offering spatial context for
+          biodiversity distribution.</li>
+        <li><strong>Color:</strong> Encodes proportions of streets within the neighbourhood with over 15 different
+          species (viridis scheme), emphasizing areas with the most extreme variations of species diversity.</li>
+        <li><strong>Opacity:</strong> Upon selection of an area, the opacity of all other areas are set to be low,
+          drawing attention to the area under analysis.</li>
+        <li><strong>Tooltip:</strong> Provides additional details like neighborhood name, number of streets, and
+          proportion of streets with high variety, enhancing interpretability.</li>
+      </ul>
+
+      <p><strong>Bar plot:</strong></p>
+      <ul>
+        <li><strong>Position:</strong>
+          <ul>
+            <li>Y-axis represents neighbourhoods.</li>
+            <li>X-axis represents the counts of species within each street.</li>
+          </ul>
+        </li>
+        <li><strong>Color:</strong> Represents the street's corresponding neighbourhood, primarily to group the
+          locations appropriately. The customised color scheme set was intended such that colorblind individuals would
+          be able to perceptual group and differentiate the streets between categories close to each other.</li>
+        <li><strong>Tooltip:</strong> Displays the corresponding neighbourhood, street and number of distinct species,
+          improving clarity.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Interaction and UI Widgets</h4>
+      <ul>
+        <li><strong>Mouse-Based Neighborhood Selection:</strong>
+          <ul>
+            <li>Users can click on a specific neighborhood in the map to filter the bar chart, displaying detailed data
+              for that neighborhood.</li>
+          </ul>
+        </li>
+        <li><strong>Linked Filtering:</strong>
+          <ul>
+            <li>Ensures the choropleth and bar chart remain synchronized. Clicking on a neighborhood updates both
+              visualizations, creating a cohesive exploration experience.</li>
+          </ul>
+        </li>
+        <li><strong>Conditional Highlighting:</strong>
+          <ul>
+            <li>Upon selection of an area, the opacity of all other areas are set to be low, drawing attention to the
+              area under analysis, improving focus and reducing cognitive load.</li>
+          </ul>
+        </li>
+        <li><strong>Tooltip Enhancements:</strong>
+          <ul>
+            <li>Tooltips provide precise numerical values for counts of streets with sufficient species variation and
+              specific number of distinct species corresponding to each location, enhancing interpretability without
+              cluttering the visualization.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Tasks Supported by the Visualization</h4>
+      <ul>
+        <li><strong>Retrieve Value:</strong> Tooltips allow users to extract specific details, such as counts of streets
+          with sufficient species variation and specific number of distinct species corresponding to each location.</li>
+        <li><strong>Filter:</strong> Users can filter data by selection in the choropleth, enabling focused exploration.
+        </li>
+        <li><strong>Compute Derived Value:</strong> To obtain the proportion of streets with sufficient species
+          variation, two aggregations were required. The first aggregation involved counting the number of unique
+          species within each street, while the second involved counting the number of streets within each
+          neighbourhood. The proportion was obtained by dividing the number of streets that had sufficient numbers of
+          distinct species over the total number of streets within each neighbourhood.</li>
+        <li><strong>Sort:</strong> Neighborhoods are implicitly ranked by proportion of streets with sufficient species
+          variation (via color intensity on the map), and species variations are sorted by neighbourhood in the bar
+          chart.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Why These Choices Were Effective</h4>
+      <ul>
+        <li><strong>Data Processing:</strong>
+          <ul>
+            <li>Aggregating unique species counts per street and extent of species variation within each neighbourhood
+              ensures the visualization is concise and focused on significant contributors to biodiversity.</li>
+            <li>Filtering the dataset avoids overwhelming users with less relevant data while still providing meaningful
+              insights into biodiversity patterns.</li>
+          </ul>
+        </li>
+        <li><strong>Comprehensive Analysis:</strong>
+          <ul>
+            <li>The map provides an overview of spatial patterns, highlighting areas with high or low biodiversity.</li>
+            <li>The bar chart complements the map by offering detailed insights into the composition of biodiversity,
+              breaking down data by locations.</li>
+            <li>Together, they provide a holistic view of Vancouver’s urban tree ecosystem, balancing broad overviews
+              with granular analyses.</li>
+          </ul>
+        </li>
+        <li><strong>Dynamic Exploration:</strong>
+          <ul>
+            <li>Mouse-based neighborhood selection and linked filtering enable seamless exploration, allowing users to
+              transition from spatial patterns to location-level breakdowns.</li>
+            <li>Conditional highlighting improves focus, reducing cognitive load and enhancing interpretability.</li>
+          </ul>
+        </li>
+        <li><strong>Enhanced Interpretability:</strong>
+          <ul>
+            <li>Tooltips and conditional highlighting make the visualization accessible to a wide audience, supporting
+              informed decision-making about neighborhoods with greater flexibility in terms of species sustainability.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Further Developments</h4>
+      <ul>
+        <li>The intended functionality for this visualisation was that the user could select a specific neighbourhood in
+          the choropleth to filter the display of species counts. However, as of this writing, the function has not been
+          implemented, and external assistance is required to resolve it.</li>
+        <li>The selected baseline of species variation may not be sufficient, and thus further UI widgets to provide
+          options for such may be considered.</li>
+        <li>The sheer quantity of neighbourhoods means that the neighbourhood locations in the bar plot run the risk of
+          being indiscriminable.</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- VIZ 2 ENDS -->
+
+  <!-- VIZ 3 START -->
+  <h2>Visualization 3: How do trees that have been planted directly compare in terms of diameter to those that have
+    grown naturally?</h2>
+  <div class="iframe-container">
+    <iframe src="../images/ntam_viz/plant_viz3.html" height="700"></iframe>
+  </div>
+
+  <!-- VIZ 3 START -->
+  <div class="container">
+
+    <div class="section">
+      <h4>Marks</h4>
+
+      <p><strong>Histogram:</strong></p>
+      <ul>
+        <li>Used to display percentage changes in height between planted and non-planted specimens among all species.
+        </li>
+        <li>Bar heights correspond to counts for each range of change in height, allowing for a display on the
+          distribution of potential height changes.</li>
+        <li>Since the dataset only provides height ranges for each specimen, the heights for the trees had to be
+          estimated by using the averages for each range, with the >90 category being estimated with 100 m.</li>
+      </ul>
+
+      <p><strong>Dot plot:</strong></p>
+      <ul>
+        <li>Used to display the percentage changes in diameter between planted and non-planted specimens across all
+          species.</li>
+        <li>Dot positions represent percentage changes between planted and non-planted specimens across species, and the
+          species are set in descending order.</li>
+        <li>Used over bar charts to follow Tufte's principle of data-ink ratio.</li>
+      </ul>
+    </div>
+
+
+    <div class="section">
+      <h4>Channels</h4>
+
+      <p><strong>Histogram:</strong></p>
+      <ul>
+        <li><strong>Position:</strong>
+          <ul>
+            <li>X-axis represents bins of percentages to organise data into discrete categories.</li>
+            <li>Y-axis represents counts of species, showing magnitude.</li>
+          </ul>
+        </li>
+        <li><strong>Length:</strong> Bar lengths encode the number of species in each height range, simplifying
+          comparisons.</li>
+        <li><strong>Tooltip:</strong> Provides specific count value for hovered histogram bins, allowing for more direct
+          comparison of values.</li>
+      </ul>
+
+      <p><strong>Dot plot:</strong></p>
+      <ul>
+        <li><strong>Position:</strong>
+          <ul>
+            <li>X-axis represents species, in descending order of percentage values.</li>
+            <li>Y-axis represents percentage changes in percentage changes in diameter between planted and non-planted
+              specimens, allowing for an accurate display of the variation in differences across species.</li>
+          </ul>
+        </li>
+        <li><strong>Color:</strong> Color selected for each point is dependent on whether the value is negative or
+          positive, with the specific color scheme selected to account for colorblindness.</li>
+        <li><strong>Tooltip:</strong> Displays the corresponding values for each species displayed, such as genus and
+          percentage change in height, improving clarity.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Interaction and UI Widgets</h4>
+      <ul>
+        <li><strong>Genus Dropdown:</strong>
+          <ul>
+            <li>Filters trees based on genus, dynamically updating both the histogram and dot plot.</li>
+            <li>This ensures the user can apply focused comparisons of physical properties between similar species.</li>
+          </ul>
+        </li>
+        <li><strong>Linked Filtering:</strong>
+          <ul>
+            <li>The user can brush the histogram to filter out which species had the corresponding change in height to
+              be displayed in the dot plot along with their corresponding change in diameter.</li>
+          </ul>
+        </li>
+        <li><strong>Conditional Highlighting:</strong>
+          <ul>
+            <li>Brushing the histogram changes the corresponding counts for each blue bar, while the grey bars behind
+              them display the original distribution.</li>
+          </ul>
+        </li>
+        <li><strong>Tooltip Enhancements:</strong>
+          <ul>
+            <li>Tooltips provide precise numerical values for counts and the percentage changes corresponding to each
+              species, enhancing interpretability without cluttering the visualization.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Tasks Supported by the Visualization</h4>
+      <ul>
+        <li><strong>Retrieve Value:</strong> Tooltips allow users to extract specific details, such as counts in
+          specific ranges and percentage changes for species.</li>
+        <li><strong>Filter:</strong> Users can filter data by genus (via dropdown) and by brushing in histogram,
+          enabling focused exploration.</li>
+        <li><strong>Compute Derived Value:</strong> Differences in height and diameter between planted and non-planted
+          trees are obtained by calculating the average height and diameter for each species, then comparing the
+          percentage change from non-planted trees to planted trees. Since the dataset only provides height ranges for
+          each specimen, the heights for the trees had to be estimated by using the averages for each range, with the
+          >90 category being estimated with 100 m.</li>
+        <li><strong>Sort:</strong> Neighborhoods are implicitly ranked by tall tree counts (via color intensity on the
+          map), and height ranges are sorted by tree count in the bar chart.</li>
+        <li><strong>Characterize Distribution:</strong> The combination of the historgam and dot plot allows users to
+          analyze the distribution of changes in height and diameter.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Why These Choices Were Effective</h4>
+      <ul>
+        <li><strong>Comprehensive Analysis:</strong>
+          <ul>
+            <li>The histogram provides an overview of the distribution of height changes.</li>
+            <li>The dot plot displays the changes in diameter changes across species.</li>
+            <li>These combined provide a better understanding of how drastically certain planted trees may differ
+              compared to their naturally grown counterparts.</li>
+          </ul>
+        </li>
+        <li><strong>Dynamic Exploration:</strong>
+          <ul>
+            <li>The dropdown menu and histogram brush allow users to explore the data dynamically, refining their
+              analysis based on genus and height range.</li>
+            <li>Linked filtering ensures consistency between the histogram and dot plot, maintaining a seamless
+              exploration experience.</li>
+          </ul>
+        </li>
+        <li><strong>Enhanced Interpretability:</strong>
+          <ul>
+            <li>Conditional highlighting and tooltips improve clarity, making it easier for users to interpret the data
+              and make informed decisions about identifying plants that grow differently from their naturally-grown
+              counterparts.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Further developments</h4>
+      <ul>
+        <li>The displayed data is limited by the inability to ensure that there are sufficient planted and non-planted
+          samples for each given species. Thus the calculated differences in diameter and height may be highly skewed
+          and otherwise inaccurate, and will need to be accounted for in the future.</li>
+        <li>Similarly, any species that does not have sufficient data needs to be shown as well in some form.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- VIZ 3 ENDS -->
+
 
 </body>
