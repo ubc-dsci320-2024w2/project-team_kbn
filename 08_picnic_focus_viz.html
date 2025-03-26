@@ -1,14 +1,216 @@
 ---
 layout: default
-title: "M3: Picnic Viz"
+title: "M3: Picnic Focus Viz"
 ---
 
-<article>
+
+<head>
+  <style>
+    body {
+      font-family: 'PT Sans', Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 10px;
+      padding: 10px;
+    }
+
+    .section {
+      margin: 10px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    iframe {
+      width: 100%;
+      border: none;
+    }
+
+    .iframe-container {
+      margin-left: 30px;
+    }
+
+    h1 {
+      margin: 20px
+    }
+
+    h2 {
+      margin: 30px;
+      max-width: 1000px
+    }
+  </style>
+
+</head>
+
+
 <body>
-  <h1>
-    Testing
-  </h1>
-  <iframe src="../images/kli_viz/picnic_viz1.html" style="width: 100vw; height: 100vh; border: none;"></iframe>
-  </iframe>
+
+  <h1>Picnic Focus Vizualizations</h1>
+
+  <h2>Visualization 1: Which neighbourhoods have the highest density of large trees (e.g., height over 40 feet) that
+    provide ample shade for comfortable picnic spots?</h2>
+
+  <!-- VIZ 1 START -->
+  <div class="iframe-container">
+    <iframe src="../images/kli_viz/picnic_viz1.html" height="100vh"></iframe>
+  </div>
+
+  <div class="container">
+
+    <div class="section">
+      <h4>Marks</h4>
+
+      <p><strong>Chlorophyll Map</strong></p>
+      <ul>
+        <li>Displays tall tree counts across Vancouver neighborhoods.</li>
+        <li>The geospatial layout provides geographic context, helping users quickly identify areas with high
+          concentrations of mature vegetation.</li>
+        <li>Color intensity (greens scheme) encodes tall tree counts, emphasizing neighborhoods with the highest
+          densities of tall trees.</li>
+        <li>This choice leverages the Gestalt principle of similarity, grouping neighborhoods with comparable tall tree
+          densities through consistent color gradients.</li>
+      </ul>
+
+      <p><strong>Bar Chart</strong></p>
+      <ul>
+        <li>Shows the distribution of trees by height range within the selected neighborhood.</li>
+        <li>Bar lengths encode tree counts for each height range, enabling detailed analysis of tree height composition.
+        </li>
+        <li>Sorting height ranges by count supports tasks like characterizing distribution and finding extrema.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Channels</h4>
+
+      <p><strong>Chlorophyll Map</strong></p>
+      <ul>
+        <li><strong>Position :</strong> Geographic boundaries represent neighborhoods, offering spatial context for tall
+          tree distributions.</li>
+        <li><strong>Color :</strong> Encodes tall tree counts using a gradient (greens scheme), making it easy to spot
+          areas with high tall tree densities.
+          <ul>
+            <li>The use of a single color gradient aligns with the principle of data-ink ratio, maximizing the
+              proportion of ink used to display data while minimizing distractions.</li>
+          </ul>
+        </li>
+        <li><strong>Opacity :</strong> Highlights the selected neighborhood in full opacity while dimming others,
+          focusing user attention on the chosen area.
+          <ul>
+            <li>This technique reduces visual clutter and enhances figure-ground differentiation.</li>
+          </ul>
+        </li>
+        <li><strong>Tooltip :</strong> Provides additional details like total tree count, tall tree count, and rank,
+          enhancing interpretability without overloading the visualization.</li>
+      </ul>
+
+      <p><strong>Bar Chart</strong></p>
+      <ul>
+        <li><strong>Position :</strong>
+          <ul>
+            <li>Y-axis represents height ranges, organizing data into discrete categories.</li>
+            <li>X-axis indicates tree count, showing magnitude.</li>
+          </ul>
+        </li>
+        <li><strong>Length :</strong> Bar lengths encode the number of trees in each height range, simplifying
+          comparisons.</li>
+        <li><strong>Color :</strong> Uses a consistent greens scheme to align with the map, reinforcing the focus on
+          tall trees.</li>
+        <li><strong>Tooltip :</strong> Displays exact values for tree counts and height ranges, improving clarity.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Interaction and UI Widgets</h4>
+
+      <p><strong>Height Slider:</strong></p>
+      <ul>
+        <li>Filters trees based on a minimum height threshold (e.g., "At Least Height: 40ft"). This ensures the
+          visualization focuses on tall trees, aligning with the goal of identifying mature vegetation
+          suitable for picnic environments. This supports filtering tasks by allowing users to refine their analysis
+          dynamically.</li>
+      </ul>
+
+      <p><strong>Neighborhood Dropdown:</strong></p>
+      <ul>
+        <li>Allows users to select a specific neighborhood, dynamically updating both the map
+          and bar chart. Enables focused analysis by neighborhood, ensuring the visualization adapts to the user's
+          chosen area. This supports retrieve value and filter tasks.</li>
+      </ul>
+
+      <p><strong>Linked Filtering:</strong></p>
+      <ul>
+        <li>Synchronizes the map and bar chart. Selecting a neighborhood updates both
+          visualizations. Creates a cohesive exploration experience, reducing cognitive load and enhancing usability.
+          This aligns with best practices for interaction idioms, such as linked highlighting.</li>
+      </ul>
+
+      <p><strong>Conditional Highlighting:</strong></p>
+      <ul>
+        <li>Highlights the selected neighborhood in full opacity while dimming others. This improves focus and reduces
+          visual
+          clutter, adhering to the Gestalt principle of figure-ground differentiation.</li>
+      </ul>
+
+      <p><strong>Tooltip Enhancements:</strong></p>
+      <ul>
+        <li>Tooltips provide precise numerical values for tall tree counts, height ranges, and ranks. This enhances
+          interpretability without cluttering the visualization, supporting retrieve value and compute derived value
+          tasks.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Tasks Supported</h4>
+      <ul>
+        <li><strong>Retrieve Value :</strong> Tooltips allow users to extract specific details, such as tall tree
+          counts, neighborhood names, and height range distributions.</li>
+        <li><strong>Filter :</strong> Users can filter data by neighborhood (via dropdown) and by tree height (via
+          slider).</li>
+        <li><strong>Compute Derived Value :</strong> Aggregated metrics like total tree count and tall tree count per
+          neighborhood are computed and displayed.</li>
+        <li><strong>Find Extremum :</strong> The map highlights neighborhoods with the highest tall tree densities,
+          while the bar chart identifies dominant height ranges.</li>
+        <li><strong>Sort :</strong> Neighborhoods are implicitly ranked by tall tree counts (via color intensity on the
+          map), and height ranges are sorted by tree count in the bar chart.</li>
+        <li><strong>Determine Range :</strong> The map's color scale visualizes the span of tall tree counts across
+          neighborhoods.</li>
+        <li><strong>Characterize Distribution :</strong> The combination of the map and bar chart allows users to
+          analyze the spread of tall trees spatially and compositionally.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Why These Choices Were Effective</h4>
+      <ul>
+        <li><strong>Comprehensive Analysis :</strong>
+          <ul>
+            <li>The map provides an overview of spatial patterns, highlighting areas with dense tall trees.</li>
+            <li>The bar chart complements the map by offering detailed insights into tree height composition at the
+              neighborhood level.</li>
+            <li>Together, they provide a holistic view of Vancouver's tree ecosystem, addressing both spatial and
+              compositional aspects.</li>
+          </ul>
+        </li>
+        <li><strong>Dynamic Exploration :</strong>
+          <ul>
+            <li>The dropdown menu and height slider allow users to explore the data dynamically, refining their analysis
+              based on neighborhood and tree size.</li>
+            <li>Linked filtering ensures consistency between the map and bar chart, maintaining a seamless exploration
+              experience.</li>
+          </ul>
+        </li>
+        <li><strong>Enhanced Interpretability :</strong>
+          <ul>
+            <li>Conditional highlighting and tooltips improve clarity, making it easier for users to interpret the data
+              and make informed decisions about identifying neighborhoods with the highest density of large trees for
+              comfortable picnic spots.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
 </body>
-</article>
