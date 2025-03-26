@@ -49,12 +49,12 @@ title: "M3: Picnic Focus Viz"
 
   <h1>Picnic Focus Vizualizations</h1>
 
+  <!-- VIZ 1 START -->
   <h2>Visualization 1: Which neighbourhoods have the highest density of large trees (e.g., height over 40 feet) that
     provide ample shade for comfortable picnic spots?</h2>
 
-  <!-- VIZ 1 START -->
   <div class="iframe-container">
-    <iframe src="../images/kli_viz/picnic_viz1.html" height="100vh"></iframe>
+    <iframe src="../images/kli_viz/picnic_viz1.html" height="600"></iframe>
   </div>
 
   <div class="container">
@@ -212,5 +212,136 @@ title: "M3: Picnic Focus Viz"
       </ul>
     </div>
   </div>
+  <!-- VIZ 1 END -->
+
+
+  <!-- VIZ 2 START -->
+
+  <h2>Visualization 2: Which neighbourhoods have the highest diversity of tree families, offering visually varied and
+    unique picnic environments?</h2>
+  <div class="iframe-container">
+    <iframe src="../images/kli_viz/picnic_viz2.html" height="630"></iframe>
+  </div>
+
+  <div class="container">
+
+    <div class="section">
+      <h4>Marks</h4>
+
+      <p><strong>Chlorophyll Map</strong></p>
+      <p>Displays the diversity of tree genera across Vancouver neighborhoods.</p>
+      <p>The geospatial layout provides geographic context, enabling users to quickly identify areas with high
+        biodiversity.</p>
+      <p>Color intensity (blues scheme) encodes unique tree genera counts, making it easy to spot neighborhoods with the
+        highest ecological richness.</p>
+
+      <p><strong>Bar Chart</strong></p>
+      <p>Shows the top 10 tree families by distinct genera count for the selected neighborhood.</p>
+      <p>Bar lengths represent the number of distinct genera per family, enabling comparisons and highlighting the most
+        biodiverse families.</p>
+    </div>
+
+    <div class="section">
+      <h4>Channels</h4>
+
+      <p><strong>Chlorophyll Map</strong></p>
+      <ul>
+        <li><strong>Position :</strong> Geographic boundaries represent neighborhoods, offering spatial context for
+          biodiversity distribution.</li>
+        <li><strong>Color :</strong> Encodes unique tree genera counts using a gradient (blues scheme), emphasizing
+          areas with high biodiversity.</li>
+        <li><strong>Highlighting :</strong> Highlights the selected neighborhood in yellow, drawing attention to the
+          area under analysis.</li>
+        <li><strong>Tooltip :</strong> Provides additional details like neighborhood name, unique genera count, and
+          rank, enhancing interpretability.</li>
+      </ul>
+
+      <p><strong>Bar Chart</strong></p>
+      <ul>
+        <li><strong>Position :</strong>
+          <ul>
+            <li>Y-axis lists tree families, sorted in descending order of distinct genera count, emphasizing the most
+              biodiverse families.</li>
+            <li>X-axis represents the number of distinct genera, showing magnitude.</li>
+          </ul>
+        </li>
+        <li><strong>Length :</strong> Bar lengths encode the number of distinct genera, simplifying comparisons between
+          families.</li>
+        <li><strong>Tooltip :</strong> Displays exact values for genera counts and family names, improving clarity.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Interaction and UI Widgets</h4>
+
+      <p><strong>Mouse-Based Neighborhood Selection - Bi-directional:</strong></p>
+      <p>Users can click on a specific neighborhood in the map to filter the bar chart. This interaction is
+        bi-directional: selecting a neighborhood updates both the map and bar chart, ensuring synchronization. This
+        supports linked highlighting and retrieve value tasks.</p>
+
+      <p><strong>Conditional Highlighting</strong></p>
+      <p>Highlights the selected neighborhood in yellow while dimming others. Improves focus and reduces cognitive load,
+        adhering to the Gestalt principle of figure-ground differentiation.</p>
+
+      <p><strong>Linked Filtering</strong></p>
+      <p>Ensures the map and bar chart remain synchronized. Clicking on a neighborhood updates both visualizations,
+        creating a cohesive exploration experience.</p>
+
+      <p><strong>Tooltip Enhancements</strong></p>
+      <p>Tooltips provide precise numerical values for unique genera counts, ranks, and family-specific details.
+        Enhances interpretability without cluttering the visualization, supporting retrieve value and compute derived
+        value tasks.</p>
+    </div>
+
+    <div class="section">
+      <h4>Tasks Supported</h4>
+      <ul>
+        <li><strong>Retrieve Value :</strong> Tooltips allow users to extract specific details, such as unique genera
+          counts, neighborhood names, and biodiversity ranks.</li>
+        <li><strong>Filter :</strong> Users can filter data by neighborhood (via mouse-based selection).</li>
+        <li><strong>Find Extremum :</strong> The map highlights neighborhoods with the highest biodiversity, while the
+          bar chart identifies the most biodiverse tree families.</li>
+        <li><strong>Sort :</strong> Neighborhoods are implicitly ranked by biodiversity (via color intensity on the
+          map), and tree families are explicitly sorted by genera count in the bar chart.</li>
+        <li><strong>Characterize Distribution :</strong> The combination of the map and bar chart allows users to
+          analyze the spread of biodiversity spatially and compositionally.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Why These Choices Were Effective</h4>
+
+      <p><strong>Data Processing :</strong></p>
+      <ul>
+        <li>Aggregating unique genera counts per neighborhood and identifying the top 10 tree families ensures the
+          visualization is concise and focused on significant contributors to biodiversity.</li>
+        <li>Filtering the dataset avoids overwhelming users with less relevant data while still providing meaningful
+          insights into biodiversity patterns.</li>
+      </ul>
+
+      <p><strong>Comprehensive Analysis :</strong></p>
+      <ul>
+        <li>The map provides an overview of spatial patterns, highlighting areas with high or low biodiversity.</li>
+        <li>The bar chart complements the map by offering detailed insights into the composition of biodiversity,
+          breaking down data by tree families.</li>
+        <li>Together, they provide a holistic view of Vancouver's urban tree ecosystem, balancing broad overviews with
+          granular analyses.</li>
+      </ul>
+
+      <p><strong>Dynamic Exploration :</strong></p>
+      <ul>
+        <li>Mouse-based neighborhood selection and linked filtering enable seamless exploration, allowing users to
+          transition from spatial patterns to family-level breakdowns.</li>
+        <li>Conditional highlighting improves focus, reducing cognitive load and enhancing interpretability.</li>
+      </ul>
+
+      <p><strong>Enhanced Interpretability :</strong></p>
+      <ul>
+        <li>Tooltips and conditional highlighting make the visualization accessible to a wide audience, supporting
+          informed decision-making about neighborhoods with diverse picnic environments.</li>
+      </ul>
+    </div>
+  </div>
+  <!-- VIZ 2 END -->
 
 </body>
