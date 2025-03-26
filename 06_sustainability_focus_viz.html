@@ -25,13 +25,16 @@ title: "M3: Substainability Focus Viz"
     iframe {
       width: 100%;
       border: none;
-      marginwidth: 10px;
     }
 
-
-    h2 {
-      margin: 10px
+    .iframe-container {
+    margin-left: 10px;
     }
+
+    h1, h2 {
+      margin: 20px
+    }
+
   </style>
 </head>
 
@@ -39,10 +42,10 @@ title: "M3: Substainability Focus Viz"
 
   <h1>Substainability Focus Viz</h1>
 
-
   <h2>Visualisation 1: How do height and diameter vary across different tree species in Vancouver’s public spaces?</h2>
+  <div class="iframe-container">
   <iframe src="../images/bri_viz/sustainability_viz1.html" height="650"></iframe>
-
+  </div>
 
   <!-- VIZ 1 START -->
 
@@ -178,7 +181,10 @@ title: "M3: Substainability Focus Viz"
   <!-- VIZ 2 START -->
 
   <h2>Visualisation 2: How does the spatial distribution of the physical traits of species differ across Vancouver?</h2>
+
+  <div class="iframe-container">
   <iframe src="../images/bri_viz/sustainability_viz2.html" height="650"></iframe>
+  </div>
 
   <div class="container">
 
@@ -313,5 +319,99 @@ title: "M3: Substainability Focus Viz"
     </div>
   </div>
   <!-- VIZ 2 END -->
+
+<!-- VIZ 3 START -->
+
+<h2>Visualisation 3: How do height and diameter of tree influence their placement in different urban settings (e.g., streets, parks, medians, and greenways)?</h2>
+
+<div class="iframe-container">
+<iframe src="../images/bri_viz/sustainability_viz3.html" height="650"></iframe>
+</div>
+
+<div class="container">
+
+  <div class="section">
+    <h4>Mark</h4>
+    <p><strong>Stacked Bar Chart:</strong> Used to compare tree height categories (small, medium, large) across different street sides. The stacked format allows for a direct proportional comparison across categories.</p>
+    <p><strong>Histogram:</strong> Used to represent the frequency distribution of tree diameters for the selected street side and height category. The binning approach in the histogram effectively shows the distribution of tree sizes.</p>
+  </div>
+
+  <div class="section">
+    <h4>Channels</h4>
+
+    <p><strong>Stacked Bar Chart</strong></p>
+    <ul>
+      <li><strong>Position:</strong> X-axis represents different street sides. Y-axis represents relative proportions of different height ranges (small, medium, large).</li>
+      <li><strong>Color:</strong> The color of the bar is represented by different height ranges.</li>
+      <li><strong>Opacity:</strong> Encodes the opacity of each bar, which changes based on the selection of height size (height_selection) and street side (street_selection). Selected values are fully visible (opacity = 1), and others are dimmed (opacity = 0.3).</li>
+      <li><strong>Tooltip:</strong> Provides additional information on hover, including height category, diameter, street side, and tree count.</li>
+    </ul>
+
+    <p><strong>Bar Chart</strong></p>
+    <ul>
+      <li><strong>Position:</strong> X-axis represents the diameter of trees. This axis is divided into bins with a maximum of 30 bins. Y-axis represents the tree count in each diameter bin.</li>
+      <li><strong>Tooltip:</strong> Provides additional information on hover, including height category, diameter, street side, and tree count.</li>
+    </ul>
+
+  </div>
+
+  <div class="section">
+    <h4>Interaction and UI Widgets</h4>
+    <ul>
+      <li><strong>Height Selection Radio Button:</strong> This widget allows the user to select a height range for the trees. The options "Small," "Medium," and "Large" correspond to the HEIGHT_SIZE variable, while the "Show All" option displays all tree heights, regardless of the size.</li>
+      <li><strong>Street Selection Radio Button:</strong> This widget allows the user to select a street side (or choose "Show All" to include all streets). The street sides are dynamically populated based on the dataset, and users can pick a specific street side for analysis.</li>
+      <li><strong>Linked Filtering:</strong>
+        <ul>
+          <li>The height selection filters both visualizations to display only data corresponding to the selected street side (or all street sides if "Show All" is selected).</li>
+          <li>The street selection filters both visualizations to display only data corresponding to the selected street side (or all street sides if "Show All" is selected).</li>
+        </ul>
+      </li>
+      <li><strong>Conditional Highlighting:</strong>
+        <ul>
+          <li>The height selection controls the opacity of the bars in the height_bar chart. Trees of the selected height range are fully visible, while trees outside the selection are dimmed.</li>
+          <li>The street selection filters both visualizations to display only data corresponding to the selected street side (or all street sides if "Show All" is selected).</li>
+        </ul>
+      </li>
+      <li><strong>Tooltip Enhancements:</strong> Tooltips provide precise numerical values for tree counts, average diameter, and height range, improving interpretability while maintaining a clean visualization.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h4>Tasks Supported by the Visualization</h4>
+    <ul>
+      <li><strong>Characterize Distribution:</strong> The height distribution allows users to see which sides of the street have a greater number of trees within specific height ranges.</li>
+      <li><strong>Filter:</strong> Filtering by tree diameter ensures that the visualization only displays relevant data, specifically trees with diameters under 60 cm. Users can also filter by street side for more precise information.</li>
+      <li><strong>Retrieve Value:</strong> Tooltips enable users to extract detailed information about the average diameter, tree count, and height range for different sides of the street.</li>
+      <li><strong>Compute Derived Value:</strong> Calculate the total number of trees for each street side and height category.</li>
+      <li><strong>Find Extremum:</strong> The stacked bars allow users to easily compare the relative proportions of different height categories on each side of the street.</li>
+      <li><strong>Determine Range:</strong> The histogram bins for each street side display the range of tree diameters within each selected height category. Users can visually assess the distribution of tree diameters for each side of the street by selecting different height categories using radio buttons.</li>
+      <li><strong>Find Anomalies:</strong> Identify any unusual diameter distribution patterns that may exist for specific combinations of street sides and height ranges.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h4>Why These Choices Were Effective</h4>
+    <ul>
+      <li><strong>Comprehensive Analysis:</strong>
+        <ul>
+          <li>The stacked bar chart represents the count of trees in each height category (Small, Medium, Large) across various street sides (urban settings). This allows users to compare how different height categories are distributed across the urban settings.</li>
+          <li>The bar chart (histogram) visually shows the distribution of tree diameters across different settings. By binning the diameter data, users can observe the prevalence of certain tree sizes across urban locations.</li>
+        </ul>
+      </li>
+      <li><strong>Dynamic Exploration:</strong>
+        <ul>
+          <li>Height Selection Radio Button: Users can filter by height categories (Small, Medium, Large) or choose "Show All" to view all trees regardless of height. This enables focused exploration of how different height ranges are distributed across various street sides.</li>
+          <li>Street Side Selection: Users can filter by specific urban settings (e.g., streets, parks, greenways), which allows them to explore how trees of different heights and diameters are placed in these settings.</li>
+          <li>Conditional Highlighting: Conditional Highlighting helps users visually distinguish between selected and unselected combinations based on their interactions. This increases the visibility of the elements the user is focusing on and improves the overall clarity of the visualization.</li>
+        </ul>
+      </li>
+      <li><strong>Enhanced Interpretability:</strong>
+        <ul>
+          <li>Tooltips provide users with direct access to key information such as tree count, height range, street side, and average diameter. This clarity ensures that users understand the data points they are interacting with.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
 
 </body>
