@@ -3,14 +3,79 @@ layout: default
 title: "M3: Picnic Viz"
 ---
 
-<article>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Visualization in Vancouver</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+        h2, h4 {
+            color: #2c3e50;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .highlight {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-left: 5px solid #3498db;
+        }
+    </style>
+</head>
 <body>
-  <h1>
-    Testing
-  </h1>
-  <iframe src="../images/bri_viz/sustainability_viz1.html" style="width: 100vw; height: 100vh; border: none;"></iframe>
-  <iframe src="../images/bri_viz/sustainability_viz2.html" style="width: 100vw; height: 100vh; border: none;"></iframe>
-  <iframe src="../images/bri_viz/sustainability_viz3.html" style="width: 100vw; height: 100vh; border: none;"></iframe>
+    <div class="container">
+        <h2>Visualisation 1: How do height and diameter vary across different tree species in Vancouver’s public spaces?</h2>
+        <ul>
+        <iframe src="../images/bri_viz/sustainability_viz1.html" style="width: 100vw; height: 100%; border: none;"></iframe>
+        </ul>
+        <div class="section">
+            <h4>Mark</h4>
+            <p><strong>Heatmap:</strong> Used to compare tree diameters across different height ranges and species.</p>
+            <p><strong>Bar Chart:</strong> Shows the average tree diameter for the top 20 species.</p>
+        </div>
 
+        <div class="section">
+            <h4>Channels</h4>
+                <p><strong>Heatmap</strong></p>
+                <ul>
+                    <li><strong>Position:</strong> X-axis represents different tree species and Y-axis denotes height ranges.</li>
+                    <li><strong>Color:</strong> A sequential color scale using the scheme red, yellow, and blue is employed. Colors represent varying values of average diameter: red indicates smaller diameters, yellow signifies intermediate sizes, and blue represents larger diameters.</li>
+                    <li><strong>Opacity:</strong> Based on the selections made (species that are selected or hovered over), if the average diameter exceeds the threshold set via the slider, the opacity of the corresponding rectangles is set to 1 (highlighted). Non-selected boxes are dimmed to an opacity of 0.3.</li>
+                    <li><strong>Tooltip:</strong> Each tooltip provides additional information, including the total tree count, species, height range, and average diameter, enhancing the interpretability of the heatmap..</li>
+                </ul>
+            
+            
+                <p><strong>Bar Chart</strong></p>
+                <ul>
+                    <li><strong>Position:</strong> X-axis represents tree species and Y-axis indicates their average diameter, promoting an intuitive understanding of size differences.</li>
+                    <li><strong>Length:</strong>The height of the bars represents the average diameter for each tree species, arranged in ascending order. This sorting simplifies the identification of species with the largest and smallest diameters.</li>
+                    <li><strong>Opacity:</strong> When a species is selected, its bar is fully visible (opacity set to 1). For all other species, the bar's opacity is dimmed to 0.3.</li>
+                    <li><strong>Tooltip:</strong> The tooltip provides details such as tree species and average diameter, enhancing the interpretability of the data.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <h4>Interaction and UI Widgets</h4>
+            <ul>
+                <li><strong>Diameter Slider:</strong> Filters heatmap by minimum average diameter.</li>
+                <li><strong>Reset Button:</strong> Resets diameter filter.</li>
+                <li><strong>Bidirectional Linking:</strong> Clickable species highlight in both charts.</li>
+                <li><strong>Conditional Highlighting:</strong> Selected species stand out.</li>
+                <li><strong>Tooltip Enhancements:</strong> Displays detailed information.</li>
+            </ul>
+        </div>
+    </div>
 </body>
-</article>
+</html>

@@ -64,7 +64,7 @@ The high-fidelity sketch expands on the choropleth by allowing zooming into each
     <img src="../images/ntam_sketches/sketch_3_1_2.jpg" alt="Sketch 3 1 2" style="width: 30%;">
     <img src="../images/ntam_sketches/sketch_3_1_3.jpg" alt="Sketch 3 1 3" style="width: 30%;">
 </div>
-<img src="../images/ntam_sketches/hi_sketch_1.jpg" alt="Hi Sketch 1">
+<img src="../images/ntam_sketches/hi_sketch_1.jpg" alt="Hi Sketch 1" style="width: 50%">
 
 
 **How do trees that have been planted directly compare in terms of diameter to those that have grown naturally?**
@@ -79,7 +79,7 @@ The high-fidelity sketch expands on the bar plot, by including a tooltip for the
     <img src="../images/ntam_sketches/sketch_3_2_3.jpg" alt="Sketch 3 2 3" style="width: 30%;">
 </div>
 
-<img src="../images/ntam_sketches/hi_sketch_2.jpg" alt="Hi Sketch 2">
+<img src="../images/ntam_sketches/hi_sketch_2.jpg" alt="Hi Sketch 2" style="width: 50%;">
 
 **What is the distribution of ages for specific tree species?**
 
@@ -93,4 +93,4 @@ The high-fidelity sketch expands on the density plot, by including a tooltip for
     <img src="../images/ntam_sketches/sketch_3_3_3.jpg" alt="Sketch 3 3 3" style="width: 30%;">
 </div>
 
-<img src="../images/ntam_sketches/hi_sketch_3.jpg" alt="Hi Sketch 3">
+<img src="../images/ntam_sketches/hi_sketch_3.jpg" alt="Hi Sketch 3" style="width: 50%">
