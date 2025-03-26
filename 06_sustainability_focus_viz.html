@@ -32,14 +32,19 @@ title: "M3: Picnic Viz"
             padding: 10px;
             border-left: 5px solid #3498db;
         }
+        iframe {
+            width: 100%;
+            height: 80vh;
+            border: none;
+            object-fit: contain; /* Ensures the image fits within the container without distorting */
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h2>Visualisation 1: How do height and diameter vary across different tree species in Vancouver’s public spaces?</h2>
         <ul>
-          <iframe src="../images/bri_viz/sustainability_viz1.html" 
-          style="width: 100%; height: 80vh; border: none;"></iframe>
+            <iframe src="../images/bri_viz/sustainability_viz1.html"></iframe>
         </ul>
         <div class="section">
             <h4>Mark</h4>
@@ -49,24 +54,23 @@ title: "M3: Picnic Viz"
 
         <div class="section">
             <h4>Channels</h4>
-                <p><strong>Heatmap</strong></p>
-                <ul>
-                    <li><strong>Position:</strong> X-axis represents different tree species and Y-axis denotes height ranges.</li>
-                    <li><strong>Color:</strong> A sequential color scale using the scheme red, yellow, and blue is employed. Colors represent varying values of average diameter: red indicates smaller diameters, yellow signifies intermediate sizes, and blue represents larger diameters.</li>
-                    <li><strong>Opacity:</strong> Based on the selections made (species that are selected or hovered over), if the average diameter exceeds the threshold set via the slider, the opacity of the corresponding rectangles is set to 1 (highlighted). Non-selected boxes are dimmed to an opacity of 0.3.</li>
-                    <li><strong>Tooltip:</strong> Each tooltip provides additional information, including the total tree count, species, height range, and average diameter, enhancing the interpretability of the heatmap..</li>
-                </ul>
+            <p><strong>Heatmap</strong></p>
+            <ul>
+                <li><strong>Position:</strong> X-axis represents different tree species and Y-axis denotes height ranges.</li>
+                <li><strong>Color:</strong> A sequential color scale using the scheme red, yellow, and blue is employed. Colors represent varying values of average diameter: red indicates smaller diameters, yellow signifies intermediate sizes, and blue represents larger diameters.</li>
+                <li><strong>Opacity:</strong> Based on the selections made (species that are selected or hovered over), if the average diameter exceeds the threshold set via the slider, the opacity of the corresponding rectangles is set to 1 (highlighted). Non-selected boxes are dimmed to an opacity of 0.3.</li>
+                <li><strong>Tooltip:</strong> Each tooltip provides additional information, including the total tree count, species, height range, and average diameter, enhancing the interpretability of the heatmap.</li>
+            </ul>
             
-            
-                <p><strong>Bar Chart</strong></p>
-                <ul>
-                    <li><strong>Position:</strong> X-axis represents tree species and Y-axis indicates their average diameter, promoting an intuitive understanding of size differences.</li>
-                    <li><strong>Length:</strong>The height of the bars represents the average diameter for each tree species, arranged in ascending order. This sorting simplifies the identification of species with the largest and smallest diameters.</li>
-                    <li><strong>Opacity:</strong> When a species is selected, its bar is fully visible (opacity set to 1). For all other species, the bar's opacity is dimmed to 0.3.</li>
-                    <li><strong>Tooltip:</strong> The tooltip provides details such as tree species and average diameter, enhancing the interpretability of the data.</li>
-                </ul>
-            </div>
+            <p><strong>Bar Chart</strong></p>
+            <ul>
+                <li><strong>Position:</strong> X-axis represents tree species and Y-axis indicates their average diameter, promoting an intuitive understanding of size differences.</li>
+                <li><strong>Length:</strong> The height of the bars represents the average diameter for each tree species, arranged in ascending order. This sorting simplifies the identification of species with the largest and smallest diameters.</li>
+                <li><strong>Opacity:</strong> When a species is selected, its bar is fully visible (opacity set to 1). For all other species, the bar's opacity is dimmed to 0.3.</li>
+                <li><strong>Tooltip:</strong> The tooltip provides details such as tree species and average diameter, enhancing the interpretability of the data.</li>
+            </ul>
         </div>
+        
         <div class="section">
             <h4>Interaction and UI Widgets</h4>
             <ul>
