@@ -2,7 +2,7 @@
 
 ## Describe your dataset in about 150-200 words
 
-The [Public Tree Dataset](https://opendata.vancouver.ca/explore/dataset/public-trees/information/?disjunctive.neighbourhood_name&disjunctive.on_street&disjunctive.species_name&disjunctive.common_name), maintained by the Vancouver Board of Parks and Recreation, provides comprehensive information on public trees across Vancouver, including their location, species, size, planting date, and coordinates. Updated daily on weekdays, the dataset supports the city’s Healthy City Strategy by managing the urban forest to enhance physical and mental well-being, while also offering environmental benefits such as air purification, carbon capture, and climate resilience. For this analysis, we used data last modified on March 4th, 2025 and enriched it by integrating external databases. We added the FAMILY_NAME column, mapping tree genera to their families using the [Global Biodiversity Information Facility (GBIF)](https://www.gbif.org/), and the HAS_POLLEN column, indicating pollen production based on the [Palynological Database (PalDat)](https://www.paldat.org/). All external data usage complies with licensing terms (CC BY for GBIF and non-commerical use for PalDat), ensuring proper attribution and non-commercial use.
+The [Public Tree Dataset](https://opendata.vancouver.ca/explore/dataset/public-trees/information/?disjunctive.neighbourhood_name&disjunctive.on_street&disjunctive.species_name&disjunctive.common_name), maintained by the Vancouver Board of Parks and Recreation, provides detailed information on public trees across Vancouver, including their location, species, size, planting date, and geographic coordinates. Updated daily on weekdays, the dataset supports the city’s Healthy City Strategy by managing the urban forest to improve physical and mental well-being while delivering environmental benefits such as cleaner air, carbon sequestration, and climate resilience. For this analysis, we used data last modified on March 4th, 2025, and enriched it by integrating external databases. We added the **FAMILY_NAME** column, mapping tree genera to their families using the [Global Biodiversity Information Facility (GBIF)](https://www.gbif.org/), and the **HAS_POLLEN** column, indicating pollen production based on the [Palynological Database (PalDat)](https://www.paldat.org/). To address missing neighborhood data, we utilized the [Overpass API](https://www.openstreetmap.org), an open-source tool developed by Geofabrik GmbH, to retrieve geographical boundaries for areas like Stanley Park and West Point Grey. Additionally, we incorporated the [Local Area Boundary dataset](https://opendata.vancouver.ca/explore/dataset/local-area-boundary/information/?disjunctive.name) from the City of Vancouver’s Open Data Portal to refine neighborhood assignments further. All external data usage complies with licensing terms (CC BY for GBIF and non-commercial use for PalDat), ensuring proper attribution and adherence to non-commercial purposes.
 
 
 ## Describe your topic/interest in about 150-200 words
@@ -17,12 +17,6 @@ For sustainability, we examine the relationship between tree height, diameter, a
 - Person 2: Kaylee Li, on a mission to find the perfect picnic spot for the upcoming spring using this dataset.
 - Person 3: Nicholas Tam, planning to target the distribution of trees by various factors.
 
-## Images
-
-{You should use this area to add a screenshot of an interesting view, and eventually, of your dashboard}
-
-<img src ="images/test.jpg" width="300px">
-
 ## Package requirements
 
 - `altair`
@@ -34,6 +28,9 @@ For sustainability, we examine the relationship between tree height, diameter, a
 
 ## References
 
-- City of Vancouver. (2025, March 4). Public trees. City of Vancouver Open Data Portal. [https://opendata.vancouver.ca/explore/dataset/public-trees/information/?disjunctive.neighbourhood_name&disjunctive.on_street&disjunctive.species_name&disjunctive.common_name](https://opendata.vancouver.ca/explore/dataset/public-trees/information/?disjunctive.neighbourhood_name&disjunctive.on_street&disjunctive.species_name&disjunctive.common_name)
-- GBIF.org (2025), Global Biodiversity Information Facility, https://www.gbif.org.
-- PalDat – a palynological database (2000 onwards, www.paldat.org)
+- City of Vancouver. (2025). Public trees [Data set]. City of Vancouver Open Data Portal. Retrieved March 4, 2025, from https://opendata.vancouver.ca/explore/dataset/public-trees/information/?disjunctive.neighbourhood_name&disjunctive.on_street&disjunctive.species_name&disjunctive.common_name
+- City of Vancouver. (2025). Local area boundary [Data set]. City of Vancouver Open Data Portal. Retrieved March 17, 2025, from
+https://opendata.vancouver.ca/explore/dataset/local-area-boundary/information/?disjunctive.name
+- GBIF.org. (2025). Global Biodiversity Information Facility [Data set]. GBIF Secretariat. https://www.gbif.org
+- OpenStreetMap contributors. (2025). Overpass API [Software]. OpenStreetMap Foundation. https://www.openstreetmap.org
+- PalDat. (n.d.). Palynological database [Database]. https://www.paldat.org
