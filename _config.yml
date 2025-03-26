@@ -22,7 +22,7 @@ navigation:
   - {file: "05_preliminary_sketches.md", title: "M2: Prelim Sketches"}
   - {file: "06_sustainability_focus_viz.md", title: "M3: Sustainability Viz"}
   - {file: "07_planting_focus_viz.md", title: "M3: Planting Viz"}
-  - {file: "08_picnic_focus_viz.md", title: "M3: Picnic Viz"}
+  - {file: "08_picnic_focus_viz.html", title: "M3: Picnic Viz"}
   - {file: "references.md", title: "References"}
 
 comments:
