@@ -33,9 +33,316 @@ Sub Questions:
 - *Which locations within each neighbourhood can host wide varieties of species?* Understanding this could help identify locations that are well-suited to hosting wider varieties of species, ensuring biodiversity and better ecosystem health across different areas of the city.
 - *How do trees that have been planted directly compare in terms of diameter to those that have grown naturally?* Knowing this could highlight how urban planting practices affect tree growth. Planted trees may face more limitations, such as space or soil conditions, which could influence their growth compared to naturally occurring trees.
 
+## Visualisations
+
 ### Visualisations -- Person 1
 
+#### Visualisation 1: How do height and diameter vary across different tree species in Vancouver’s public spaces?
+
+##### Mark
+
+1. Heatmap: Used to compare tree diameters across different height ranges and species. The color intensity effectively illustrates variations in diameter at various heights, making patterns and outliers easily identifiable.
+2. Bar Chart: Used to show the average tree diameter for the top 20 species.The height of each bar allows for straightforward comparisons of tree species regarding diameter, making it easy to rank them.
+
+##### Channels
+
+1. Heatmap
+- Position: The X-axis represents different tree species, while the Y-axis denotes height ranges. This layout facilitates easy comparisons across species at various heights.
+- Color: The colors represent diameter size using a clear gradient for visualizing variations.
+
+2. Bar Chart
+- Position: The X-axis shows various tree species, while the Y-axis indicates their average diameter, promoting an intuitive understanding of size differences.
+- Length: The height of the bars represents the average diameter for each species. The bars are sorted in ascending order, simplifying the identification of species with the largest or smallest diameters.
+
+##### Interaction and UI Widges
+
+- Filtering: Allows users to select specific tree species for focused analysis
+- Brushing & Linking:  Clicking on a species in the bar chart highlights the corresponding cells in the heatmap, allowing users to track diameter variations across height ranges.
+- Hovering: Tooltips display exact numerical values for tree diameters, the species name, and the height category, enhancing interpretability.
+
+##### Task Analysis
+
+1. Characterize Distribution: Analyze the distribution of diameters and heights among different tree species.
+2. Filter: Filter data to only include trees from the top 20 families 
+3. Compute Derived Value:  Compute the average diameter and tree count for each species-height combination.
+4. Find Extremum: Identify which tree species has the largest or smallest average diameter
+5. Determine Range: Identity the range of tree diameters within each tree species and height category
+6. Find Anomalies: Identify if any species has unexpectedly high or low diameters at specific heights
+7. Sort: Rank tree species by average diameter in ascending order
+
+#### Visualisation 2: How does the spatial distribution of the physical traits of species differ across Vancouver?
+
+##### Mark
+
+1. Scatter Plots: Used to represent tree diameters at different latitudes for various height categories. Each point represents an aggregated average, making spatial trends clear.
+2. Bar Charts: Used to display the dominant species within each height category. This allows for easy comparison of species distribution across different tree sizes.
+
+##### Channels
+
+- Position (Latitude vs. Height Category in Scatter Plots): Latitude is mapped to the x-axis, and Height Category is mapped to the y-axis, enabling a clear spatial pattern analysis.
+- Length (Bar Charts for Species Distribution): The height of each bar represents the relative abundance of tree species, making dominant species visually prominent.
+- Size (Latitude vs. Height Category in Scatter Plots): The size of each point indicates the average tree diameter at various latitudes and height categories, making comparisons straightforward.
+
+##### Interaction and UI Widges
+
+- Filtering by Height Category: The figures separate data by height (small, medium, large) using a drop-down menu, making it easier to interpret trends without information overload.
+- Linked Views: The scatter plots and bar charts complement each other by showing both tree size variations and species composition, facilitating multi-faceted analysis.
+- Highlighting Trends: The scatter plots reveal consistent spatial patterns, such as larger tree diameters in northern latitudes, while bar charts highlight species dominance.
+
+##### Task Analysis
+
+1. Characterize Distribution: Analyze the distribution of diameters and heights in latitudes
+2. Filter: 
+- Filter data to only include trees from the top 20 families 
+- Filter trees based on the selected height category in the bar chart
+3. Compute Derived Value:  Compute the average diameter and tree count for a given latitude and height category.
+4. Find Extremum: Identify the latitude where the trees have the largest or smallest average diameter
+5. Determine Range: Identity the range of tree diameters within each tree species and height category
+6. Correlate: Analyze the relationship between latitude and tree size distribution.
+7. Sort: Rank tree species by tree count for the selected height
+
+#### Visualisation 3: How do height and diameter of tree influence their placement in different urban settings (e.g., streets, parks, medians, and greenways)?
+
+##### Mark
+
+1. Stacked Bar Chat: Used to compare tree height categories (small, medium, large) across different street sides. The stacked format allows for a direct proportional comparison across categories.
+2. Histogram: Used to represent the frequency distribution of tree diameters for the selected street side and height category. The binning approach in the histogram effectively shows the distribution of tree sizes.
+
+##### Channels
+
+1. Stacked Bar Chart
+
+- Position: X-axis represents different street sides, allowing for direct comparisons of tree distribution across urban settings. Y-axis represents the proportion of trees in each height category, making it easy to compare different tree sizes.
+- Color: Different tree height categories (small, medium, large) are represented by distinct colors, helping to distinguish between the height distributions.
+
+2. Histogram
+
+- Position (Histogram): X-axis represents tree diameter values, enabling users to see the distribution of tree trunk sizes. Y-axis represents tree counts, showing the frequency of different diameter ranges.
+
+##### Interaction and UI Widges
+
+- Street Selection: Users can choose between even, odd, median, park, bike medians, and greenways.
+- Height Selection: Users can filter tree heights to focus on small, medium, or large trees.
+- Selecting a street type and height category updates the histogram and highlights the corresponding proportion in the stacked bar chart, allowing users to explore specific subsets of data and analyze relationships between height and diameter.
+
+##### Task Analysis
+
+1. Characterize Distribution: Analyze the distribution of diameters and heights among different street sides.
+2. Filter: Filter data to only include trees from the top 20 families and limit tree diameter to below 60 cm
+3. Compute Derived Value: Compute the total count of trees per street side and height category.
+4. Find Extremum: Identify which street side has the largest or smallest proportion of each height category
+5. Determine Range: Identity the range of tree diameters within each street side and height category
+6. Find Anomalies: Identify if any street sides have an unusual height distribution.
+
 ### Visualisations -- Person 2
+
+#### Visualization 1: Which neighbourhoods have the highest density of large trees (e.g., height over 40 feet) that provide ample shade for comfortable picnic spots? Large trees are essential for creating shaded areas, which can significantly enhance the picnic experience on sunny days.
+
+##### Marks
+
+- Map (Geospatial Visualization):
+  - Used to display tall tree counts (>40ft) across Vancouver neighborhoods.  
+  - The geospatial layout provides geographic context, helping users quickly identify areas with dense tall trees.  
+  - Color intensity (greens scheme) encodes tall tree counts, emphasizing neighborhoods with the highest concentrations of mature vegetation.  
+
+- Bar Chart:  
+  - Used to show the distribution of trees by height range within the selected neighborhood.  
+  - Bar lengths represent tree counts for each height range, enabling detailed analysis of tree height composition and supporting comparisons.  
+
+##### Channels
+
+- Map
+  - Position: Geographic boundaries represent neighborhoods, offering spatial context for tall tree distributions.  
+  - Color: Encodes tall tree counts using a gradient (greens scheme), making it easy to spot areas with high tall tree densities.  
+  - Opacity: Highlights the selected neighborhood in full opacity while dimming others, focusing user attention on the chosen area.  
+  - Tooltip: Provides additional details like total tree count, tall tree count, and rank, enhancing interpretability.  
+
+- Bar Chart  
+  - Position:  
+    - Y-axis represents height ranges, organizing data into discrete categories.  
+    - X-axis indicates tree count, showing magnitude.  
+  - Length: Bar lengths encode the number of trees in each height range, simplifying comparisons.  
+  - Color: Uses a consistent greens scheme to align with the map, reinforcing the focus on tall trees.  
+  - Tooltip: Displays exact values for tree counts and height ranges, improving clarity.  
+
+##### Interaction and UI Widgets
+
+- Height Slider:
+  - Filters trees based on a minimum height threshold (e.g., "At Least Height: 50ft").  
+  - This ensures the visualization focuses on tall trees, aligning with the goal of identifying mature vegetation suitable for picnic environments.  
+
+- Neighborhood Dropdown:  
+  - Allows users to select a specific neighborhood, dynamically updating both the map and bar chart.  
+  - This interaction enables focused analysis by neighborhood, ensuring the visualization adapts to the user’s chosen area.  
+
+- Linked Filtering:  
+  - Synchronizes the map and bar chart. Selecting a neighborhood updates both visualizations, creating a cohesive exploration experience.  
+
+- Conditional Highlighting:  
+  - Highlights the selected neighborhood in full opacity while dimming others, improving focus and reducing visual clutter.  
+
+- Tooltip Enhancements:  
+  - Tooltips provide precise numerical values for tall tree counts, height ranges, and ranks, enhancing interpretability without cluttering the visualization.  
+
+##### Tasks Supported by the Visualization
+
+- Retrieve Value: Tooltips allow users to extract specific details, such as tall tree counts, neighborhood names, and height range distributions.
+- Filter: Users can filter data by neighborhood (via dropdown) and by tree height (via slider), enabling focused exploration.  
+- Compute Derived Value: Aggregated metrics like total tree count and tall tree count per neighborhood are computed and displayed, providing insights into tree density and maturity.  
+- Find Extremum: The map highlights neighborhoods with the highest tall tree densities, while the bar chart identifies dominant height ranges.  
+- Sort: Neighborhoods are implicitly ranked by tall tree counts (via color intensity on the map), and height ranges are sorted by tree count in the bar chart.  
+- Determine Range: The map’s color scale visualizes the span of tall tree counts across neighborhoods, helping users understand variability.  
+- Characterize Distribution: The combination of the map and bar chart allows users to analyze the spread of tall trees spatially and compositionally.  
+
+##### Why These Choices Were Effective
+
+1. Comprehensive Analysis:
+   - The map provides an overview of spatial patterns, highlighting areas with dense tall trees.  
+   - The bar chart complements the map by offering detailed insights into tree height composition at the neighborhood level.  
+   - Together, they provide a holistic view of Vancouver's tree ecosystem, addressing both spatial and compositional aspects.  
+
+2. Dynamic Exploration:  
+   - The dropdown menu and height slider allow users to explore the data dynamically, refining their analysis based on neighborhood and tree size.  
+   - Linked filtering ensures consistency between the map and bar chart, maintaining a seamless exploration experience.  
+
+3. Enhanced Interpretability:  
+   - Conditional highlighting and tooltips improve clarity, making it easier for users to interpret the data and make informed decisions about identifying neighborhoods with the highest density of large trees for comfortable picnic spots.  
+
+#### Visualisation 2: Which neighbourhoods have the highest diversity of tree families, offering visually varied and unique picnic environments? A mix of tree species can create a more aesthetically pleasing and engaging atmosphere for picnickers.
+
+##### Marks
+
+- Map (Geospatial Visualization):
+  - Used to display the diversity of tree genera across Vancouver neighborhoods.  
+  - The geospatial layout provides geographic context, enabling users to quickly identify areas with high biodiversity.  
+  - Color intensity (`blues` scheme) encodes unique tree genera counts, making it easy to spot neighborhoods with the highest ecological richness.  
+
+- Bar Chart:  
+  - Used to show the top 10 tree families by distinct genera count for the selected neighborhood.  
+  - Bar lengths represent the number of distinct genera per family, enabling comparisons and highlighting the most biodiverse families.  
+
+##### Channels
+
+- Map  
+  - Position: Geographic boundaries represent neighborhoods, offering spatial context for biodiversity distribution.  
+  - Color: Encodes unique tree genera counts using a gradient (`blues` scheme), emphasizing areas with high biodiversity.  
+  - Highlighting: Highlights the selected neighborhood in yellow, drawing attention to the area under analysis.  
+  - Tooltip: Provides additional details like neighborhood name, unique genera count, and rank, enhancing interpretability.  
+
+- Bar Chart  
+  - Position:  
+    - Y-axis lists tree families, sorted in descending order of distinct genera count, emphasizing the most biodiverse families.  
+    - X-axis represents the number of distinct genera, showing magnitude.  
+  - Length: Bar lengths encode the number of distinct genera, simplifying comparisons between families.  
+  - Tooltip: Displays exact values for genera counts and family names, improving clarity.  
+
+##### Interaction and UI Widgets
+
+- Mouse-Based Neighborhood Selection:  
+  - Users can click on a specific neighborhood in the map to filter the bar chart, displaying data for that neighborhood.  
+  - This interaction is bi-directional: selecting a neighborhood updates both the map and bar chart, ensuring synchronization.  
+
+- Conditional Highlighting:  
+  - Highlights the selected neighborhood in yellow while dimming others, improving focus and reducing cognitive load.  
+
+- Linked Filtering:  
+  - Ensures the map and bar chart remain synchronized. Clicking on a neighborhood updates both visualizations, creating a cohesive exploration experience.  
+
+- Tooltip Enhancements:  
+  - Tooltips provide precise numerical values for unique genera counts, ranks, and family-specific details, enhancing interpretability without cluttering the visualization.  
+
+##### Tasks Supported by the Visualization
+
+- Retrieve Value: Tooltips allow users to extract specific details, such as unique genera counts, neighborhood names, and biodiversity ranks.  
+- Filter: Users can filter data by neighborhood (via mouse-based selection), enabling focused exploration.  
+- Find Extremum: The map highlights neighborhoods with the highest biodiversity, while the bar chart identifies the most biodiverse tree families.  
+- Sort: Neighborhoods are implicitly ranked by biodiversity (via color intensity on the map), and tree families are explicitly sorted by genera count in the bar chart.  
+- Characterize Distribution: The combination of the map and bar chart allows users to analyze the spread of biodiversity spatially and compositionally.  
+
+##### Why These Choices Were Effective
+
+1. Data Processing:  
+   - Aggregating unique genera counts per neighborhood and identifying the top 10 tree families ensures the visualization is concise and focused on significant contributors to biodiversity.  
+   - Filtering the dataset avoids overwhelming users with less relevant data while still providing meaningful insights into biodiversity patterns.  
+
+2. Comprehensive Analysis:  
+   - The map provides an overview of spatial patterns, highlighting areas with high or low biodiversity.  
+   - The bar chart complements the map by offering detailed insights into the composition of biodiversity, breaking down data by tree families.  
+   - Together, they provide a holistic view of Vancouver’s urban tree ecosystem, balancing broad overviews with granular analyses.  
+
+3. Dynamic Exploration:  
+   - Mouse-based neighborhood selection and linked filtering enable seamless exploration, allowing users to transition from spatial patterns to family-level breakdowns.  
+   - Conditional highlighting improves focus, reducing cognitive load and enhancing interpretability.  
+
+4. Enhanced Interpretability:  
+   - Tooltips and conditional highlighting make the visualization accessible to a wide audience, supporting informed decision-making about neighborhoods with diverse picnic environments.  
+
+#### Visualisation 3: Which neighbourhoods have trees that produce high amounts of pollen, potentially affecting picnic experiences for people with allergies? Identifying high-pollen areas can help allergy sufferers avoid discomfort or plan allergy-friendly events.
+
+##### Marks
+
+- Scatterplot:  
+  - Used to display the spatial distribution of trees in the selected neighborhood, with points color-coded by pollen presence (Yes/No).  
+  - The scatterplot provides a geographic overview, enabling users to identify areas with high concentrations of pollen-producing trees or non-pollen-producing trees.  
+
+- Bar Chart:  
+  - Used to show the top 10 streets by tree count in the selected neighborhood, further broken down by pollen presence.  
+  - Bar lengths represent tree counts, and color differentiation highlights the proportion of pollen-producing vs. non-pollen-producing trees on each street.  
+
+##### Channels
+
+- Scatterplot  
+  - Position: X and Y coordinates represent the geographic locations of trees, offering spatial context.  
+  - Color: Encodes pollen presence using distinct colors (e.g., red for "Yes" and blue for "No"), making it easy to distinguish between pollen-producing and non-pollen-producing trees.  
+  - Tooltip: Provides additional details like tree location and pollen status, enhancing interpretability.  
+
+- Bar Chart  
+  - Position:  
+    - Y-axis lists streets, sorted by tree count in descending order, emphasizing streets with the highest tree densities.  
+    - X-axis represents tree count, showing magnitude.  
+  - Length: Bar lengths encode the number of trees, simplifying comparisons between streets.  
+  - Color: Differentiates between pollen-producing and non-pollen-producing trees within each street, highlighting compositional patterns.  
+  - Tooltip: Displays exact values for tree counts and pollen breakdowns, improving clarity.  
+
+##### Interaction and UI Widgets
+
+- Dropdown Menu (Neighborhood Selection):  
+  - Allows users to select a specific neighborhood from a list, dynamically updating both the scatterplot and bar chart.  
+  - This interaction ensures the visualization adapts to the user’s chosen area, enabling focused exploration.  
+
+- Pollen Radio Button (Has Pollen Selection):  
+  - Lets users filter trees based on whether they produce pollen ("Yes" or "No").  
+  - This feature allows users to focus on specific subsets of data, such as identifying high-pollen areas or planning allergy-friendly events.  
+
+- Linked Filtering:  
+  - Ensures both the scatterplot and bar chart update dynamically based on the selections.  
+  - For example, selecting a neighborhood updates both visualizations, while filtering by pollen presence refines the displayed data consistently across views.  
+
+- Tooltip Enhancements:  
+  - Tooltips provide precise numerical values and additional context, such as tree location and pollen status, without cluttering the visualization.  
+
+##### Tasks Supported by the Visualization
+
+- Retrieve Value: Tooltips allow users to extract specific details, such as tree locations and pollen statuses.  
+- Filter: Users can filter data by neighborhood (via dropdown) and pollen presence (via radio buttons), enabling focused exploration.  
+- Find Extremum: The scatterplot highlights areas with high concentrations of pollen-producing trees, while the bar chart identifies streets with the most trees.  
+- Sort: Streets are explicitly sorted by tree count in the bar chart, emphasizing areas with the highest tree densities.  
+- Characterize Distribution: The combination of the scatterplot and bar chart allows users to analyze the spread of pollen-producing trees spatially and compositionally.  
+
+##### Why These Choices Were Effective
+
+1. Comprehensive Analysis:  
+   - The scatterplot provides a spatial overview of tree distribution, helping users identify areas with high pollen-producing tree concentrations.  
+   - The bar chart complements the scatterplot by offering detailed insights into specific streets, breaking down data by pollen presence.  
+   - Together, these visualizations provide a holistic view of Vancouver’s urban tree ecosystem, balancing broad overviews with granular analyses.  
+
+2. Dynamic Exploration:  
+   - Dropdown and radio button selections give users control over filtering data, enabling them to explore patterns of pollen presence in specific neighborhoods.  
+   - Linked filtering ensures consistency across visualizations, reducing confusion and maintaining focus.  
+
+3. Enhanced Interpretability:  
+   - Tooltips and clear color encoding improve clarity, making the visualization accessible to a wide audience.  
+   - These features support informed decision-making about identifying high-pollen areas to avoid discomfort for allergy sufferers or plan allergy-friendly events.  
 
 ### Visualisations -- Person 3
 
