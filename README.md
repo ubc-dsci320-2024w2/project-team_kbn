@@ -1,7 +1,7 @@
 # Group KBN - Vancouver Trees
 
 ## Website URL
-![https://ubc-dsci320-2024w2.github.io/project-team_kbn/](https://ubc-dsci320-2024w2.github.io/project-team_kbn/)
+[https://ubc-dsci320-2024w2.github.io/project-team_kbn/](https://ubc-dsci320-2024w2.github.io/project-team_kbn/)
 
 ## Describe your dataset in about 150-200 words
 
