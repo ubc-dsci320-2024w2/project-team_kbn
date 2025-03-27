@@ -299,17 +299,17 @@ title: "M3: Picnic Focus Viz"
   <div class="section">
     <h4>Interaction and UI Widgets</h4>
 
-    <p><strong>Mouse-Based Neighborhood Selection + Tree Family Selection - Bi-directional:</strong></p>
+  <p><strong>Mouse-Based Neighborhood and Tree Family Selection (Bi-directional Interaction):</strong></p>
+  <ul>
+    <li>Clicking on a neighborhood on the map filters the bar chart to show tree families in that area.</li>
+    <li>Hovering over a bar in the chart highlights the distribution of that tree family on the map.</li>
+    <li>The interaction is bidirectional because:</li>
     <ul>
-      <li>Users can click on a specific neighborhood in the map to filter the bar chart.</li>
-      <li>This interaction is bi-directional: selecting a neighborhood updates both the map and bar chart, ensuring
-        synchronization.</li>
-      <li>Hovering over the bar chart updates the map with the distribution of that tree family in the selected
-        neighborhood on the map.</li>
-      <li>Clicking on the map updates the bar chart with the top 10 tree families in that region, enhancing the
-        relationship between the two visualizations.</li>
-      <li>Supports linked highlighting and retrieve value tasks.</li>
+      <li>Selecting a neighborhood on the map updates both the map and the bar chart, keeping them in sync.</li>
+      <li>Hovering over a bar in the chart updates the map with the corresponding tree family's distribution in the selected neighborhood.</li>
     </ul>
+    <li>This supports linked highlighting and retrieving specific values from both visualizations.</li>
+  </ul>
 
     <p><strong>Conditional Highlighting</strong></p>
     <ul>
