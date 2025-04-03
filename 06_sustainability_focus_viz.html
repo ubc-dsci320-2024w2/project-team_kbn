@@ -200,8 +200,8 @@ title: "M3: Substainability Focus Viz"
       <h4>Mark</h4>
       <p><strong>Scatter Plots:</strong> Used to represent tree diameters at different latitudes for various height
         categories. Each point represents an aggregated average, making spatial trends clear.</p>
-      <p><strong>Bar Charts:</strong> Used to display the dominant species within each height category. This allows for
-        easy comparison of species distribution across different tree sizes.</p>
+      <p><strong>Histogram:</strong> Used to display the diameter of trees within each selected height category and latitude bin. 
+        This allows for easy comparison of species distribution across different tree sizes.</p>
     </div>
 
     <div class="section">
@@ -221,7 +221,7 @@ title: "M3: Substainability Focus Viz"
           average diameter, and tree count.</li>
       </ul>
 
-      <p><strong>Bar Chart</strong></p>
+      <p><strong>Histogram</strong></p>
       <ul>
         <li><strong>Position:</strong> X-axis represents the binned tree diameter values (maximum of 50 bins). Y-axis
           represents the tree count in each diameter bin.</li>
@@ -234,25 +234,25 @@ title: "M3: Substainability Focus Viz"
     <div class="section">
       <h4>Interaction and UI Widgets</h4>
       <ul>
-        <li><strong>Threshold Slider:</strong> The threshold_slider dynamically filters the scatter plot, showing only
+        <li><strong>Tree Count Slider:</strong> The tree count slider dynamically filters the scatter plot, highlighting only
           trees with a count greater than or equal to the selected threshold value.</li>
-        <li><strong>Diameter Slider:</strong> The diameter_selection slider filters the species chart to display only
+        <li><strong>Diameter Slider:</strong> The diameter slider filters the histogram to display only
           those trees with a diameter greater than or equal to the selected value.</li>
-        <li><strong>Dot Selection:</strong> The dot_selection enables the user to select a specific group of trees by
+        <li><strong>Dot Selection:</strong> The dot selection enables the user to select a specific group of trees by
           clicking on a scatter plot point. The selected trees' height and latitude values are then used to filter the
-          species chart.</li>
+          distribution of diameter.</li>
         <li><strong>Linked Filtering:</strong>
           <ul>
             <li>As the threshold slider value changes, the scatter plot updates in real-time to reflect the data points
               that meet the tree count criteria. This allows users to focus on areas with higher tree counts.</li>
-            <li>As the diameter slider value changes, the bar chart updates in real-time to reflect the data points that
+            <li>As the diameter slider value changes, the histogram updates in real-time to reflect the data points that
               meet the minimum diameter criteria.</li>
-            <li>Once a point is selected in the scatter plot, the species chart (bar chart) updates to display only data
+            <li>Once a point is selected in the scatter plot, the histogram updates to display only data
               that corresponds to the selected height category and latitude bin.</li>
           </ul>
         </li>
         <li><strong>Conditional Highlighting:</strong> When a point is selected, its color changes from green (default)
-          to red, visually indicating the selection. The species chart then updates to display the diameters of trees
+          to purple, visually indicating the selection. The histogram then updates to display the diameters of trees
           corresponding to the selected height and latitude bins.</li>
         <li><strong>Tooltip Enhancements:</strong> Tooltips provide precise numerical values for tree counts, average
           diameter, and latitude bin improving interpretability while maintaining a clean visualization.</li>
@@ -263,7 +263,7 @@ title: "M3: Substainability Focus Viz"
       <h4>Tasks Supported by the Visualization</h4>
       <ul>
         <li><strong>Characterize Distribution:</strong> Users can explore how tree diameter distribution varies across
-          different height and latitude categories using the bar chart (species chart). The scatter plot illustrates the
+          different height and latitude categories using the histogram. The scatter plot illustrates the
           distribution of tree counts for each height and latitude bin.</li>
         <li><strong>Retrieve Value:</strong> Tooltips enable users to extract specific details about tree species,
           including average diameter, tree count, and height range across different latitudes.</li>
@@ -278,7 +278,7 @@ title: "M3: Substainability Focus Viz"
         <li><strong>Find Extremum:</strong> Users can interact with the scatter plot to visually identify the latitude
           bins and heights that correspond to the largest and smallest tree counts.</li>
         <li><strong>Determine Range:</strong> Identify the range of tree diameters within each tree species and height
-          category. The species chart displays the range of diameters using bars for the diameter bins. The diameter
+          category. The histogram displays the range of diameters using bars for the diameter bins. The diameter
           slider allows users to further filter this range, showing only the trees that fall within the selected
           diameter thresholds.</li>
         <li><strong>Correlate:</strong> Users can identify patterns or trends in tree data distribution, such as whether
@@ -303,7 +303,7 @@ title: "M3: Substainability Focus Viz"
         </li>
         <li><strong>Dynamic Exploration:</strong>
           <ul>
-            <li>Threshold Slider: The slider allows users to set a threshold for the minimum tree count. As users adjust
+            <li>Tree Count Slider: The slider allows users to set a threshold for the minimum tree count. As users adjust
               the slider, the chart updates in real-time to show only the points where the tree count meets or exceeds
               the specified threshold.</li>
             <li>Diameter Slider: The Diameter Slider provides a way to filter data based on the diameter of the trees.
@@ -385,7 +385,7 @@ title: "M3: Substainability Focus Viz"
         <li><strong>Linked Filtering:</strong>
           <ul>
             <li>The height selection filters both visualizations to display only data corresponding to the selected
-              street side (or all street sides if "Show All" is selected).</li>
+              height category (or all height catogries if "Show All" is selected).</li>
             <li>The street selection filters both visualizations to display only data corresponding to the selected
               street side (or all street sides if "Show All" is selected).</li>
           </ul>
