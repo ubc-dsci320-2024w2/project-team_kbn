@@ -389,7 +389,7 @@ title: "M3: Picnic Focus Viz"
   <h2>Visualization 3: Which neighbourhoods have trees that produce high amounts of pollen, potentially affecting picnic
     experiences for people with allergies? </h2>
   <div class="iframe-container">
-    <iframe src="../images/kli_viz/picnic_viz3.html" height="700"></iframe>
+    <iframe src="../images/kli_viz/picnic_viz3.html" height="800"></iframe>
   </div>
 
   <!-- VIZ START -->
@@ -398,7 +398,7 @@ title: "M3: Picnic Focus Viz"
     <div class="section">
       <h4>Marks</h4>
 
-      <p><strong>Scatterplot</strong></p>
+      <p><strong>Geospatial Scatterplot</strong></p>
       <ul>
         <li>Displays the spatial distribution of trees in the selected neighborhood, color-coded by pollen presence
           (Yes/No).</li>
@@ -407,12 +407,19 @@ title: "M3: Picnic Focus Viz"
         <li>Aligns with the Gestalt principle of proximity, grouping nearby trees visually based on their location.</li>
       </ul>
 
-      <p><strong>Bar Chart</strong></p>
+      <p><strong>Bar Chart 1</strong></p>
       <ul>
         <li>Shows the top 10 streets by tree count in the selected neighborhood, broken down by pollen presence.</li>
         <li>Bar lengths encode tree counts, simplifying comparisons between streets.</li>
         <li>Color differentiation highlights the proportion of pollen-producing vs. non-pollen-producing trees on each
           street, supporting tasks like characterizing distribution.</li>
+      </ul>
+
+      <p><strong>Bar Chart 2</strong></p>
+      <ul>
+        <li>Displays the total number of trees per neighbourhood, color-coded by pollen presence (orange = produces pollen, blue = does not produce pollen).</li>
+        <li>Helps users identify which neighbourhoods have the most trees and how many produce pollen.</li>
+        <li>Allows comparison across neighbourhoods to determine high-pollen areas.</li>
       </ul>
     </div>
 
@@ -448,8 +455,7 @@ title: "M3: Picnic Focus Viz"
       <ul>
         <li><strong>Position :</strong>
           <ul>
-            <li>Y-axis : Lists streets, sorted by tree count in descending order, emphasizing streets with the highest
-              tree densities.</li>
+            <li>Y-axis: Displays neighbourhoods (left chart) or streets (bottom-right chart), sorted by tree count.</li>
             <li>X-axis : Represents tree count, showing magnitude.</li>
           </ul>
         </li>
@@ -525,11 +531,10 @@ title: "M3: Picnic Focus Viz"
         <li><strong>Filter :</strong> Users can filter data by neighborhood (via dropdown) and pollen presence (via
           radio buttons), enabling focused exploration.</li>
         <li><strong>Find Extremum :</strong> The scatterplot highlights areas with high concentrations of
-          pollen-producing trees, while the bar chart identifies streets with the most trees.</li>
+          pollen-producing trees, while the bar chart identifies neighbourhoods or streets with the most trees.</li>
         <li><strong>Sort :</strong> Streets are explicitly sorted by tree count in the bar chart, emphasizing areas with
           the highest tree densities.</li>
-        <li><strong>Characterize Distribution :</strong> The combination of the scatterplot and bar chart allows users
-          to analyze the spread of pollen-producing trees spatially and compositionally.</li>
+        <li><strong>Characterize Distribution :</strong> The combination of the scatterplot and bar charts allows users to analyze the spatial distribution of pollen-producing trees and compare tree densities across neighbourhoods and streets.</li>
       </ul>
     </div>
 
@@ -540,7 +545,7 @@ title: "M3: Picnic Focus Viz"
       <ul>
         <li>The scatterplot provides a spatial overview of tree distribution, helping users identify areas with high
           pollen-producing tree concentrations.</li>
-        <li>The bar chart complements the scatterplot by offering detailed insights into specific streets, breaking down
+        <li>The bar chart complements the scatterplot by offering detailed insights into specific streets and neighbhourhood, breaking down
           data by pollen presence.</li>
         <li>Together, these visualizations provide a holistic view of Vancouver's urban tree ecosystem, balancing broad
           overviews with granular analyses.</li>
