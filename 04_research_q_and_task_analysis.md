@@ -32,9 +32,9 @@ Given the tree dataset, how would we want to arrange the types of trees to be pl
 
 Sub Questions:
 
-- *Which planted species exist in many different locations within each neighbourhood?* Understanding this could help identify species that are well-suited to multiple environments, ensuring biodiversity and better ecosystem health across different areas of the city.
-- *How do trees that have been planted directly compare in terms of diameter to those that have grown naturally?* Knowing this could highlight how urban planting practices affect tree growth. Planted trees may face more limitations, such as space or soil conditions, which could influence their growth compared to naturally occurring trees.
-- *What is the distribution of ages for specific tree species?* This could reveal whether the neighbourhoods are planting enough young trees to sustain long-term tree coverage and whether certain species need more attention for regeneration or maintenance.
+- *What are the counts and proportions of planted trees?* This could allow users to discover which species has sufficient data for both planted and non-planted specimens through the combinations of the total number of trees and the proportion of planted samples.
+- *Which planted species exist in many different locations within each neighbourhood?* Understanding this could help identify locations that either can support large varieties of species or locations that could benefit from more biodiversity, ensuring better ecosystem health across different areas of the city.
+- *How do trees that have been planted directly compare in terms of diameter to those that have grown naturally?* Knowing this could highlight how urban planting practices affect tree growth. Planted trees may face more limitations, such as space, relocatability, or soil conditions, which could influence their growth compared to naturally occurring trees.
 
 ## Task Analysis
 
